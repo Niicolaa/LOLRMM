@@ -101,6 +101,7 @@ def write_sigma_rule(rule: Dict[str, Any], filepath: str) -> None:
                     else:
                         val = subvalue.replace("'", "''")
                         f.write(f"        {subkey}: '{val}'\n")
+
         f.write(f"    condition: {detection['condition']}\n")
 
         # Falsepositives
