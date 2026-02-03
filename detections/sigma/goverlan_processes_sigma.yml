@@ -1,5 +1,5 @@
 title: Potential Goverlan RMM Tool Process Activity
-id: 7b502658-f31c-47d0-9170-5b7333927119
+id: 2736e7de-784b-5e02-b860-422b94ad5a25
 status: experimental
 description: |
     Detects potential processes activity of Goverlan RMM tool
@@ -16,20 +16,20 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "goverrmc.exe"
-            - "govsrv*.exe"
-            - "GovAgentInstallHelper.exe"
-            - "GovAgentx64.exe"
-            - "GovReachClient.exe"
-            - "*\GovSrv.exe"
+            - 'goverrmc.exe'
+            - 'govsrv*.exe'
+            - 'GovAgentInstallHelper.exe'
+            - 'GovAgentx64.exe'
+            - 'GovReachClient.exe'
+            - '*\GovSrv.exe'
     selection_image:
         Image|endswith:
-            - "goverrmc.exe"
-            - "govsrv*.exe"
-            - "GovAgentInstallHelper.exe"
-            - "GovAgentx64.exe"
-            - "GovReachClient.exe"
-            - "*\GovSrv.exe"
+            - 'goverrmc.exe'
+            - 'govsrv*.exe'
+            - 'GovAgentInstallHelper.exe'
+            - 'GovAgentx64.exe'
+            - 'GovReachClient.exe'
+            - '*\GovSrv.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Goverlan

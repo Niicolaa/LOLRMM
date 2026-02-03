@@ -1,5 +1,5 @@
 title: Potential LogMeIn RMM Tool Network Activity
-id: eb264423-f7a2-4b2f-9f4d-5b1d15335292
+id: 31dfeb50-5e94-56f9-ae23-91e4e5f7658c
 status: experimental
 description: |
     Detects potential network activity of LogMeIn RMM tool
@@ -16,11 +16,11 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "logmein-gateway.com"
-            - "*.logmein.com"
-            - "*.logmein.eu"
-            - "logmeinrescue.com"
-            - "*.logmeininc.com"
+            - 'logmein-gateway.com'
+            - '*.logmein.com'
+            - '*.logmein.eu'
+            - 'logmeinrescue.com'
+            - '*.logmeininc.com'
     condition: selection
 falsepositives:
     - Legitimate use of LogMeIn

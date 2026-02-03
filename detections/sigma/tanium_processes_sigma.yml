@@ -1,5 +1,5 @@
 title: Potential Tanium RMM Tool Process Activity
-id: 60824f59-8a05-4daf-9e5c-aa0ac87ca085
+id: bfb48114-5a65-56de-91dd-b561a663a442
 status: experimental
 description: |
     Detects potential processes activity of Tanium RMM tool
@@ -16,18 +16,18 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "TaniumClient.exe"
-            - "TaniumCX.exe"
-            - "TaniumExecWrapper.exe"
-            - "TaniumFileInfo.exe"
-            - "TPowerShell.exe"
+            - 'TaniumClient.exe'
+            - 'TaniumCX.exe'
+            - 'TaniumExecWrapper.exe'
+            - 'TaniumFileInfo.exe'
+            - 'TPowerShell.exe'
     selection_image:
         Image|endswith:
-            - "TaniumClient.exe"
-            - "TaniumCX.exe"
-            - "TaniumExecWrapper.exe"
-            - "TaniumFileInfo.exe"
-            - "TPowerShell.exe"
+            - 'TaniumClient.exe'
+            - 'TaniumCX.exe'
+            - 'TaniumExecWrapper.exe'
+            - 'TaniumFileInfo.exe'
+            - 'TPowerShell.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Tanium

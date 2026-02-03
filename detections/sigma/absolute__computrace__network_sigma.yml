@@ -1,5 +1,5 @@
 title: Potential Absolute (Computrace) RMM Tool Network Activity
-id: 55c4a3ca-89b7-458e-83ef-4ea140499753
+id: 7a0e6218-bc60-5010-8890-6efa9223f650
 status: experimental
 description: |
     Detects potential network activity of Absolute (Computrace) RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*search.namequery.com"
-            - "*server.absolute.com"
+            - '*search.namequery.com'
+            - '*server.absolute.com'
     condition: selection
 falsepositives:
     - Legitimate use of Absolute (Computrace)

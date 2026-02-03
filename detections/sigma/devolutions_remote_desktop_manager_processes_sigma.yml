@@ -1,5 +1,5 @@
 title: Potential Devolutions Remote Desktop Manager RMM Tool Process Activity
-id: f629b10f-bb3b-4ec5-a26f-da9319c0f519
+id: c9a9c17f-0fb9-5266-96d1-4d33908c9c5f
 status: experimental
 description: |
     Detects potential processes activity of Devolutions Remote Desktop Manager RMM tool
@@ -15,9 +15,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: "*\RemoteDesktopManager.exe"
+        ParentImage|endswith: '*\RemoteDesktopManager.exe'
     selection_image:
-        Image|endswith: "*\RemoteDesktopManager.exe"
+        Image|endswith: '*\RemoteDesktopManager.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Devolutions Remote Desktop Manager

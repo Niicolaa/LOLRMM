@@ -1,5 +1,5 @@
 title: Potential RunSmart RMM Tool Network Activity
-id: 415a0883-52f9-4624-b02c-0538535e1d68
+id: b4eb5db2-be4a-5ef7-bf7d-16f62520308c
 status: experimental
 description: |
     Detects potential network activity of RunSmart RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "runsmart.io"
+        DestinationHostname|endswith: 'runsmart.io'
     condition: selection
 falsepositives:
     - Legitimate use of RunSmart

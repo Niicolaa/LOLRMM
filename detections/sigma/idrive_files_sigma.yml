@@ -1,5 +1,5 @@
 title: Potential iDrive RMM Tool File Activity
-id: ec1e0d8b-70d4-4acc-b17a-5848b63e85b9
+id: 6b92f296-e412-5864-806f-02120af6615f
 status: experimental
 description: |
     Detects potential files activity of iDrive RMM tool
@@ -16,10 +16,10 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\ProgramData\IDrive\*"
-            - "C:\Program Files\IDrive\*"
-            - "C:\Program Files (x86)\IDrive\*"
-            - "C:\Users\*\AppData\Local\IDrive\*"
+            - 'C:\ProgramData\IDrive\*'
+            - 'C:\Program Files\IDrive\*'
+            - 'C:\Program Files (x86)\IDrive\*'
+            - 'C:\Users\*\AppData\Local\IDrive\*'
     condition: selection
 falsepositives:
     - Legitimate use of iDrive

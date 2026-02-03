@@ -1,5 +1,5 @@
 title: Potential FastViewer RMM Tool Process Activity
-id: 024f8a34-0480-4da7-86f6-a86234aed621
+id: 27b99c31-cc0f-5e88-85a0-3569eece8e34
 status: experimental
 description: |
     Detects potential processes activity of FastViewer RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "fastclient.exe"
-            - "fastmaster.exe"
-            - "FastViewer.exe"
+            - 'fastclient.exe'
+            - 'fastmaster.exe'
+            - 'FastViewer.exe'
     selection_image:
         Image|endswith:
-            - "fastclient.exe"
-            - "fastmaster.exe"
-            - "FastViewer.exe"
+            - 'fastclient.exe'
+            - 'fastmaster.exe'
+            - 'FastViewer.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of FastViewer

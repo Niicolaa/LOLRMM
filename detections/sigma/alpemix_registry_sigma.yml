@@ -1,5 +1,5 @@
 title: Potential Alpemix RMM Tool Registry Activity
-id: 702f82b3-fad1-483a-b07b-a988319e440b
+id: 7ea38b5e-00fd-5919-b1a6-7ac3b8b361a4
 status: experimental
 description: |
     Detects potential registry activity of Alpemix RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: registry_event
 detection:
     selection:
-        TargetObject|contains: "HKLM\SYSTEM\CurrentControlSet\Services\AlpemixSrvcx"
+        TargetObject|contains: 'HKLM\SYSTEM\CurrentControlSet\Services\AlpemixSrvcx'
     condition: selection
 falsepositives:
     - Legitimate use of Alpemix

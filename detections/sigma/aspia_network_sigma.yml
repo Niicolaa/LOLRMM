@@ -1,5 +1,5 @@
 title: Potential Aspia RMM Tool Network Activity
-id: 236f7be4-fe02-40e1-b550-05569dd16f71
+id: e03486e4-0c5d-5337-8ff5-3ffe8cf32f66
 status: experimental
 description: |
     Detects potential network activity of Aspia RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "https://github.com/dchapyshev/aspia"
+        DestinationHostname|endswith: 'https://github.com/dchapyshev/aspia'
     condition: selection
 falsepositives:
     - Legitimate use of Aspia

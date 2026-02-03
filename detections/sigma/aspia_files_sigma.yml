@@ -1,5 +1,5 @@
 title: Potential Aspia RMM Tool File Activity
-id: 850d85b6-4393-4a5d-8c0e-9c6de8257129
+id: 7d008bdc-f620-5661-b386-06d2f655c12a
 status: experimental
 description: |
     Detects potential files activity of Aspia RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\Users\*\AppData\Roaming\aspia\client.ini"
-            - "C:\Users\*\AppData\Local\Temp\aspia\aspia_client-*.log"
-            - "C:\Program Files\Aspia\Client\qt.conf"
+            - 'C:\Users\*\AppData\Roaming\aspia\client.ini'
+            - 'C:\Users\*\AppData\Local\Temp\aspia\aspia_client-*.log'
+            - 'C:\Program Files\Aspia\Client\qt.conf'
     condition: selection
 falsepositives:
     - Legitimate use of Aspia

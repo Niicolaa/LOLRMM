@@ -1,5 +1,5 @@
 title: Potential Netop Remote Control (aka Impero Connect) RMM Tool Network Activity
-id: 41913bfc-35cd-4f68-bf6c-0abeefecf58d
+id: 43bf44d0-5082-599b-a71e-e13c0e5a8287
 status: experimental
 description: |
     Detects potential network activity of Netop Remote Control (aka Impero Connect) RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "imperosoftware.com/impero-connect/"
+        DestinationHostname|endswith: 'imperosoftware.com/impero-connect/'
     condition: selection
 falsepositives:
     - Legitimate use of Netop Remote Control (aka Impero Connect)

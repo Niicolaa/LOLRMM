@@ -1,5 +1,5 @@
 title: Potential Mikogo RMM Tool Process Activity
-id: c8bea8e7-b968-4a32-a62f-0baa57f9ca2d
+id: 15a0ff48-36e6-57db-b481-d8b9f9020670
 status: experimental
 description: |
     Detects potential processes activity of Mikogo RMM tool
@@ -16,20 +16,20 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "mikogo.exe"
-            - "mikogo-starter.exe"
-            - "mikogo-service.exe"
-            - "mikogolauncher.exe"
-            - "*\Mikogo-Service.exe"
-            - "*\Mikogo-Screen-Service.exe"
+            - 'mikogo.exe'
+            - 'mikogo-starter.exe'
+            - 'mikogo-service.exe'
+            - 'mikogolauncher.exe'
+            - '*\Mikogo-Service.exe'
+            - '*\Mikogo-Screen-Service.exe'
     selection_image:
         Image|endswith:
-            - "mikogo.exe"
-            - "mikogo-starter.exe"
-            - "mikogo-service.exe"
-            - "mikogolauncher.exe"
-            - "*\Mikogo-Service.exe"
-            - "*\Mikogo-Screen-Service.exe"
+            - 'mikogo.exe'
+            - 'mikogo-starter.exe'
+            - 'mikogo-service.exe'
+            - 'mikogolauncher.exe'
+            - '*\Mikogo-Service.exe'
+            - '*\Mikogo-Screen-Service.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Mikogo

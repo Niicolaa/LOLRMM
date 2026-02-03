@@ -1,5 +1,5 @@
 title: Potential Ivanti Remote Control RMM Tool Process Activity
-id: b62220aa-a022-4dae-8322-cfc4ab3a4ed0
+id: fa596aaf-dbf7-52be-90f0-10a4db037e02
 status: experimental
 description: |
     Detects potential processes activity of Ivanti Remote Control RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "IvantiRemoteControl.exe"
-            - "ArcUI.exe"
-            - "AgentlessRC.exe"
+            - 'IvantiRemoteControl.exe'
+            - 'ArcUI.exe'
+            - 'AgentlessRC.exe'
     selection_image:
         Image|endswith:
-            - "IvantiRemoteControl.exe"
-            - "ArcUI.exe"
-            - "AgentlessRC.exe"
+            - 'IvantiRemoteControl.exe'
+            - 'ArcUI.exe'
+            - 'AgentlessRC.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Ivanti Remote Control

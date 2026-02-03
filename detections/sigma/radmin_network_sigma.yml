@@ -1,5 +1,5 @@
 title: Potential RAdmin RMM Tool Network Activity
-id: ab5e1d8d-467b-483b-9c9e-de5db10c3149
+id: 3290858e-d681-59b4-b138-ab417db5aad1
 status: experimental
 description: |
     Detects potential network activity of RAdmin RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "radmin.com"
+        DestinationHostname|endswith: 'radmin.com'
     condition: selection
 falsepositives:
     - Legitimate use of RAdmin

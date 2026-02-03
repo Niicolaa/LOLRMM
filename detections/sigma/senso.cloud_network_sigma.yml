@@ -1,5 +1,5 @@
 title: Potential Senso.cloud RMM Tool Network Activity
-id: 316c52ea-7c2a-4aea-a087-e4bd8df58dbb
+id: 4e19267c-7aee-555b-a281-d828d4bdb760
 status: experimental
 description: |
     Detects potential network activity of Senso.cloud RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.senso.cloud"
-            - "senso.cloud"
+            - '*.senso.cloud'
+            - 'senso.cloud'
     condition: selection
 falsepositives:
     - Legitimate use of Senso.cloud

@@ -1,5 +1,5 @@
 title: Potential RemoteUtilities RMM Tool Process Activity
-id: 9c0894a7-eaf9-4c86-b891-7a2da76145ef
+id: 011e691f-bca7-56c0-b9cf-65a58dff0302
 status: experimental
 description: |
     Detects potential processes activity of RemoteUtilities RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "rutview.exe"
-            - "rutserv.exe"
-            - "*\rutserv.exe"
+            - 'rutview.exe'
+            - 'rutserv.exe'
+            - '*\rutserv.exe'
     selection_image:
         Image|endswith:
-            - "rutview.exe"
-            - "rutserv.exe"
-            - "*\rutserv.exe"
+            - 'rutview.exe'
+            - 'rutserv.exe'
+            - '*\rutserv.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of RemoteUtilities

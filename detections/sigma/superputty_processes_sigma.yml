@@ -1,5 +1,5 @@
 title: Potential SuperPuTTY RMM Tool Process Activity
-id: 848e6a09-fbbc-4d4c-853b-ca6c5d31d1a0
+id: fae01e7f-2500-5086-b6cb-a1f14a24bcda
 status: experimental
 description: |
     Detects potential processes activity of SuperPuTTY RMM tool
@@ -15,9 +15,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: "*\superputty.exe"
+        ParentImage|endswith: '*\superputty.exe'
     selection_image:
-        Image|endswith: "*\superputty.exe"
+        Image|endswith: '*\superputty.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of SuperPuTTY

@@ -1,5 +1,5 @@
 title: Potential Distant Desktop RMM Tool Network Activity
-id: 976fd46f-a1c2-43be-af98-92d213c8384e
+id: 16b90e49-779d-53de-9296-18ccee322203
 status: experimental
 description: |
     Detects potential network activity of Distant Desktop RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.distantdesktop.com"
-            - "*signalserver.xyz"
+            - '*.distantdesktop.com'
+            - '*signalserver.xyz'
     condition: selection
 falsepositives:
     - Legitimate use of Distant Desktop

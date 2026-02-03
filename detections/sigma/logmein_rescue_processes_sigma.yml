@@ -1,5 +1,5 @@
 title: Potential LogMeIn rescue RMM Tool Process Activity
-id: 3ce222ab-a723-47ed-9129-6331efcef1e5
+id: 30ad9cfb-af50-58ba-a878-b08e7b080a94
 status: experimental
 description: |
     Detects potential processes activity of LogMeIn rescue RMM tool
@@ -16,20 +16,20 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "support-logmeinrescue*.exe"
-            - "support-logmeinrescue.exe"
-            - "lmi_rescue.exe"
-            - "C:\Users\*\AppData\Local\LogMeIn Rescue Applet\LMIR*.tmp\lmi_rescue.exe"
-            - "C:\Users\*\AppData\Local\LogMeIn Rescue Applet\LMIR*.tmp\lmi_rescue_srv.exe"
-            - "C:\Users\*\AppData\Local\LogMeIn Rescue Applet\LMIR*.tmp\lmi_rescue.exe"
+            - 'support-logmeinrescue*.exe'
+            - 'support-logmeinrescue.exe'
+            - 'lmi_rescue.exe'
+            - 'C:\Users\*\AppData\Local\LogMeIn Rescue Applet\LMIR*.tmp\lmi_rescue.exe'
+            - 'C:\Users\*\AppData\Local\LogMeIn Rescue Applet\LMIR*.tmp\lmi_rescue_srv.exe'
+            - 'C:\Users\*\AppData\Local\LogMeIn Rescue Applet\LMIR*.tmp\lmi_rescue.exe'
     selection_image:
         Image|endswith:
-            - "support-logmeinrescue*.exe"
-            - "support-logmeinrescue.exe"
-            - "lmi_rescue.exe"
-            - "C:\Users\*\AppData\Local\LogMeIn Rescue Applet\LMIR*.tmp\lmi_rescue.exe"
-            - "C:\Users\*\AppData\Local\LogMeIn Rescue Applet\LMIR*.tmp\lmi_rescue_srv.exe"
-            - "C:\Users\*\AppData\Local\LogMeIn Rescue Applet\LMIR*.tmp\lmi_rescue.exe"
+            - 'support-logmeinrescue*.exe'
+            - 'support-logmeinrescue.exe'
+            - 'lmi_rescue.exe'
+            - 'C:\Users\*\AppData\Local\LogMeIn Rescue Applet\LMIR*.tmp\lmi_rescue.exe'
+            - 'C:\Users\*\AppData\Local\LogMeIn Rescue Applet\LMIR*.tmp\lmi_rescue_srv.exe'
+            - 'C:\Users\*\AppData\Local\LogMeIn Rescue Applet\LMIR*.tmp\lmi_rescue.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of LogMeIn rescue

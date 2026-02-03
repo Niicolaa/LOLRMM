@@ -1,5 +1,5 @@
 title: Potential Fortra RMM Tool Network Activity
-id: 8a17bebb-5c8d-4e61-bd5b-92336ad89723
+id: 5b1f81b3-2746-5c4a-883c-8127fae1a2ee
 status: experimental
 description: |
     Detects potential network activity of Fortra RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "fortra.com"
+        DestinationHostname|endswith: 'fortra.com'
     condition: selection
 falsepositives:
     - Legitimate use of Fortra

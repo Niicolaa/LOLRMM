@@ -1,5 +1,5 @@
 title: Potential TeleDesktop RMM Tool Process Activity
-id: 1cd2ea11-546a-466a-a2f9-afdcfbed3679
+id: e5eb90c4-d5a4-524c-8fcd-71339367b55e
 status: experimental
 description: |
     Detects potential processes activity of TeleDesktop RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "pstlaunch.exe"
-            - "ptdskclient.exe"
-            - "ptdskhost.exe"
+            - 'pstlaunch.exe'
+            - 'ptdskclient.exe'
+            - 'ptdskhost.exe'
     selection_image:
         Image|endswith:
-            - "pstlaunch.exe"
-            - "ptdskclient.exe"
-            - "ptdskhost.exe"
+            - 'pstlaunch.exe'
+            - 'ptdskclient.exe'
+            - 'ptdskhost.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of TeleDesktop

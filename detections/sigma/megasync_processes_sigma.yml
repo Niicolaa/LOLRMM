@@ -1,5 +1,5 @@
 title: Potential MEGAsync RMM Tool Process Activity
-id: 2835dd3c-9446-418b-a0ba-e957710a1bca
+id: bbcee03f-c33d-5c95-a798-ea24c70f31e4
 status: experimental
 description: |
     Detects potential processes activity of MEGAsync RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "*\MEGAsyncSetup64.exe"
-            - "*\MEGAupdater.exe"
+            - '*\MEGAsyncSetup64.exe'
+            - '*\MEGAupdater.exe'
     selection_image:
         Image|endswith:
-            - "*\MEGAsyncSetup64.exe"
-            - "*\MEGAupdater.exe"
+            - '*\MEGAsyncSetup64.exe'
+            - '*\MEGAupdater.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of MEGAsync

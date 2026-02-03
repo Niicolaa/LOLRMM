@@ -1,5 +1,5 @@
 title: Potential Level.io RMM Tool Network Activity
-id: 31eb757b-062f-4cf5-aa7a-f76335bb99ae
+id: 3741c941-c218-5b9f-9a42-ad021dff3b6b
 status: experimental
 description: |
     Detects potential network activity of Level.io RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "level.io"
-            - "*.level.io"
+            - 'level.io'
+            - '*.level.io'
     condition: selection
 falsepositives:
     - Legitimate use of Level.io

@@ -1,5 +1,5 @@
 title: Potential Jump Desktop RMM Tool Network Activity
-id: 53245764-24c0-4072-b049-36a480ca2257
+id: 8e92ecf4-39f1-5247-ba79-209fca410e73
 status: experimental
 description: |
     Detects potential network activity of Jump Desktop RMM tool
@@ -16,10 +16,10 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.jumpdesktop.com"
-            - "jumpdesktop.com"
-            - "jumpto.me"
-            - "*.jumpto.me"
+            - '*.jumpdesktop.com'
+            - 'jumpdesktop.com'
+            - 'jumpto.me'
+            - '*.jumpto.me'
     condition: selection
 falsepositives:
     - Legitimate use of Jump Desktop

@@ -1,5 +1,5 @@
 title: Potential Kaseya (VSA) RMM Tool Network Activity
-id: a52028c3-5b36-4922-903d-a9d7df27036a
+id: 17e5ca30-80b3-5197-bb20-e7ae2ac4ada8
 status: experimental
 description: |
     Detects potential network activity of Kaseya (VSA) RMM tool
@@ -16,10 +16,10 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "deploy01.kaseya.com"
-            - "*managedsupport.kaseya.net"
-            - "*.kaseya.net"
-            - "kaseya.com"
+            - 'deploy01.kaseya.com'
+            - '*managedsupport.kaseya.net'
+            - '*.kaseya.net'
+            - 'kaseya.com'
     condition: selection
 falsepositives:
     - Legitimate use of Kaseya (VSA)

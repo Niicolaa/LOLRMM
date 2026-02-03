@@ -1,5 +1,5 @@
 title: Potential SimpleHelp RMM Tool Process Activity
-id: 3b06561f-cabe-475c-9738-137727115fb4
+id: 04ac0573-4b50-5fca-b012-96e799cffe82
 status: experimental
 description: |
     Detects potential processes activity of SimpleHelp RMM tool
@@ -16,18 +16,18 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "simplehelpcustomer.exe"
-            - "simpleservice.exe"
-            - "simplegatewayservice.exe"
-            - "remote access.exe"
-            - "windowslauncher.exe"
+            - 'simplehelpcustomer.exe'
+            - 'simpleservice.exe'
+            - 'simplegatewayservice.exe'
+            - 'remote access.exe'
+            - 'windowslauncher.exe'
     selection_image:
         Image|endswith:
-            - "simplehelpcustomer.exe"
-            - "simpleservice.exe"
-            - "simplegatewayservice.exe"
-            - "remote access.exe"
-            - "windowslauncher.exe"
+            - 'simplehelpcustomer.exe'
+            - 'simpleservice.exe'
+            - 'simplegatewayservice.exe'
+            - 'remote access.exe'
+            - 'windowslauncher.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of SimpleHelp

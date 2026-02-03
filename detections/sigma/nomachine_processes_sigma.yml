@@ -1,5 +1,5 @@
 title: Potential NoMachine RMM Tool Process Activity
-id: a65ba7ac-3467-41d5-bc15-2134ab8851ff
+id: fbc8d96c-60c1-5039-ac27-5e9e03304214
 status: experimental
 description: |
     Detects potential processes activity of NoMachine RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "nomachine*.exe"
-            - "nxd.exe"
+            - 'nomachine*.exe'
+            - 'nxd.exe'
     selection_image:
         Image|endswith:
-            - "nomachine*.exe"
-            - "nxd.exe"
+            - 'nomachine*.exe'
+            - 'nxd.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of NoMachine

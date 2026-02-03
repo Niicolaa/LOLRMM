@@ -1,5 +1,5 @@
 title: Potential NetBird RMM Tool Network Activity
-id: 80a7c9b8-0992-4edf-bcd1-0b47039210e6
+id: b185f048-8668-5dba-a8fa-09e8d9fd2097
 status: experimental
 description: |
     Detects potential network activity of NetBird RMM tool
@@ -16,10 +16,10 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "netbird.io"
-            - "*.netbird.io"
-            - "api.netbird.io"
-            - "signal.netbird.io"
+            - 'netbird.io'
+            - '*.netbird.io'
+            - 'api.netbird.io'
+            - 'signal.netbird.io'
     condition: selection
 falsepositives:
     - Legitimate use of NetBird

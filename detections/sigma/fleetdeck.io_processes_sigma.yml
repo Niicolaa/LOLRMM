@@ -1,5 +1,5 @@
 title: Potential FleetDeck.io RMM Tool Process Activity
-id: d8b814b5-45b7-41ff-803d-a27bce29873c
+id: d9764e9b-4c04-5024-af8d-83a5a869cf23
 status: experimental
 description: |
     Detects potential processes activity of FleetDeck.io RMM tool
@@ -16,24 +16,24 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "C:\Program Files (x86)\FleetDeck Agent\fleetdeck_agent_svc.exe"
-            - "C:\Program Files (x86)\FleetDeck Agent\*\fleetdeck_agent.exe"
-            - "fleetdeck-agent.exe"
-            - "fleetdeck_agent_svc.exe"
-            - "fleetdeck_commander_svc.exe"
-            - "fleetdeck_installer.exe"
-            - "fleetdeck_commander_launcher.exe"
-            - "fleetdeck_agent.exe"
+            - 'C:\Program Files (x86)\FleetDeck Agent\fleetdeck_agent_svc.exe'
+            - 'C:\Program Files (x86)\FleetDeck Agent\*\fleetdeck_agent.exe'
+            - 'fleetdeck-agent.exe'
+            - 'fleetdeck_agent_svc.exe'
+            - 'fleetdeck_commander_svc.exe'
+            - 'fleetdeck_installer.exe'
+            - 'fleetdeck_commander_launcher.exe'
+            - 'fleetdeck_agent.exe'
     selection_image:
         Image|endswith:
-            - "C:\Program Files (x86)\FleetDeck Agent\fleetdeck_agent_svc.exe"
-            - "C:\Program Files (x86)\FleetDeck Agent\*\fleetdeck_agent.exe"
-            - "fleetdeck-agent.exe"
-            - "fleetdeck_agent_svc.exe"
-            - "fleetdeck_commander_svc.exe"
-            - "fleetdeck_installer.exe"
-            - "fleetdeck_commander_launcher.exe"
-            - "fleetdeck_agent.exe"
+            - 'C:\Program Files (x86)\FleetDeck Agent\fleetdeck_agent_svc.exe'
+            - 'C:\Program Files (x86)\FleetDeck Agent\*\fleetdeck_agent.exe'
+            - 'fleetdeck-agent.exe'
+            - 'fleetdeck_agent_svc.exe'
+            - 'fleetdeck_commander_svc.exe'
+            - 'fleetdeck_installer.exe'
+            - 'fleetdeck_commander_launcher.exe'
+            - 'fleetdeck_agent.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of FleetDeck.io

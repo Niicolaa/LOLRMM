@@ -1,5 +1,5 @@
 title: Potential Remobo RMM Tool Process Activity
-id: 7e63f420-4f9a-4ee2-bea5-7d95f80e59e1
+id: 8472c9da-bd2f-543a-96e8-612c089e2c1c
 status: experimental
 description: |
     Detects potential processes activity of Remobo RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "remobo.exe"
-            - "remobo_client.exe"
-            - "remobo_tracker.exe"
+            - 'remobo.exe'
+            - 'remobo_client.exe'
+            - 'remobo_tracker.exe'
     selection_image:
         Image|endswith:
-            - "remobo.exe"
-            - "remobo_client.exe"
-            - "remobo_tracker.exe"
+            - 'remobo.exe'
+            - 'remobo_client.exe'
+            - 'remobo_tracker.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Remobo

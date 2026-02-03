@@ -1,5 +1,5 @@
 title: Potential CloudFlare Tunnel RMM Tool Network Activity
-id: 6063194b-87d7-491c-ba2e-c492b6d498cc
+id: 75494e1e-0ddc-5086-966d-475c6ef35243
 status: experimental
 description: |
     Detects potential network activity of CloudFlare Tunnel RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "cloudflare.com/products/tunnel/"
+        DestinationHostname|endswith: 'cloudflare.com/products/tunnel/'
     condition: selection
 falsepositives:
     - Legitimate use of CloudFlare Tunnel

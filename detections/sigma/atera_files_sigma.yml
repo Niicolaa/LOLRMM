@@ -1,5 +1,5 @@
 title: Potential Atera RMM Tool File Activity
-id: e408190a-d11e-40a8-997c-612c888198d9
+id: 16b7fb6f-538e-5caf-b575-ef1a0b693f7c
 status: experimental
 description: |
     Detects potential files activity of Atera RMM tool
@@ -16,15 +16,15 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageRunCommandInteractive\log.txt"
-            - "C:\Program Files\ATERA Networks\AteraAgent\Packages\*"
-            - "C:\Program Files\ATERA Networks\AteraAgent\AteraAgent.exe"
-            - "C:\Program Files\Atera Networks\AlphaAgent.exe"
-            - "C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageSTRemote\AgentPackageSTRemote.exe"
-            - "C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageMonitoring\AgentPackageMonitoring.exe"
-            - "C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageHeartbeat\AgentPackageHeartbeat.exe"
-            - "C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageFileExplorer\AgentPackageFileExplorer.exe"
-            - "C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageRunCommandInteractive\AgentPackageRunCommandInteractive.exe"
+            - 'C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageRunCommandInteractive\log.txt'
+            - 'C:\Program Files\ATERA Networks\AteraAgent\Packages\*'
+            - 'C:\Program Files\ATERA Networks\AteraAgent\AteraAgent.exe'
+            - 'C:\Program Files\Atera Networks\AlphaAgent.exe'
+            - 'C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageSTRemote\AgentPackageSTRemote.exe'
+            - 'C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageMonitoring\AgentPackageMonitoring.exe'
+            - 'C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageHeartbeat\AgentPackageHeartbeat.exe'
+            - 'C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageFileExplorer\AgentPackageFileExplorer.exe'
+            - 'C:\Program Files\ATERA Networks\AteraAgent\Packages\AgentPackageRunCommandInteractive\AgentPackageRunCommandInteractive.exe'
     condition: selection
 falsepositives:
     - Legitimate use of Atera

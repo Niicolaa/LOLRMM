@@ -1,5 +1,5 @@
 title: Potential AweRay RMM Tool Network Activity
-id: 6ca88de8-2b31-4237-bd29-dee7c1a3a516
+id: 59c68e6a-acfa-54df-9ad5-7371e311ad96
 status: experimental
 description: |
     Detects potential network activity of AweRay RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "asapi*.aweray.net"
-            - "client-api.aweray.com"
+            - 'asapi*.aweray.net'
+            - 'client-api.aweray.com'
     condition: selection
 falsepositives:
     - Legitimate use of AweRay

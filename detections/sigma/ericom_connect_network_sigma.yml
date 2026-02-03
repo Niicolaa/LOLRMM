@@ -1,5 +1,5 @@
 title: Potential Ericom Connect RMM Tool Network Activity
-id: 4c125d69-a8f9-449c-b538-79ff5d0af094
+id: 0e1ba511-f87f-59af-a058-01efb0b57e5c
 status: experimental
 description: |
     Detects potential network activity of Ericom Connect RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "ericom.com"
+            - 'user_managed'
+            - 'ericom.com'
     condition: selection
 falsepositives:
     - Legitimate use of Ericom Connect

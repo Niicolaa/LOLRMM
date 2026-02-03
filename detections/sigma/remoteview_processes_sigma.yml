@@ -1,5 +1,5 @@
 title: Potential RemoteView RMM Tool Process Activity
-id: 13302c49-9508-4eab-8930-db5c7ed03a31
+id: c10868e8-0080-5356-866e-633dd617d931
 status: experimental
 description: |
     Detects potential processes activity of RemoteView RMM tool
@@ -16,16 +16,16 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "remoteview.exe"
-            - "rv.exe"
-            - "rvagent.exe"
-            - "rvagtray.exe"
+            - 'remoteview.exe'
+            - 'rv.exe'
+            - 'rvagent.exe'
+            - 'rvagtray.exe'
     selection_image:
         Image|endswith:
-            - "remoteview.exe"
-            - "rv.exe"
-            - "rvagent.exe"
-            - "rvagtray.exe"
+            - 'remoteview.exe'
+            - 'rv.exe'
+            - 'rvagent.exe'
+            - 'rvagtray.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of RemoteView

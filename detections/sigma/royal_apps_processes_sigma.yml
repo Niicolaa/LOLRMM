@@ -1,5 +1,5 @@
 title: Potential Royal Apps RMM Tool Process Activity
-id: 2a41396d-970e-455c-b2ab-c6088dd2f1da
+id: 3d572f57-1a49-5ab7-8448-ddabefd61cfd
 status: experimental
 description: |
     Detects potential processes activity of Royal Apps RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "royalserver.exe"
-            - "royalts.exe"
+            - 'royalserver.exe'
+            - 'royalts.exe'
     selection_image:
         Image|endswith:
-            - "royalserver.exe"
-            - "royalts.exe"
+            - 'royalserver.exe'
+            - 'royalts.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Royal Apps

@@ -1,5 +1,5 @@
 title: Potential NTR Remote RMM Tool Network Activity
-id: f85ec6df-f984-484f-9857-812a32cedd20
+id: f3169743-070d-5bb1-aaea-47c766214cdd
 status: experimental
 description: |
     Detects potential network activity of NTR Remote RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "*.ntrsupport.com"
+        DestinationHostname|endswith: '*.ntrsupport.com'
     condition: selection
 falsepositives:
     - Legitimate use of NTR Remote

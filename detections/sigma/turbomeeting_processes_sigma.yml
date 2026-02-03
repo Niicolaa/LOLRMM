@@ -1,5 +1,5 @@
 title: Potential TurboMeeting RMM Tool Process Activity
-id: d6672b19-fc80-455b-8a40-b3167e7d366e
+id: 1e4882f8-0a0e-55fe-96c9-805f0189b56e
 status: experimental
 description: |
     Detects potential processes activity of TurboMeeting RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "pcstarter.exe"
-            - "turbomeeting.exe"
-            - "turbomeetingstarter.exe"
+            - 'pcstarter.exe'
+            - 'turbomeeting.exe'
+            - 'turbomeetingstarter.exe'
     selection_image:
         Image|endswith:
-            - "pcstarter.exe"
-            - "turbomeeting.exe"
-            - "turbomeetingstarter.exe"
+            - 'pcstarter.exe'
+            - 'turbomeeting.exe'
+            - 'turbomeetingstarter.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of TurboMeeting

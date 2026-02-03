@@ -1,5 +1,5 @@
 title: Potential ConnectWise Control RMM Tool Process Activity
-id: 2b380d2e-2b2a-4386-970d-2370ed1330d7
+id: a3a68601-a633-5e2b-90b8-8aeac4c8c4e4
 status: experimental
 description: |
     Detects potential processes activity of ConnectWise Control RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "connectwisechat-customer.exe"
-            - "connectwisecontrol.client.exe"
-            - "screenconnect.windowsclient.exe"
+            - 'connectwisechat-customer.exe'
+            - 'connectwisecontrol.client.exe'
+            - 'screenconnect.windowsclient.exe'
     selection_image:
         Image|endswith:
-            - "connectwisechat-customer.exe"
-            - "connectwisecontrol.client.exe"
-            - "screenconnect.windowsclient.exe"
+            - 'connectwisechat-customer.exe'
+            - 'connectwisecontrol.client.exe'
+            - 'screenconnect.windowsclient.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ConnectWise Control

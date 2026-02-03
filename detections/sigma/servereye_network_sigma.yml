@@ -1,5 +1,5 @@
 title: Potential ServerEye RMM Tool Network Activity
-id: dbf78700-a792-49ed-8418-eafc323287db
+id: 73f14021-fba7-5cb6-b111-12e624b99392
 status: experimental
 description: |
     Detects potential network activity of ServerEye RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "*.server-eye.de"
+        DestinationHostname|endswith: '*.server-eye.de'
     condition: selection
 falsepositives:
     - Legitimate use of ServerEye

@@ -1,5 +1,5 @@
 title: Potential Ammyy Admin RMM Tool Registry Activity
-id: 0e5ec518-0868-40d7-839f-79d018de1b6d
+id: cea54c85-6d56-51b6-8dd2-ba04f37a71b2
 status: experimental
 description: |
     Detects potential registry activity of Ammyy Admin RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         TargetObject|contains:
-            - "HKU\.DEFAULT\Software\Ammyy\Admin"
-            - "HKLM\SYSTEM\ControlSet001\Control\SafeBoot\Network\AmmyyAdmin"
+            - 'HKU\.DEFAULT\Software\Ammyy\Admin'
+            - 'HKLM\SYSTEM\ControlSet001\Control\SafeBoot\Network\AmmyyAdmin'
     condition: selection
 falsepositives:
     - Legitimate use of Ammyy Admin

@@ -1,5 +1,5 @@
 title: Potential ezHelp RMM Tool Process Activity
-id: e2cbcda8-8994-4043-87ce-554b132400d7
+id: c732e963-0046-590e-8794-0da34f0c7745
 status: experimental
 description: |
     Detects potential processes activity of ezHelp RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "ezhelpclientmanager.exe"
-            - "ezHelpManager.exe"
-            - "ezhelpclient.exe"
+            - 'ezhelpclientmanager.exe'
+            - 'ezHelpManager.exe'
+            - 'ezhelpclient.exe'
     selection_image:
         Image|endswith:
-            - "ezhelpclientmanager.exe"
-            - "ezHelpManager.exe"
-            - "ezhelpclient.exe"
+            - 'ezhelpclientmanager.exe'
+            - 'ezHelpManager.exe'
+            - 'ezhelpclient.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ezHelp

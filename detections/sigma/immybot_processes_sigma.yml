@@ -1,5 +1,5 @@
 title: Potential ImmyBot RMM Tool Process Activity
-id: 1f0855b6-c220-4cc6-8451-ac68c192150c
+id: cb300985-1903-52c0-8d14-f514636826a5
 status: experimental
 description: |
     Detects potential processes activity of ImmyBot RMM tool
@@ -16,22 +16,22 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "C:\Program Files\ImmyBot\ImmyAgent.exe"
-            - "C:\Program Files\ImmyBot\ImmyUpdater.exe"
-            - "C:\Program Files (x86)\ImmyBot\ImmyAgent.exe"
-            - "C:\Program Files (x86)\ImmyBot\ImmyUpdater.exe"
-            - "ImmyAgent.exe"
-            - "ImmyUpdater.exe"
-            - "ImmyBot.Agent.Ephemeral.exe"
+            - 'C:\Program Files\ImmyBot\ImmyAgent.exe'
+            - 'C:\Program Files\ImmyBot\ImmyUpdater.exe'
+            - 'C:\Program Files (x86)\ImmyBot\ImmyAgent.exe'
+            - 'C:\Program Files (x86)\ImmyBot\ImmyUpdater.exe'
+            - 'ImmyAgent.exe'
+            - 'ImmyUpdater.exe'
+            - 'ImmyBot.Agent.Ephemeral.exe'
     selection_image:
         Image|endswith:
-            - "C:\Program Files\ImmyBot\ImmyAgent.exe"
-            - "C:\Program Files\ImmyBot\ImmyUpdater.exe"
-            - "C:\Program Files (x86)\ImmyBot\ImmyAgent.exe"
-            - "C:\Program Files (x86)\ImmyBot\ImmyUpdater.exe"
-            - "ImmyAgent.exe"
-            - "ImmyUpdater.exe"
-            - "ImmyBot.Agent.Ephemeral.exe"
+            - 'C:\Program Files\ImmyBot\ImmyAgent.exe'
+            - 'C:\Program Files\ImmyBot\ImmyUpdater.exe'
+            - 'C:\Program Files (x86)\ImmyBot\ImmyAgent.exe'
+            - 'C:\Program Files (x86)\ImmyBot\ImmyUpdater.exe'
+            - 'ImmyAgent.exe'
+            - 'ImmyUpdater.exe'
+            - 'ImmyBot.Agent.Ephemeral.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ImmyBot

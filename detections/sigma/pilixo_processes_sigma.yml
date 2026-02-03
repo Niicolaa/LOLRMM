@@ -1,5 +1,5 @@
 title: Potential Pilixo RMM Tool Process Activity
-id: cbb41a3c-c91a-4f3a-a9d2-6f70d620af91
+id: 7e5587df-38a8-5b9c-a649-06bcf09816a4
 status: experimental
 description: |
     Detects potential processes activity of Pilixo RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "rdp.exe"
-            - "Pilixo_Installer*.exe"
+            - 'rdp.exe'
+            - 'Pilixo_Installer*.exe'
     selection_image:
         Image|endswith:
-            - "rdp.exe"
-            - "Pilixo_Installer*.exe"
+            - 'rdp.exe'
+            - 'Pilixo_Installer*.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Pilixo

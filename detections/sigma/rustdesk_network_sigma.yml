@@ -1,5 +1,5 @@
 title: Potential RustDesk RMM Tool Network Activity
-id: ef036cf3-39d0-4686-b932-f39bb6d00f7a
+id: 036b78ca-f289-510c-a9d8-60d0a02b5fbd
 status: experimental
 description: |
     Detects potential network activity of RustDesk RMM tool
@@ -16,11 +16,11 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "rustdesk.com"
-            - "user_managed"
-            - "web.rustdesk.com"
-            - "api.rustdesk.com"
-            - "rs-ny.rustdesk.com"
+            - 'rustdesk.com'
+            - 'user_managed'
+            - 'web.rustdesk.com'
+            - 'api.rustdesk.com'
+            - 'rs-ny.rustdesk.com'
     condition: selection
 falsepositives:
     - Legitimate use of RustDesk

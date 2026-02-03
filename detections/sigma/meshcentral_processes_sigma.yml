@@ -1,5 +1,5 @@
 title: Potential MeshCentral RMM Tool Process Activity
-id: 5c38c85c-9c44-4f42-9ecd-81a9f2ed2501
+id: f4407101-4808-5bc9-b153-b27a5f366c39
 status: experimental
 description: |
     Detects potential processes activity of MeshCentral RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "meshcentral*.exe"
-            - "meshagent*.exe"
+            - 'meshcentral*.exe'
+            - 'meshagent*.exe'
     selection_image:
         Image|endswith:
-            - "meshcentral*.exe"
-            - "meshagent*.exe"
+            - 'meshcentral*.exe'
+            - 'meshagent*.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of MeshCentral

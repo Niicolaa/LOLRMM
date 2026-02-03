@@ -1,5 +1,5 @@
 title: Potential GoToAssist RMM Tool Process Activity
-id: 01931c11-1a9c-4217-96ce-43274153aa98
+id: 09d394f5-8581-5511-94b8-a235f5868323
 status: experimental
 description: |
     Detects potential processes activity of GoToAssist RMM tool
@@ -16,20 +16,20 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "gotoassist.exe"
-            - "g2a*.exe"
-            - "GoTo Assist Opener.exe"
-            - "g2mcomm.exe"
-            - "goto opener.exe"
-            - "g2ax_comm_customer.exe"
+            - 'gotoassist.exe'
+            - 'g2a*.exe'
+            - 'GoTo Assist Opener.exe'
+            - 'g2mcomm.exe'
+            - 'goto opener.exe'
+            - 'g2ax_comm_customer.exe'
     selection_image:
         Image|endswith:
-            - "gotoassist.exe"
-            - "g2a*.exe"
-            - "GoTo Assist Opener.exe"
-            - "g2mcomm.exe"
-            - "goto opener.exe"
-            - "g2ax_comm_customer.exe"
+            - 'gotoassist.exe'
+            - 'g2a*.exe'
+            - 'GoTo Assist Opener.exe'
+            - 'g2mcomm.exe'
+            - 'goto opener.exe'
+            - 'g2ax_comm_customer.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of GoToAssist

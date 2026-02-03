@@ -1,5 +1,5 @@
 title: Potential Remote.it RMM Tool Network Activity
-id: 808d3530-2700-4e6e-9e2a-2e790747b903
+id: 717930c5-0cd3-5204-987a-a15f36972ee5
 status: experimental
 description: |
     Detects potential network activity of Remote.it RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "auth.api.remote.it"
-            - "api.remote.it"
-            - "remote.it"
+            - 'auth.api.remote.it'
+            - 'api.remote.it'
+            - 'remote.it'
     condition: selection
 falsepositives:
     - Legitimate use of Remote.it

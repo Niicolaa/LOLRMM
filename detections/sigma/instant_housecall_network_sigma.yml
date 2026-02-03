@@ -1,5 +1,5 @@
 title: Potential Instant Housecall RMM Tool Network Activity
-id: 9ddae071-197a-44af-a0a9-802bbab5862b
+id: ce1de8ca-f922-527b-8f24-53e053a59af7
 status: experimental
 description: |
     Detects potential network activity of Instant Housecall RMM tool
@@ -16,10 +16,10 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.instanthousecall.com"
-            - "secure.instanthousecall.com"
-            - "*.instanthousecall.net"
-            - "instanthousecall.com"
+            - '*.instanthousecall.com'
+            - 'secure.instanthousecall.com'
+            - '*.instanthousecall.net'
+            - 'instanthousecall.com'
     condition: selection
 falsepositives:
     - Legitimate use of Instant Housecall

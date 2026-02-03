@@ -1,5 +1,5 @@
 title: Potential PSEXEC RMM Tool Process Activity
-id: f4f12fb3-ed69-46b8-ac17-32caebc65e02
+id: dc1e6fbd-5122-59c5-9052-faab3db8acfa
 status: experimental
 description: |
     Detects potential processes activity of PSEXEC RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "psexec.exe"
-            - "psexecsvc.exe"
+            - 'psexec.exe'
+            - 'psexecsvc.exe'
     selection_image:
         Image|endswith:
-            - "psexec.exe"
-            - "psexecsvc.exe"
+            - 'psexec.exe'
+            - 'psexecsvc.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of PSEXEC

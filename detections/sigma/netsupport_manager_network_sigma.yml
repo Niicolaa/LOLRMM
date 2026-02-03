@@ -1,5 +1,5 @@
 title: Potential NetSupport Manager RMM Tool Network Activity
-id: da81d1e7-47ac-47fc-8205-ab170efbd9ae
+id: d947f549-6714-582d-b8bf-74f746be1cb2
 status: experimental
 description: |
     Detects potential network activity of NetSupport Manager RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.netsupportmanager.com"
-            - "netsupportmanager.com"
+            - '*.netsupportmanager.com'
+            - 'netsupportmanager.com'
     condition: selection
 falsepositives:
     - Legitimate use of NetSupport Manager

@@ -1,5 +1,5 @@
 title: Potential AweRay RMM Tool Process Activity
-id: 5542d8df-5c9c-46f9-9202-4790a6d18422
+id: 711b30b0-2032-5dd4-9e8a-c41b82b8b56a
 status: experimental
 description: |
     Detects potential processes activity of AweRay RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "aweray_remote*.exe"
-            - "AweSun.exe"
+            - 'aweray_remote*.exe'
+            - 'AweSun.exe'
     selection_image:
         Image|endswith:
-            - "aweray_remote*.exe"
-            - "AweSun.exe"
+            - 'aweray_remote*.exe'
+            - 'AweSun.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of AweRay

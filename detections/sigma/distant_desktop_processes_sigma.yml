@@ -1,5 +1,5 @@
 title: Potential Distant Desktop RMM Tool Process Activity
-id: 2908deeb-b686-4e9e-8cbf-8ac99e370b25
+id: b567fd28-af59-5ca8-9dd3-1de918bd52d4
 status: experimental
 description: |
     Detects potential processes activity of Distant Desktop RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "ddsystem.exe"
-            - "dd.exe"
-            - "distant-desktop.exe"
+            - 'ddsystem.exe'
+            - 'dd.exe'
+            - 'distant-desktop.exe'
     selection_image:
         Image|endswith:
-            - "ddsystem.exe"
-            - "dd.exe"
-            - "distant-desktop.exe"
+            - 'ddsystem.exe'
+            - 'dd.exe'
+            - 'distant-desktop.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Distant Desktop

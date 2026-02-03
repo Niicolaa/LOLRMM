@@ -1,5 +1,5 @@
 title: Potential Ivanti Remote Control RMM Tool Network Activity
-id: 2f1eb53c-a6cc-49b2-bb6a-5108be07401d
+id: c7de30b2-80bf-5405-961d-ff8c89437abe
 status: experimental
 description: |
     Detects potential network activity of Ivanti Remote Control RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "*.ivanticloud.com"
+        DestinationHostname|endswith: '*.ivanticloud.com'
     condition: selection
 falsepositives:
     - Legitimate use of Ivanti Remote Control

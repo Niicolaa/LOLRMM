@@ -1,5 +1,5 @@
 title: Potential QQ IM-remote assistance RMM Tool Process Activity
-id: ca1479e7-0598-4251-a0e9-60ee577655e8
+id: 5a12d2a7-336d-58ea-833c-9656eae3a393
 status: experimental
 description: |
     Detects potential processes activity of QQ IM-remote assistance RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "qq.exe"
-            - "QQProtect.exe"
-            - "qqpcmgr.exe"
+            - 'qq.exe'
+            - 'QQProtect.exe'
+            - 'qqpcmgr.exe'
     selection_image:
         Image|endswith:
-            - "qq.exe"
-            - "QQProtect.exe"
-            - "qqpcmgr.exe"
+            - 'qq.exe'
+            - 'QQProtect.exe'
+            - 'qqpcmgr.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of QQ IM-remote assistance

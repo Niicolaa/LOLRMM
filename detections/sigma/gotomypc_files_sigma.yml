@@ -1,5 +1,5 @@
 title: Potential GoToMyPC RMM Tool File Activity
-id: 51cfa613-68d8-4d9c-bda6-99cc5eb7b7d8
+id: 458ec4d0-048c-5e1f-92c7-0c55656be532
 status: experimental
 description: |
     Detects potential files activity of GoToMyPC RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: file_event
 detection:
     selection:
-        TargetFilename|endswith: "%AppData%\GoTo\Logs\goto.log"
+        TargetFilename|endswith: '%AppData%\GoTo\Logs\goto.log'
     condition: selection
 falsepositives:
     - Legitimate use of GoToMyPC

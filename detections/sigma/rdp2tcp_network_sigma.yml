@@ -1,5 +1,5 @@
 title: Potential rdp2tcp RMM Tool Network Activity
-id: ec3e8faa-61c0-4613-acd9-535e44db4faf
+id: 53e44c09-7cf3-5194-bd69-21e75f1a4c9f
 status: experimental
 description: |
     Detects potential network activity of rdp2tcp RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "github.com/V-E-O/rdp2tcp"
+            - 'user_managed'
+            - 'github.com/V-E-O/rdp2tcp'
     condition: selection
 falsepositives:
     - Legitimate use of rdp2tcp

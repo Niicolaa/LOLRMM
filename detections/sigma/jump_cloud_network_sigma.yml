@@ -1,5 +1,5 @@
 title: Potential Jump Cloud RMM Tool Network Activity
-id: 758758dd-30ed-40b7-bfdb-bef690801094
+id: c98b5b05-3393-5678-9240-43f2866de11b
 status: experimental
 description: |
     Detects potential network activity of Jump Cloud RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.api.jumpcloud.com"
-            - "*.assist.jumpcloud.com"
+            - '*.api.jumpcloud.com'
+            - '*.assist.jumpcloud.com'
     condition: selection
 falsepositives:
     - Legitimate use of Jump Cloud

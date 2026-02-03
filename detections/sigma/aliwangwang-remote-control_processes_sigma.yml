@@ -1,5 +1,5 @@
 title: Potential AliWangWang-remote-control RMM Tool Process Activity
-id: bbd6b4fa-937a-4a24-9202-9aad184e1bd3
+id: 73ace0a7-c394-5070-adbc-20505b81e441
 status: experimental
 description: |
     Detects potential processes activity of AliWangWang-remote-control RMM tool
@@ -15,9 +15,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: "alitask.exe"
+        ParentImage|endswith: 'alitask.exe'
     selection_image:
-        Image|endswith: "alitask.exe"
+        Image|endswith: 'alitask.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of AliWangWang-remote-control

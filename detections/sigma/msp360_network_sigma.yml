@@ -1,5 +1,5 @@
 title: Potential MSP360 RMM Tool Network Activity
-id: 3359e97d-f9a1-4a73-aeb3-f6dffd07e182
+id: a64cdbdb-4bf3-5dc1-b61b-26086ecbe36f
 status: experimental
 description: |
     Detects potential network activity of MSP360 RMM tool
@@ -16,10 +16,10 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.cloudberrylab.com"
-            - "*.msp360.com"
-            - "*.mspbackups.com"
-            - "msp360.com"
+            - '*.cloudberrylab.com'
+            - '*.msp360.com'
+            - '*.mspbackups.com'
+            - 'msp360.com'
     condition: selection
 falsepositives:
     - Legitimate use of MSP360

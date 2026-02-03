@@ -1,5 +1,5 @@
 title: Potential TeamViewer RMM Tool Process Activity
-id: 09110ce0-abb6-4e37-8cc7-73f9b62f9341
+id: fb9bb911-7eac-5670-86ee-e90f1d9c80b3
 status: experimental
 description: |
     Detects potential processes activity of TeamViewer RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "teamviewer_desktop.exe"
-            - "teamviewer_service.exe"
+            - 'teamviewer_desktop.exe'
+            - 'teamviewer_service.exe'
     selection_image:
         Image|endswith:
-            - "teamviewer_desktop.exe"
-            - "teamviewer_service.exe"
+            - 'teamviewer_desktop.exe'
+            - 'teamviewer_service.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of TeamViewer

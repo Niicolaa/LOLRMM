@@ -1,5 +1,5 @@
 title: Potential OCS inventory RMM Tool Network Activity
-id: 0c684da4-0f70-4d1f-ac9d-69081b1232aa
+id: 042f65ec-55ea-57cf-a636-bb6febb1b347
 status: experimental
 description: |
     Detects potential network activity of OCS inventory RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "ocsinventory-ng.org"
+            - 'user_managed'
+            - 'ocsinventory-ng.org'
     condition: selection
 falsepositives:
     - Legitimate use of OCS inventory

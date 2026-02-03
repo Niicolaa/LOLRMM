@@ -1,5 +1,5 @@
 title: Potential NetLock RMM RMM Tool Process Activity
-id: 2fada1ee-37f5-4f4a-9ce1-548ce4816bca
+id: 1b2c2f32-87eb-510c-b3ad-76395e0f9416
 status: experimental
 description: |
     Detects potential processes activity of NetLock RMM RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "NetLock_RMM_Agent_Installer.exe"
-            - "C:\Program Files\0x101 Cyber Security\NetLock RMM\UserAgent\NetLock_RMM_User_Process.exe"
-            - "C:\Program Files\0x101 Cyber Security\NetLock RMM\UserAgent\NetLock_RMM_User_UAC.exe"
+            - 'NetLock_RMM_Agent_Installer.exe'
+            - 'C:\Program Files\0x101 Cyber Security\NetLock RMM\UserAgent\NetLock_RMM_User_Process.exe'
+            - 'C:\Program Files\0x101 Cyber Security\NetLock RMM\UserAgent\NetLock_RMM_User_UAC.exe'
     selection_image:
         Image|endswith:
-            - "NetLock_RMM_Agent_Installer.exe"
-            - "C:\Program Files\0x101 Cyber Security\NetLock RMM\UserAgent\NetLock_RMM_User_Process.exe"
-            - "C:\Program Files\0x101 Cyber Security\NetLock RMM\UserAgent\NetLock_RMM_User_UAC.exe"
+            - 'NetLock_RMM_Agent_Installer.exe'
+            - 'C:\Program Files\0x101 Cyber Security\NetLock RMM\UserAgent\NetLock_RMM_User_Process.exe'
+            - 'C:\Program Files\0x101 Cyber Security\NetLock RMM\UserAgent\NetLock_RMM_User_UAC.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of NetLock RMM

@@ -1,5 +1,5 @@
 title: Potential Ericom AccessNow RMM Tool Process Activity
-id: 9362eb12-de27-4ea7-8167-8c4efeaf0801
+id: f77f551f-7c4f-58c4-85cb-af7d8cf941ed
 status: experimental
 description: |
     Detects potential processes activity of Ericom AccessNow RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "accessserver*.exe"
-            - "accessserver.exe"
+            - 'accessserver*.exe'
+            - 'accessserver.exe'
     selection_image:
         Image|endswith:
-            - "accessserver*.exe"
-            - "accessserver.exe"
+            - 'accessserver*.exe'
+            - 'accessserver.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Ericom AccessNow

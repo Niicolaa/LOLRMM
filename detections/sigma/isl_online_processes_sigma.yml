@@ -1,5 +1,5 @@
 title: Potential ISL Online RMM Tool Process Activity
-id: 542a8878-e6fc-49d4-aca6-771481916686
+id: bad7c55b-aef0-5d0a-89f2-248859d75ee4
 status: experimental
 description: |
     Detects potential processes activity of ISL Online RMM tool
@@ -16,20 +16,20 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "*\ISLLight.exe"
-            - "isllight.exe"
-            - "ISLLightClient.exe"
-            - "ISLLight.exe"
-            - "isllightservice.exe"
-            - "islalwaysonmonitor.exe"
+            - '*\ISLLight.exe'
+            - 'isllight.exe'
+            - 'ISLLightClient.exe'
+            - 'ISLLight.exe'
+            - 'isllightservice.exe'
+            - 'islalwaysonmonitor.exe'
     selection_image:
         Image|endswith:
-            - "*\ISLLight.exe"
-            - "isllight.exe"
-            - "ISLLightClient.exe"
-            - "ISLLight.exe"
-            - "isllightservice.exe"
-            - "islalwaysonmonitor.exe"
+            - '*\ISLLight.exe'
+            - 'isllight.exe'
+            - 'ISLLightClient.exe'
+            - 'ISLLight.exe'
+            - 'isllightservice.exe'
+            - 'islalwaysonmonitor.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ISL Online

@@ -1,5 +1,5 @@
 title: Potential KickIdler RMM Tool Network Activity
-id: e0e86ba3-7a49-4a1c-92f1-cd49dad7e388
+id: a700629c-ef7e-5092-9dc0-dc4dd4fee2f6
 status: experimental
 description: |
     Detects potential network activity of KickIdler RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "kickidler.com"
-            - "my.kickidler.com"
+            - 'kickidler.com'
+            - 'my.kickidler.com'
     condition: selection
 falsepositives:
     - Legitimate use of KickIdler

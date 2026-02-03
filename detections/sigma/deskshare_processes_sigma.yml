@@ -1,5 +1,5 @@
 title: Potential DeskShare RMM Tool Process Activity
-id: 25d1fd39-ee4f-4d52-bcc4-cd417ead46f1
+id: 372fdee7-19bb-501d-ad80-cf6244c40bfe
 status: experimental
 description: |
     Detects potential processes activity of DeskShare RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "TeamTaskManager.exe"
-            - "DSGuest.exe"
+            - 'TeamTaskManager.exe'
+            - 'DSGuest.exe'
     selection_image:
         Image|endswith:
-            - "TeamTaskManager.exe"
-            - "DSGuest.exe"
+            - 'TeamTaskManager.exe'
+            - 'DSGuest.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of DeskShare

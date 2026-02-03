@@ -1,5 +1,5 @@
 title: Potential GatherPlace-desktop sharing RMM Tool Process Activity
-id: 4d1c1d1b-f1c8-40a2-9111-e791b6bec6d2
+id: 8b1cc2f8-ef9e-5821-91c8-eea73c9a6f78
 status: experimental
 description: |
     Detects potential processes activity of GatherPlace-desktop sharing RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "gp3.exe"
-            - "gp4.exe"
-            - "gp5.exe"
+            - 'gp3.exe'
+            - 'gp4.exe'
+            - 'gp5.exe'
     selection_image:
         Image|endswith:
-            - "gp3.exe"
-            - "gp4.exe"
-            - "gp5.exe"
+            - 'gp3.exe'
+            - 'gp4.exe'
+            - 'gp5.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of GatherPlace-desktop sharing

@@ -1,5 +1,5 @@
 title: Potential ManageEngine ServiceDesk Plus RMM Tool Network Activity
-id: 5faf2af3-0071-45b1-b352-6839983de22f
+id: 491304ad-942a-5be3-8678-62efa8c09743
 status: experimental
 description: |
     Detects potential network activity of ManageEngine ServiceDesk Plus RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.manageengine.com"
-            - "manageengine.com"
+            - '*.manageengine.com'
+            - 'manageengine.com'
     condition: selection
 falsepositives:
     - Legitimate use of ManageEngine ServiceDesk Plus

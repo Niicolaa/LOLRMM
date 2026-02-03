@@ -1,5 +1,5 @@
 title: Potential ServerEye RMM Tool Process Activity
-id: 4b02de59-06b8-4c12-88fb-2a0ef7968a9e
+id: dd27b5bb-3bac-5d5b-a4de-b154b23cc0cb
 status: experimental
 description: |
     Detects potential processes activity of ServerEye RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "servereye*.exe"
-            - "ServiceProxyLocalSys.exe"
+            - 'servereye*.exe'
+            - 'ServiceProxyLocalSys.exe'
     selection_image:
         Image|endswith:
-            - "servereye*.exe"
-            - "ServiceProxyLocalSys.exe"
+            - 'servereye*.exe'
+            - 'ServiceProxyLocalSys.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ServerEye

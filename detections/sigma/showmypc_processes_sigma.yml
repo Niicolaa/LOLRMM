@@ -1,5 +1,5 @@
 title: Potential ShowMyPC RMM Tool Process Activity
-id: b2c2d1be-7432-42b7-8976-bde5c780f5dd
+id: 00c07d8e-ee88-5c2c-b7fe-af0caf9920d2
 status: experimental
 description: |
     Detects potential processes activity of ShowMyPC RMM tool
@@ -16,16 +16,16 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "SMPCSetup.exe"
-            - "showmypc*.exe"
-            - "showmypc.exe"
-            - "smpcsetup.exe"
+            - 'SMPCSetup.exe'
+            - 'showmypc*.exe'
+            - 'showmypc.exe'
+            - 'smpcsetup.exe'
     selection_image:
         Image|endswith:
-            - "SMPCSetup.exe"
-            - "showmypc*.exe"
-            - "showmypc.exe"
-            - "smpcsetup.exe"
+            - 'SMPCSetup.exe'
+            - 'showmypc*.exe'
+            - 'showmypc.exe'
+            - 'smpcsetup.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ShowMyPC

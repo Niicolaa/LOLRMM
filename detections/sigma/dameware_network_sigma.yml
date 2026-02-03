@@ -1,5 +1,5 @@
 title: Potential DameWare RMM Tool Network Activity
-id: cda7aada-e359-463f-9e41-8997f61fa729
+id: 3c6b800b-0504-5583-9396-02b4defb8181
 status: experimental
 description: |
     Detects potential network activity of DameWare RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "dameware.com"
+        DestinationHostname|endswith: 'dameware.com'
     condition: selection
 falsepositives:
     - Legitimate use of DameWare

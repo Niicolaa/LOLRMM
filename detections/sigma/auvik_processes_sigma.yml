@@ -1,5 +1,5 @@
 title: Potential Auvik RMM Tool Process Activity
-id: 648d5737-b931-4675-a87d-b9d5df844827
+id: 41f0444d-6d10-536a-95f3-09a0c8bdec06
 status: experimental
 description: |
     Detects potential processes activity of Auvik RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "auvik.engine.exe"
-            - "auvik.agent.exe"
+            - 'auvik.engine.exe'
+            - 'auvik.agent.exe'
     selection_image:
         Image|endswith:
-            - "auvik.engine.exe"
-            - "auvik.agent.exe"
+            - 'auvik.engine.exe'
+            - 'auvik.agent.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Auvik

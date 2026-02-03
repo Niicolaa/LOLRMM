@@ -1,5 +1,5 @@
 title: Potential FreeNX RMM Tool Process Activity
-id: a94006a4-a716-4aba-92c1-245aa97bd0a8
+id: b0257923-185c-59b4-a566-1cf08a000d2c
 status: experimental
 description: |
     Detects potential processes activity of FreeNX RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "C:\*\nxplayer.exe"
-            - "*\nxplayer.exe"
+            - 'C:\*\nxplayer.exe'
+            - '*\nxplayer.exe'
     selection_image:
         Image|endswith:
-            - "C:\*\nxplayer.exe"
-            - "*\nxplayer.exe"
+            - 'C:\*\nxplayer.exe'
+            - '*\nxplayer.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of FreeNX

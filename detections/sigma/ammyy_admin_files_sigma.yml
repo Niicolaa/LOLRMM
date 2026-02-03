@@ -1,5 +1,5 @@
 title: Potential Ammyy Admin RMM Tool File Activity
-id: cce6aeea-db94-4984-93f0-e12bb6eb68c4
+id: 95a064f3-4195-53e7-976e-b771f48f05de
 status: experimental
 description: |
     Detects potential files activity of Ammyy Admin RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "%programdata%\\AMMYY\\access.log"
-            - "%Binary_path%\\AA_v3.log"
+            - '%programdata%\\AMMYY\\access.log'
+            - '%Binary_path%\\AA_v3.log'
     condition: selection
 falsepositives:
     - Legitimate use of Ammyy Admin

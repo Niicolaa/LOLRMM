@@ -1,5 +1,5 @@
 title: Potential Atera RMM Tool Network Activity
-id: 6e97753a-9f8c-425c-b3bf-c71d0a56b432
+id: d59b2d4e-0991-559c-9c9c-27b4038191be
 status: experimental
 description: |
     Detects potential network activity of Atera RMM tool
@@ -16,20 +16,20 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "pubsub.atera.com"
-            - "pubsub.pubnub.com"
-            - "agentreporting.atera.com"
-            - "getalphacontrol.com"
-            - "app.atera.com"
-            - "agenthb.atera.com"
-            - "packagesstore.blob.core.windows.net"
-            - "ps.pndsn.com"
-            - "agent-api.atera.com"
-            - "agentreportingstore.blob.core.windows.net"
-            - "atera-agent-heartbeat.servicebus.windows.net"
-            - "ps.atera.com"
-            - "atera.pubnubapi.com"
-            - "appcdn.atera.com"
+            - 'pubsub.atera.com'
+            - 'pubsub.pubnub.com'
+            - 'agentreporting.atera.com'
+            - 'getalphacontrol.com'
+            - 'app.atera.com'
+            - 'agenthb.atera.com'
+            - 'packagesstore.blob.core.windows.net'
+            - 'ps.pndsn.com'
+            - 'agent-api.atera.com'
+            - 'agentreportingstore.blob.core.windows.net'
+            - 'atera-agent-heartbeat.servicebus.windows.net'
+            - 'ps.atera.com'
+            - 'atera.pubnubapi.com'
+            - 'appcdn.atera.com'
     condition: selection
 falsepositives:
     - Legitimate use of Atera

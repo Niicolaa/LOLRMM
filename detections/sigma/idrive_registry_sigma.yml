@@ -1,5 +1,5 @@
 title: Potential iDrive RMM Tool Registry Activity
-id: b042e496-f23e-456c-a96f-a1d7e4799afe
+id: 1192dc81-6a33-50b7-bb18-18b8f1034001
 status: experimental
 description: |
     Detects potential registry activity of iDrive RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         TargetObject|contains:
-            - "HKEY_LOCAL_MACHINE\SOFTWARE\IDrive\*"
-            - "HKEY_CURRENT_USER\SOFTWARE\IDrive\*"
+            - 'HKEY_LOCAL_MACHINE\SOFTWARE\IDrive\*'
+            - 'HKEY_CURRENT_USER\SOFTWARE\IDrive\*'
     condition: selection
 falsepositives:
     - Legitimate use of iDrive

@@ -1,5 +1,5 @@
 title: Potential Rapid7 RMM Tool Process Activity
-id: ee28b672-73dc-4b3e-9752-2a420426f6f2
+id: 4894945e-5648-56c6-9e58-81c7cea0c118
 status: experimental
 description: |
     Detects potential processes activity of Rapid7 RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "ir_agent.exe"
-            - "rapid7_agent_core.exe"
-            - "rapid7_endpoint_broker.exe"
+            - 'ir_agent.exe'
+            - 'rapid7_agent_core.exe'
+            - 'rapid7_endpoint_broker.exe'
     selection_image:
         Image|endswith:
-            - "ir_agent.exe"
-            - "rapid7_agent_core.exe"
-            - "rapid7_endpoint_broker.exe"
+            - 'ir_agent.exe'
+            - 'rapid7_agent_core.exe'
+            - 'rapid7_endpoint_broker.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Rapid7

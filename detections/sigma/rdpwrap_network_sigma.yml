@@ -1,5 +1,5 @@
 title: Potential rdpwrap RMM Tool Network Activity
-id: 6b1a897b-c257-46c7-87b0-dd414ed1665d
+id: 1c9adf11-e4d9-5240-bd17-9431caa49f15
 status: experimental
 description: |
     Detects potential network activity of rdpwrap RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "github.com/stascorp/rdpwrap"
+            - 'user_managed'
+            - 'github.com/stascorp/rdpwrap'
     condition: selection
 falsepositives:
     - Legitimate use of rdpwrap

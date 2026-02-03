@@ -1,5 +1,5 @@
 title: Potential Domotz RMM Tool Network Activity
-id: 971355a9-ae88-4c4e-ac3b-ccd85f3c9374
+id: 7a70e801-7efa-5341-8fa0-9c2a50863134
 status: experimental
 description: |
     Detects potential network activity of Domotz RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.domotz.co"
-            - "domotz.com"
-            - "*cell-1.domotz.com"
+            - '*.domotz.co'
+            - 'domotz.com'
+            - '*cell-1.domotz.com'
     condition: selection
 falsepositives:
     - Legitimate use of Domotz

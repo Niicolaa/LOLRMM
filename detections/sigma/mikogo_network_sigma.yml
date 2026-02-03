@@ -1,5 +1,5 @@
 title: Potential Mikogo RMM Tool Network Activity
-id: 8ec80400-d9ef-49bd-8d74-2957df9ed212
+id: a370bb98-6f65-5491-bb2b-d8c98a99b9c5
 status: experimental
 description: |
     Detects potential network activity of Mikogo RMM tool
@@ -16,10 +16,10 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.real-time-collaboration.com"
-            - "*.mikogo4.com"
-            - "*.mikogo.com"
-            - "mikogo.com"
+            - '*.real-time-collaboration.com'
+            - '*.mikogo4.com'
+            - '*.mikogo.com'
+            - 'mikogo.com'
     condition: selection
 falsepositives:
     - Legitimate use of Mikogo

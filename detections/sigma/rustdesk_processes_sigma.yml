@@ -1,5 +1,5 @@
 title: Potential RustDesk RMM Tool Process Activity
-id: df331272-6d87-458c-bfc8-5ccf8e3f2a4b
+id: d31a1b75-8ec6-56ad-961e-909eeb08ba7c
 status: experimental
 description: |
     Detects potential processes activity of RustDesk RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "rustdesk*.exe"
-            - "rustdesk.exe"
-            - "C:\Users\*\AppData\Local\rustdesk\rustdesk.exe"
+            - 'rustdesk*.exe'
+            - 'rustdesk.exe'
+            - 'C:\Users\*\AppData\Local\rustdesk\rustdesk.exe'
     selection_image:
         Image|endswith:
-            - "rustdesk*.exe"
-            - "rustdesk.exe"
-            - "C:\Users\*\AppData\Local\rustdesk\rustdesk.exe"
+            - 'rustdesk*.exe'
+            - 'rustdesk.exe'
+            - 'C:\Users\*\AppData\Local\rustdesk\rustdesk.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of RustDesk

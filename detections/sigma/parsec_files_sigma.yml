@@ -1,5 +1,5 @@
 title: Potential Parsec RMM Tool File Activity
-id: 805f80a7-9ee1-4506-86ca-40e99d468ca7
+id: 92d45705-b47b-574b-934d-b0fd41ae1488
 status: experimental
 description: |
     Detects potential files activity of Parsec RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\Program Files\Parsec\parsecd.exe"
-            - "C:\Program Files\Parsec\pservice.exe"
-            - "C:\Program Files\Parsec\teams.exe"
+            - 'C:\Program Files\Parsec\parsecd.exe'
+            - 'C:\Program Files\Parsec\pservice.exe'
+            - 'C:\Program Files\Parsec\teams.exe'
     condition: selection
 falsepositives:
     - Legitimate use of Parsec

@@ -1,5 +1,5 @@
 title: Potential AliWangWang-remote-control RMM Tool Network Activity
-id: 3b171c13-ce06-4a13-a310-85a3d6a44b24
+id: f8d54406-6279-589a-91dc-c557acd33cb6
 status: experimental
 description: |
     Detects potential network activity of AliWangWang-remote-control RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "wangwang.taobao.com"
+        DestinationHostname|endswith: 'wangwang.taobao.com'
     condition: selection
 falsepositives:
     - Legitimate use of AliWangWang-remote-control

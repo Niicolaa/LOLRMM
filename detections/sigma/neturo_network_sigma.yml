@@ -1,5 +1,5 @@
 title: Potential Neturo RMM Tool Network Activity
-id: 1ef4662b-ce19-4208-a689-8369ef1c4b8a
+id: fe56e305-ad09-5262-ab73-b2bc3889c8db
 status: experimental
 description: |
     Detects potential network activity of Neturo RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "neturo.uplus.co.kr"
+        DestinationHostname|endswith: 'neturo.uplus.co.kr'
     condition: selection
 falsepositives:
     - Legitimate use of Neturo

@@ -1,5 +1,5 @@
 title: Potential SmarTTY RMM Tool Process Activity
-id: f305bdba-27a9-4f58-a7e3-810a06ea1677
+id: b6feeae2-c7d5-5408-8690-91c008d35a0c
 status: experimental
 description: |
     Detects potential processes activity of SmarTTY RMM tool
@@ -15,9 +15,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: "*\SmarTTY.exe"
+        ParentImage|endswith: '*\SmarTTY.exe'
     selection_image:
-        Image|endswith: "*\SmarTTY.exe"
+        Image|endswith: '*\SmarTTY.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of SmarTTY

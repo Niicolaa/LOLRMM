@@ -1,5 +1,5 @@
 title: Potential LiteManager RMM Tool Process Activity
-id: 4ebd6463-07d2-45c1-af9e-9b29c1686b09
+id: a49f184c-6d87-58d1-843f-030644ae8c8d
 status: experimental
 description: |
     Detects potential processes activity of LiteManager RMM tool
@@ -16,20 +16,20 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "lmnoipserver.exe"
-            - "ROMFUSClient.exe"
-            - "romfusclient.exe"
-            - "romviewer.exe"
-            - "romserver.exe"
-            - "ROMServer.exe"
+            - 'lmnoipserver.exe'
+            - 'ROMFUSClient.exe'
+            - 'romfusclient.exe'
+            - 'romviewer.exe'
+            - 'romserver.exe'
+            - 'ROMServer.exe'
     selection_image:
         Image|endswith:
-            - "lmnoipserver.exe"
-            - "ROMFUSClient.exe"
-            - "romfusclient.exe"
-            - "romviewer.exe"
-            - "romserver.exe"
-            - "ROMServer.exe"
+            - 'lmnoipserver.exe'
+            - 'ROMFUSClient.exe'
+            - 'romfusclient.exe'
+            - 'romviewer.exe'
+            - 'romserver.exe'
+            - 'ROMServer.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of LiteManager

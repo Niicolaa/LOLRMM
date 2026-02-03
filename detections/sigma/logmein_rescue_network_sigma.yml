@@ -1,5 +1,5 @@
 title: Potential LogMeIn rescue RMM Tool Network Activity
-id: d8f391c5-fc37-49ca-89ba-92be2fe2c66d
+id: 61756274-30fa-514d-bb2f-81834a209c8b
 status: experimental
 description: |
     Detects potential network activity of LogMeIn rescue RMM tool
@@ -16,11 +16,11 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.logmeinrescue.com"
-            - "*.logmeinrescue.eu"
-            - "logmeinrescue.com"
-            - "rescue-list.*.logmein-gateway.com"
-            - "rescue-data-cetner.logmein-gateway.com"
+            - '*.logmeinrescue.com'
+            - '*.logmeinrescue.eu'
+            - 'logmeinrescue.com'
+            - 'rescue-list.*.logmein-gateway.com'
+            - 'rescue-data-cetner.logmein-gateway.com'
     condition: selection
 falsepositives:
     - Legitimate use of LogMeIn rescue

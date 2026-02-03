@@ -1,5 +1,5 @@
 title: Potential Manage Engine (Desktop Central) RMM Tool Network Activity
-id: badbffcf-286e-4001-8c3e-af31b99188c3
+id: daefac3a-be06-54d2-9f1f-689fe7832b0b
 status: experimental
 description: |
     Detects potential network activity of Manage Engine (Desktop Central) RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "desktopcentral.manageengine.com"
-            - "desktopcentral.manageengine.com.eu"
-            - "desktopcentral.manageengine.cn"
-            - "*.dms.zoho.com"
-            - "*.dms.zoho.com.eu"
-            - "*.-dms.zoho.com.cn"
+            - 'desktopcentral.manageengine.com'
+            - 'desktopcentral.manageengine.com.eu'
+            - 'desktopcentral.manageengine.cn'
+            - '*.dms.zoho.com'
+            - '*.dms.zoho.com.eu'
+            - '*.-dms.zoho.com.cn'
     condition: selection
 falsepositives:
     - Legitimate use of Manage Engine (Desktop Central)

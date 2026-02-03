@@ -1,5 +1,5 @@
 title: Potential Goverlan RMM Tool Network Activity
-id: 9be883e4-fb6b-4d6c-bcc2-f2877045dcd8
+id: c0b88393-a1e8-5b95-8f5d-f9e583f22585
 status: experimental
 description: |
     Detects potential network activity of Goverlan RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "goverlan.com"
+            - 'user_managed'
+            - 'goverlan.com'
     condition: selection
 falsepositives:
     - Legitimate use of Goverlan

@@ -1,5 +1,5 @@
 title: Potential Level.io RMM Tool File Activity
-id: 3a981905-05e9-4d81-8b86-54083ce07c65
+id: cb4aef36-7b73-575d-9cf8-94a31f80a8b0
 status: experimental
 description: |
     Detects potential files activity of Level.io RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\Program Files\Level\level.exe"
-            - "C:\Program Files\Level\osqueryi.exe"
-            - "C:\Program Files\Level\level.log"
+            - 'C:\Program Files\Level\level.exe'
+            - 'C:\Program Files\Level\osqueryi.exe'
+            - 'C:\Program Files\Level\level.log'
     condition: selection
 falsepositives:
     - Legitimate use of Level.io

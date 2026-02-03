@@ -1,5 +1,5 @@
 title: Potential ISL Light RMM Tool Process Activity
-id: 2cea3963-bb1d-4543-a1d3-2606bc4f1020
+id: 63705d15-2d16-56da-bd7c-754600e7b401
 status: experimental
 description: |
     Detects potential processes activity of ISL Light RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "islalwaysonmonitor.exe"
-            - "isllight.exe"
-            - "isllightservice.exe"
+            - 'islalwaysonmonitor.exe'
+            - 'isllight.exe'
+            - 'isllightservice.exe'
     selection_image:
         Image|endswith:
-            - "islalwaysonmonitor.exe"
-            - "isllight.exe"
-            - "isllightservice.exe"
+            - 'islalwaysonmonitor.exe'
+            - 'isllight.exe'
+            - 'isllightservice.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ISL Light

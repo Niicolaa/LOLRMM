@@ -1,5 +1,5 @@
 title: Potential ShowMyPC RMM Tool Network Activity
-id: 64d73b81-7f64-4c60-92aa-b6c9f3a7b473
+id: 05dc597f-7f50-5a47-ba49-5e83cfb8124f
 status: experimental
 description: |
     Detects potential network activity of ShowMyPC RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.showmypc.com"
-            - "showmypc.com"
+            - '*.showmypc.com'
+            - 'showmypc.com'
     condition: selection
 falsepositives:
     - Legitimate use of ShowMyPC

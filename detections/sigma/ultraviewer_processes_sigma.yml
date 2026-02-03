@@ -1,5 +1,5 @@
 title: Potential UltraViewer RMM Tool Process Activity
-id: 016424c1-3802-4ce0-ba75-d4a07d9158a8
+id: 9512b4b0-ef0e-5f0f-abf3-1896eb5cd4e5
 status: experimental
 description: |
     Detects potential processes activity of UltraViewer RMM tool
@@ -16,26 +16,26 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "UltraViewer_Service.exe"
-            - "UltraViewer_Desktop.exe"
-            - "ultraviewer.exe"
-            - "C:\Program Files (x86)\UltraViewer\UltraViewer_Desktop.exe"
-            - "*\UltraViewer_Desktop.exe"
-            - "ultraviewer_desktop.exe"
-            - "ultraviewer_service.exe"
-            - "UltraViewer_Desktop.exe"
-            - "UltraViewer_Service.exe"
+            - 'UltraViewer_Service.exe'
+            - 'UltraViewer_Desktop.exe'
+            - 'ultraviewer.exe'
+            - 'C:\Program Files (x86)\UltraViewer\UltraViewer_Desktop.exe'
+            - '*\UltraViewer_Desktop.exe'
+            - 'ultraviewer_desktop.exe'
+            - 'ultraviewer_service.exe'
+            - 'UltraViewer_Desktop.exe'
+            - 'UltraViewer_Service.exe'
     selection_image:
         Image|endswith:
-            - "UltraViewer_Service.exe"
-            - "UltraViewer_Desktop.exe"
-            - "ultraviewer.exe"
-            - "C:\Program Files (x86)\UltraViewer\UltraViewer_Desktop.exe"
-            - "*\UltraViewer_Desktop.exe"
-            - "ultraviewer_desktop.exe"
-            - "ultraviewer_service.exe"
-            - "UltraViewer_Desktop.exe"
-            - "UltraViewer_Service.exe"
+            - 'UltraViewer_Service.exe'
+            - 'UltraViewer_Desktop.exe'
+            - 'ultraviewer.exe'
+            - 'C:\Program Files (x86)\UltraViewer\UltraViewer_Desktop.exe'
+            - '*\UltraViewer_Desktop.exe'
+            - 'ultraviewer_desktop.exe'
+            - 'ultraviewer_service.exe'
+            - 'UltraViewer_Desktop.exe'
+            - 'UltraViewer_Service.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of UltraViewer

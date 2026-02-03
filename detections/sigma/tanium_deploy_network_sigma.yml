@@ -1,5 +1,5 @@
 title: Potential Tanium Deploy RMM Tool Network Activity
-id: 9519eaf9-726a-4eb6-a57e-d4c3ab58aa04
+id: 2c179bfe-afdd-5daf-9dee-fb29f55b4e6d
 status: experimental
 description: |
     Detects potential network activity of Tanium Deploy RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "tanium.com/products/tanium-deploy"
+        DestinationHostname|endswith: 'tanium.com/products/tanium-deploy'
     condition: selection
 falsepositives:
     - Legitimate use of Tanium Deploy

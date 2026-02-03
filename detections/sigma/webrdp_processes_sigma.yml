@@ -1,5 +1,5 @@
 title: Potential WebRDP RMM Tool Process Activity
-id: 49564198-ad3c-49c9-a9ee-37f746e8c406
+id: 7c388ddb-7ef0-5eba-bcb4-ee10e08d5d1b
 status: experimental
 description: |
     Detects potential processes activity of WebRDP RMM tool
@@ -15,9 +15,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: "webrdp.exe"
+        ParentImage|endswith: 'webrdp.exe'
     selection_image:
-        Image|endswith: "webrdp.exe"
+        Image|endswith: 'webrdp.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of WebRDP

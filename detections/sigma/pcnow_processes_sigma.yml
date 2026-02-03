@@ -1,5 +1,5 @@
 title: Potential Pcnow RMM Tool Process Activity
-id: c9a21343-ff0f-4320-80f6-4e6b916c1715
+id: 3e244db5-ab73-5143-855d-00f5eb161c13
 status: experimental
 description: |
     Detects potential processes activity of Pcnow RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "mwcliun.exe"
-            - "pcnmgr.exe"
-            - "webexpcnow.exe"
+            - 'mwcliun.exe'
+            - 'pcnmgr.exe'
+            - 'webexpcnow.exe'
     selection_image:
         Image|endswith:
-            - "mwcliun.exe"
-            - "pcnmgr.exe"
-            - "webexpcnow.exe"
+            - 'mwcliun.exe'
+            - 'pcnmgr.exe'
+            - 'webexpcnow.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Pcnow

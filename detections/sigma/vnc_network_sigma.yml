@@ -1,5 +1,5 @@
 title: Potential VNC RMM Tool Network Activity
-id: e935b3af-f524-4e91-abdf-9d7c71543a35
+id: 577684d7-0362-5e0f-a75c-feafc46e1468
 status: experimental
 description: |
     Detects potential network activity of VNC RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "realvnc.com/en/connect/download/vnc"
+            - 'user_managed'
+            - 'realvnc.com/en/connect/download/vnc'
     condition: selection
 falsepositives:
     - Legitimate use of VNC

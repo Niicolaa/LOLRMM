@@ -1,5 +1,5 @@
 title: Potential HelpU RMM Tool Process Activity
-id: 02cd4956-64b1-462e-9d30-5a905dfe0916
+id: ab8363c3-a027-59f6-9e5a-49021fad7794
 status: experimental
 description: |
     Detects potential processes activity of HelpU RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "helpu_install.exe"
-            - "HelpuUpdater.exe"
-            - "HelpuManager.exe"
+            - 'helpu_install.exe'
+            - 'HelpuUpdater.exe'
+            - 'HelpuManager.exe'
     selection_image:
         Image|endswith:
-            - "helpu_install.exe"
-            - "HelpuUpdater.exe"
-            - "HelpuManager.exe"
+            - 'helpu_install.exe'
+            - 'HelpuUpdater.exe'
+            - 'HelpuManager.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of HelpU

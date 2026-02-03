@@ -1,5 +1,5 @@
 title: Potential ToDesk RMM Tool Process Activity
-id: 9ef78fb9-1d9d-4d55-a596-f15011191996
+id: 3c5eb466-4f0e-5099-8ebe-d003dbca2fb1
 status: experimental
 description: |
     Detects potential processes activity of ToDesk RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "todesk.exe"
-            - "ToDesk_Service.exe"
-            - "ToDesk_Setup.exe"
+            - 'todesk.exe'
+            - 'ToDesk_Service.exe'
+            - 'ToDesk_Setup.exe'
     selection_image:
         Image|endswith:
-            - "todesk.exe"
-            - "ToDesk_Service.exe"
-            - "ToDesk_Setup.exe"
+            - 'todesk.exe'
+            - 'ToDesk_Service.exe'
+            - 'ToDesk_Setup.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ToDesk

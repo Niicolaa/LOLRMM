@@ -1,5 +1,5 @@
 title: Potential RustDesk RMM Tool File Activity
-id: 30e48a3b-aff6-4df3-a8b7-bb8f91642c97
+id: beb04428-e0e1-5207-b941-c75a913865e8
 status: experimental
 description: |
     Detects potential files activity of RustDesk RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: file_event
 detection:
     selection:
-        TargetFilename|endswith: "C:\Windows\ServiceProfiles\LocalService\AppData\Roaming\RustDesk\*"
+        TargetFilename|endswith: 'C:\Windows\ServiceProfiles\LocalService\AppData\Roaming\RustDesk\*'
     condition: selection
 falsepositives:
     - Legitimate use of RustDesk

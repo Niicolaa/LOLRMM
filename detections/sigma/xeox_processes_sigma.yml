@@ -1,5 +1,5 @@
 title: Potential Xeox RMM Tool Process Activity
-id: 29a4617a-a391-4576-b9db-7ac5599ea49d
+id: 4b8c6f35-35ec-5acb-a290-2bff5acf4466
 status: experimental
 description: |
     Detects potential processes activity of Xeox RMM tool
@@ -16,16 +16,16 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "xeox-agent_x64.exe"
-            - "xeox_service_windows.exe"
-            - "xeox-agent_*.exe"
-            - "xeox-agent_x86.exe"
+            - 'xeox-agent_x64.exe'
+            - 'xeox_service_windows.exe'
+            - 'xeox-agent_*.exe'
+            - 'xeox-agent_x86.exe'
     selection_image:
         Image|endswith:
-            - "xeox-agent_x64.exe"
-            - "xeox_service_windows.exe"
-            - "xeox-agent_*.exe"
-            - "xeox-agent_x86.exe"
+            - 'xeox-agent_x64.exe'
+            - 'xeox_service_windows.exe'
+            - 'xeox-agent_*.exe'
+            - 'xeox-agent_x86.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Xeox

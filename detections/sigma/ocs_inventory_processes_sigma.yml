@@ -1,5 +1,5 @@
 title: Potential OCS inventory RMM Tool Process Activity
-id: 326282a4-4e00-4397-8980-652acf2b836a
+id: 363fe317-cbbd-5f02-b435-48f411fb98fe
 status: experimental
 description: |
     Detects potential processes activity of OCS inventory RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "ocsinventory.exe"
-            - "ocsservice.exe"
+            - 'ocsinventory.exe'
+            - 'ocsservice.exe'
     selection_image:
         Image|endswith:
-            - "ocsinventory.exe"
-            - "ocsservice.exe"
+            - 'ocsinventory.exe'
+            - 'ocsservice.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of OCS inventory

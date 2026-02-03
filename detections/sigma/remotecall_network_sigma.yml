@@ -1,5 +1,5 @@
 title: Potential RemoteCall RMM Tool Network Activity
-id: e128a8ae-5c31-4ce8-9238-41c02b3d9570
+id: bf467a07-e7dd-5a81-9fa6-5fdc1ac073fd
 status: experimental
 description: |
     Detects potential network activity of RemoteCall RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.remotecall.com"
-            - "*.startsupport.com"
-            - "remotecall.com"
+            - '*.remotecall.com'
+            - '*.startsupport.com'
+            - 'remotecall.com'
     condition: selection
 falsepositives:
     - Legitimate use of RemoteCall

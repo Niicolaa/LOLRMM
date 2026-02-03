@@ -1,5 +1,5 @@
 title: Potential ISL Light RMM Tool Network Activity
-id: 6faae4d8-b6b4-44b9-915a-863edc0b9e75
+id: f3b285f1-e50e-5df3-abf9-014c6693bd7c
 status: experimental
 description: |
     Detects potential network activity of ISL Light RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "islonline.com"
+        DestinationHostname|endswith: 'islonline.com'
     condition: selection
 falsepositives:
     - Legitimate use of ISL Light

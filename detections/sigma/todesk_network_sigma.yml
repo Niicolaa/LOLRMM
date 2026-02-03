@@ -1,5 +1,5 @@
 title: Potential ToDesk RMM Tool Network Activity
-id: fb40c579-cce9-42b1-be80-9f104246771c
+id: 9c79deb6-7c74-54bb-9a48-829f3ef4b6e1
 status: experimental
 description: |
     Detects potential network activity of ToDesk RMM tool
@@ -16,10 +16,10 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "todesk.com"
-            - "*.todesk.com"
-            - "*.todesk.com"
-            - "todesktop.com"
+            - 'todesk.com'
+            - '*.todesk.com'
+            - '*.todesk.com'
+            - 'todesktop.com'
     condition: selection
 falsepositives:
     - Legitimate use of ToDesk

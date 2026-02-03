@@ -1,5 +1,5 @@
 title: Potential Laplink Everywhere RMM Tool Process Activity
-id: 29bbf326-70de-4f3c-adca-f274c3ecf8f1
+id: 81dadd37-276a-56a9-a922-a122e0ee5ae0
 status: experimental
 description: |
     Detects potential processes activity of Laplink Everywhere RMM tool
@@ -16,20 +16,20 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "laplink.exe"
-            - "laplink-everywhere-setup*.exe"
-            - "laplinkeverywhere.exe"
-            - "llrcservice.exe"
-            - "serverproxyservice.exe"
-            - "OOSysAgent.exe"
+            - 'laplink.exe'
+            - 'laplink-everywhere-setup*.exe'
+            - 'laplinkeverywhere.exe'
+            - 'llrcservice.exe'
+            - 'serverproxyservice.exe'
+            - 'OOSysAgent.exe'
     selection_image:
         Image|endswith:
-            - "laplink.exe"
-            - "laplink-everywhere-setup*.exe"
-            - "laplinkeverywhere.exe"
-            - "llrcservice.exe"
-            - "serverproxyservice.exe"
-            - "OOSysAgent.exe"
+            - 'laplink.exe'
+            - 'laplink-everywhere-setup*.exe'
+            - 'laplinkeverywhere.exe'
+            - 'llrcservice.exe'
+            - 'serverproxyservice.exe'
+            - 'OOSysAgent.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Laplink Everywhere

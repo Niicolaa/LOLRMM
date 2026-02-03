@@ -1,5 +1,5 @@
 title: Potential Pulseway RMM Tool Network Activity
-id: 1ebf7f89-517c-42be-b5f9-fd2eaf804815
+id: 9f3debb0-52b8-5702-973c-96e787828291
 status: experimental
 description: |
     Detects potential network activity of Pulseway RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "pulseway.com"
+        DestinationHostname|endswith: 'pulseway.com'
     condition: selection
 falsepositives:
     - Legitimate use of Pulseway

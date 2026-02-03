@@ -1,5 +1,5 @@
 title: Potential Domotz RMM Tool Process Activity
-id: 98e2fb0c-90b3-40f5-a316-ca43e0666396
+id: d8380a02-7d07-5be1-8d33-be5762487a84
 status: experimental
 description: |
     Detects potential processes activity of Domotz RMM tool
@@ -16,20 +16,20 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "domotz.exe"
-            - "Domotz Pro Desktop App.exe"
-            - "domotz_bash.exe"
-            - "domotz*.exe"
-            - "Domotz Pro Desktop App Setup*.exe"
-            - "domotz-windows*.exe"
+            - 'domotz.exe'
+            - 'Domotz Pro Desktop App.exe'
+            - 'domotz_bash.exe'
+            - 'domotz*.exe'
+            - 'Domotz Pro Desktop App Setup*.exe'
+            - 'domotz-windows*.exe'
     selection_image:
         Image|endswith:
-            - "domotz.exe"
-            - "Domotz Pro Desktop App.exe"
-            - "domotz_bash.exe"
-            - "domotz*.exe"
-            - "Domotz Pro Desktop App Setup*.exe"
-            - "domotz-windows*.exe"
+            - 'domotz.exe'
+            - 'Domotz Pro Desktop App.exe'
+            - 'domotz_bash.exe'
+            - 'domotz*.exe'
+            - 'Domotz Pro Desktop App Setup*.exe'
+            - 'domotz-windows*.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Domotz

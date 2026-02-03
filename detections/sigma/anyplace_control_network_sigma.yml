@@ -1,5 +1,5 @@
 title: Potential Anyplace Control RMM Tool Network Activity
-id: 0ce6b48f-a852-46b2-b453-aad988b765bc
+id: fd43f5b7-5a26-5176-8cd6-4c24f3a33c32
 status: experimental
 description: |
     Detects potential network activity of Anyplace Control RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "anyplace-control.com"
+        DestinationHostname|endswith: 'anyplace-control.com'
     condition: selection
 falsepositives:
     - Legitimate use of Anyplace Control

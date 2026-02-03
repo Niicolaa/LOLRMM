@@ -1,5 +1,5 @@
 title: Potential SunLogin RMM Tool Process Activity
-id: 21b6dd8f-c77c-4e92-ac6d-134fedd8b5e0
+id: 50661c23-9728-505e-92e5-7fcf68ba272c
 status: experimental
 description: |
     Detects potential processes activity of SunLogin RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "OrayRemoteShell.exe"
-            - "OrayRemoteService.exe"
-            - "sunlogin*.exe"
+            - 'OrayRemoteShell.exe'
+            - 'OrayRemoteService.exe'
+            - 'sunlogin*.exe'
     selection_image:
         Image|endswith:
-            - "OrayRemoteShell.exe"
-            - "OrayRemoteService.exe"
-            - "sunlogin*.exe"
+            - 'OrayRemoteShell.exe'
+            - 'OrayRemoteService.exe'
+            - 'sunlogin*.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of SunLogin

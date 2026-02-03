@@ -1,5 +1,5 @@
 title: Potential SecureCRT RMM Tool Process Activity
-id: 7f82d0de-7f1b-40cc-af22-feb94b83620c
+id: 00be54dd-11bc-5f95-bb4b-b8db1e9ffb0f
 status: experimental
 description: |
     Detects potential processes activity of SecureCRT RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "C:\*\SecureCRT.EXE"
-            - "*\SecureCRT.EXE"
+            - 'C:\*\SecureCRT.EXE'
+            - '*\SecureCRT.EXE'
     selection_image:
         Image|endswith:
-            - "C:\*\SecureCRT.EXE"
-            - "*\SecureCRT.EXE"
+            - 'C:\*\SecureCRT.EXE'
+            - '*\SecureCRT.EXE'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of SecureCRT

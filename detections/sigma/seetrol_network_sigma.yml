@@ -1,5 +1,5 @@
 title: Potential Seetrol RMM Tool Network Activity
-id: 413b6de9-92b0-4319-a47c-794c4ba4a229
+id: 867418ba-c0ab-5d7b-92be-73eddc096385
 status: experimental
 description: |
     Detects potential network activity of Seetrol RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "seetrol.co.kr"
+        DestinationHostname|endswith: 'seetrol.co.kr'
     condition: selection
 falsepositives:
     - Legitimate use of Seetrol

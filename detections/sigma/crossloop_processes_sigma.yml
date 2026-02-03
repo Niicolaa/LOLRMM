@@ -1,5 +1,5 @@
 title: Potential CrossLoop RMM Tool Process Activity
-id: 9185b64d-5766-4a16-bdaa-1b6a7f1a238c
+id: 67431f75-7e18-5e2b-af78-b6415e48bf2f
 status: experimental
 description: |
     Detects potential processes activity of CrossLoop RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "crossloopservice.exe"
-            - "CrossLoopConnect.exe"
-            - "WinVNCStub.exe"
+            - 'crossloopservice.exe'
+            - 'CrossLoopConnect.exe'
+            - 'WinVNCStub.exe'
     selection_image:
         Image|endswith:
-            - "crossloopservice.exe"
-            - "CrossLoopConnect.exe"
-            - "WinVNCStub.exe"
+            - 'crossloopservice.exe'
+            - 'CrossLoopConnect.exe'
+            - 'WinVNCStub.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of CrossLoop

@@ -1,5 +1,5 @@
 title: Potential ImmyBot RMM Tool Network Activity
-id: 287dd0f4-84e9-43a4-b2b3-331b65f81848
+id: 8e1e10d1-5868-562d-93f2-d2a28c29068c
 status: experimental
 description: |
     Detects potential network activity of ImmyBot RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.immy.bot"
-            - "immy.bot"
+            - '*.immy.bot'
+            - 'immy.bot'
     condition: selection
 falsepositives:
     - Legitimate use of ImmyBot

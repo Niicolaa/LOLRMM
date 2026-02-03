@@ -1,5 +1,5 @@
 title: Potential Netop Remote Control (Impero Connect) RMM Tool Network Activity
-id: d4a46670-e2fe-4e21-8df4-15ff9846a6bd
+id: 0a4f9206-b064-506b-a278-72a2c4b7e458
 status: experimental
 description: |
     Detects potential network activity of Netop Remote Control (Impero Connect) RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.connect.backdrop.cloud"
-            - "*.netop.com"
+            - '*.connect.backdrop.cloud'
+            - '*.netop.com'
     condition: selection
 falsepositives:
     - Legitimate use of Netop Remote Control (Impero Connect)

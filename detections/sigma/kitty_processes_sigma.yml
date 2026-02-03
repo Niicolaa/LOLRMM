@@ -1,5 +1,5 @@
 title: Potential KiTTY RMM Tool Process Activity
-id: 42890971-6a87-4ef8-adcd-de49f710411e
+id: 832b997b-ade9-576d-b12a-1b8b0b703d49
 status: experimental
 description: |
     Detects potential processes activity of KiTTY RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "C:\*\kitty.exe"
-            - "*\kitty.exe"
+            - 'C:\*\kitty.exe'
+            - '*\kitty.exe'
     selection_image:
         Image|endswith:
-            - "C:\*\kitty.exe"
-            - "*\kitty.exe"
+            - 'C:\*\kitty.exe'
+            - '*\kitty.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of KiTTY

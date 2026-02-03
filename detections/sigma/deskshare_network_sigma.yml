@@ -1,5 +1,5 @@
 title: Potential DeskShare RMM Tool Network Activity
-id: ec1ffe3e-5536-4ab1-a5b4-fb10aa04c973
+id: deef7543-ba1c-5a9e-a284-bdbeeb4a9f6f
 status: experimental
 description: |
     Detects potential network activity of DeskShare RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "user_managed"
+        DestinationHostname|endswith: 'user_managed'
     condition: selection
 falsepositives:
     - Legitimate use of DeskShare

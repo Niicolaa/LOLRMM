@@ -1,5 +1,5 @@
 title: Potential pcAnywhere RMM Tool Network Activity
-id: b45716a9-25e8-43e1-9016-dcfdc80d1448
+id: 7685e6b9-2dec-5e64-ba87-6d0fb871c8b7
 status: experimental
 description: |
     Detects potential network activity of pcAnywhere RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "user_managed"
+        DestinationHostname|endswith: 'user_managed'
     condition: selection
 falsepositives:
     - Legitimate use of pcAnywhere

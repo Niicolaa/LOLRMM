@@ -1,5 +1,5 @@
 title: Potential KHelpDesk RMM Tool Network Activity
-id: 0a44fb5c-cef4-4c58-974d-bfc8a3270037
+id: 7fcb8e36-d01f-57b2-9d4a-6589f6b4a6ae
 status: experimental
 description: |
     Detects potential network activity of KHelpDesk RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "*.khelpdesk.com.br"
+        DestinationHostname|endswith: '*.khelpdesk.com.br'
     condition: selection
 falsepositives:
     - Legitimate use of KHelpDesk

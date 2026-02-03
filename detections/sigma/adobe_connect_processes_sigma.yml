@@ -1,5 +1,5 @@
 title: Potential Adobe Connect RMM Tool Process Activity
-id: be92b526-2d0a-45fc-8ee2-293bc27bfd06
+id: 88477682-dd8c-5d99-be68-7e890fbbe847
 status: experimental
 description: |
     Detects potential processes activity of Adobe Connect RMM tool
@@ -16,16 +16,16 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "ConnectAppSetup*.exe"
-            - "ConnectShellSetup*.exe"
-            - "Connect.exe"
-            - "ConnectDetector.exe"
+            - 'ConnectAppSetup*.exe'
+            - 'ConnectShellSetup*.exe'
+            - 'Connect.exe'
+            - 'ConnectDetector.exe'
     selection_image:
         Image|endswith:
-            - "ConnectAppSetup*.exe"
-            - "ConnectShellSetup*.exe"
-            - "Connect.exe"
-            - "ConnectDetector.exe"
+            - 'ConnectAppSetup*.exe'
+            - 'ConnectShellSetup*.exe'
+            - 'Connect.exe'
+            - 'ConnectDetector.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Adobe Connect

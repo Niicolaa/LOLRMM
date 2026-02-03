@@ -1,5 +1,5 @@
 title: Potential Bluetrait RMM Tool File Activity
-id: d4d5ed80-49c9-4ec8-997e-3c899c843ad5
+id: 3c9415f1-7451-5cd7-b664-5f74241ab4a5
 status: experimental
 description: |
     Detects potential files activity of Bluetrait RMM tool
@@ -16,11 +16,11 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\Program Files (x86)\Bluetrait Agent\Bluetrait MSP Agent.exe"
-            - "C:\Program Files (x86)\Bluetrait Agent\BluetraitUserAgent.exe"
-            - "C:\Program Files (x86)\Bluetrait Agent\config.db"
-            - "C:\Program Files (x86)\Bluetrait Agent\config.json"
-            - "C:\Program Files (x86)\Bluetrait Agent\libraries\paexec.exe"
+            - 'C:\Program Files (x86)\Bluetrait Agent\Bluetrait MSP Agent.exe'
+            - 'C:\Program Files (x86)\Bluetrait Agent\BluetraitUserAgent.exe'
+            - 'C:\Program Files (x86)\Bluetrait Agent\config.db'
+            - 'C:\Program Files (x86)\Bluetrait Agent\config.json'
+            - 'C:\Program Files (x86)\Bluetrait Agent\libraries\paexec.exe'
     condition: selection
 falsepositives:
     - Legitimate use of Bluetrait

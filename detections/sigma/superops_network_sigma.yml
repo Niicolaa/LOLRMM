@@ -1,5 +1,5 @@
 title: Potential SuperOps RMM Tool Network Activity
-id: aa8115a7-c53e-4280-ae28-0125d83e38f9
+id: 7f604aa8-b2fd-5b59-9e74-c6591082cccb
 status: experimental
 description: |
     Detects potential network activity of SuperOps RMM tool
@@ -16,11 +16,11 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.superopsbeta.com"
-            - "superops.ai"
-            - "serv.superopsalpha.com"
-            - "*.superops.ai"
-            - "*.superopsalpha.com"
+            - '*.superopsbeta.com'
+            - 'superops.ai'
+            - 'serv.superopsalpha.com'
+            - '*.superops.ai'
+            - '*.superopsalpha.com'
     condition: selection
 falsepositives:
     - Legitimate use of SuperOps

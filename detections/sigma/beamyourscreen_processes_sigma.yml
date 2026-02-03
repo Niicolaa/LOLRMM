@@ -1,5 +1,5 @@
 title: Potential BeamYourScreen RMM Tool Process Activity
-id: 9aaf177a-9ea9-47f1-8eed-5c0757f781ba
+id: 515bb822-a67e-57af-9d88-af17147d2916
 status: experimental
 description: |
     Detects potential processes activity of BeamYourScreen RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "beamyourscreen.exe"
-            - "beamyourscreen-host.exe"
+            - 'beamyourscreen.exe'
+            - 'beamyourscreen-host.exe'
     selection_image:
         Image|endswith:
-            - "beamyourscreen.exe"
-            - "beamyourscreen-host.exe"
+            - 'beamyourscreen.exe'
+            - 'beamyourscreen-host.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of BeamYourScreen

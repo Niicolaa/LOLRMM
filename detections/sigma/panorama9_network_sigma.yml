@@ -1,5 +1,5 @@
 title: Potential Panorama9 RMM Tool Network Activity
-id: 51871839-1573-4442-a522-f73d8228b442
+id: 39e45491-4c6c-54c7-91d5-489906a43dad
 status: experimental
 description: |
     Detects potential network activity of Panorama9 RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "trusted.panorama9.com"
-            - "changes.panorama9.com"
-            - "panorama9.com"
+            - 'trusted.panorama9.com'
+            - 'changes.panorama9.com'
+            - 'panorama9.com'
     condition: selection
 falsepositives:
     - Legitimate use of Panorama9

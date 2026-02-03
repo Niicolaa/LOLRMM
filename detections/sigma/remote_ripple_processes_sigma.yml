@@ -1,5 +1,5 @@
 title: Potential Remote Ripple RMM Tool Process Activity
-id: 7e8a3a94-1784-4f1a-8661-efdd2606e7ba
+id: af293487-04b8-5ead-9d22-5149ba77cdcd
 status: experimental
 description: |
     Detects potential processes activity of Remote Ripple RMM tool
@@ -15,9 +15,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: "RemoteRipple.exe"
+        ParentImage|endswith: 'RemoteRipple.exe'
     selection_image:
-        Image|endswith: "RemoteRipple.exe"
+        Image|endswith: 'RemoteRipple.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Remote Ripple

@@ -1,5 +1,5 @@
 title: Potential SkyFex RMM Tool Process Activity
-id: 24b4eec9-a48a-4553-ba43-11563e571799
+id: 4462cba6-53e7-5591-84c6-65a2c4b25ce7
 status: experimental
 description: |
     Detects potential processes activity of SkyFex RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "Deskroll.exe"
-            - "DeskRollUA.exe"
+            - 'Deskroll.exe'
+            - 'DeskRollUA.exe'
     selection_image:
         Image|endswith:
-            - "Deskroll.exe"
-            - "DeskRollUA.exe"
+            - 'Deskroll.exe'
+            - 'DeskRollUA.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of SkyFex

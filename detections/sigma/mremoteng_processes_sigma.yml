@@ -1,5 +1,5 @@
 title: Potential mRemoteNG RMM Tool Process Activity
-id: fa283767-f6d0-499f-bb0a-7d9ffd608465
+id: 2ecac090-231a-5618-a24e-2d3e07f47fbd
 status: experimental
 description: |
     Detects potential processes activity of mRemoteNG RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "mRemoteNG.exe"
-            - "*\mRemoteNG.exe"
-            - "*\mRemoteNG.exe"
+            - 'mRemoteNG.exe'
+            - '*\mRemoteNG.exe'
+            - '*\mRemoteNG.exe'
     selection_image:
         Image|endswith:
-            - "mRemoteNG.exe"
-            - "*\mRemoteNG.exe"
-            - "*\mRemoteNG.exe"
+            - 'mRemoteNG.exe'
+            - '*\mRemoteNG.exe'
+            - '*\mRemoteNG.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of mRemoteNG

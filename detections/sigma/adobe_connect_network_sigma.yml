@@ -1,5 +1,5 @@
 title: Potential Adobe Connect RMM Tool Network Activity
-id: 45c243e6-1d18-4e4b-b173-e5d62327435c
+id: 43bfb949-54e0-5a67-bbb6-d208dd02c8c4
 status: experimental
 description: |
     Detects potential network activity of Adobe Connect RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "*.adobeconnect.com"
+        DestinationHostname|endswith: '*.adobeconnect.com'
     condition: selection
 falsepositives:
     - Legitimate use of Adobe Connect

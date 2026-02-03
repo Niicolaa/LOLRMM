@@ -1,5 +1,5 @@
 title: Potential Alpemix RMM Tool Process Activity
-id: 9098a49a-42bf-4696-bc10-781782f77dd3
+id: 8f623bd9-633c-5f56-af26-7c4148a35e9f
 status: experimental
 description: |
     Detects potential processes activity of Alpemix RMM tool
@@ -15,9 +15,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: "C:\AlpemixService.exe"
+        ParentImage|endswith: 'C:\AlpemixService.exe'
     selection_image:
-        Image|endswith: "C:\AlpemixService.exe"
+        Image|endswith: 'C:\AlpemixService.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Alpemix

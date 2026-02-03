@@ -1,5 +1,5 @@
 title: Potential ImmyBot RMM Tool File Activity
-id: f86abc6a-a2d1-4cb3-90fd-91d5ab5cb069
+id: 86e417fd-8e4d-51a5-b6f4-68e57e4f8da5
 status: experimental
 description: |
     Detects potential files activity of ImmyBot RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\Program Files\ImmyBot\*"
-            - "C:\Program Files (x86)\ImmyBot\*"
-            - "C:\ProgramData\ImmyBot\Logs\*"
-            - "C:\ProgramData\ImmyBot\Scripts\*"
-            - "C:\ProgramData\ImmyBotAgentService\config.json"
-            - "C:\Windows\Temp\ImmyBot\*"
+            - 'C:\Program Files\ImmyBot\*'
+            - 'C:\Program Files (x86)\ImmyBot\*'
+            - 'C:\ProgramData\ImmyBot\Logs\*'
+            - 'C:\ProgramData\ImmyBot\Scripts\*'
+            - 'C:\ProgramData\ImmyBotAgentService\config.json'
+            - 'C:\Windows\Temp\ImmyBot\*'
     condition: selection
 falsepositives:
     - Legitimate use of ImmyBot

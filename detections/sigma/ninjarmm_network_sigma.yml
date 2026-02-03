@@ -1,5 +1,5 @@
 title: Potential NinjaRMM RMM Tool Network Activity
-id: ba4d8584-c3ab-4f27-ac83-5231097ff012
+id: 91ec854e-788e-5231-8365-bee358110458
 status: experimental
 description: |
     Detects potential network activity of NinjaRMM RMM tool
@@ -16,22 +16,22 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.ninjarmm.com"
-            - "*.ninjaone.com"
-            - "resources.ninjarmm.com"
-            - "ninjaone.com"
-            - "ninjarmm.net"
-            - "*.ninjarmm.net"
-            - "rmmservice.eu"
-            - "*.rmmservice.eu"
-            - "rmmservice.eu"
-            - "*.rmmservice.eu"
-            - "rmmservice.com.au"
-            - "*.rmmservice.com.au"
-            - "rmmservice.ca"
-            - "*.rmmservice.ca"
-            - "ninja-backup.com"
-            - "*.ninja-backup.com"
+            - '*.ninjarmm.com'
+            - '*.ninjaone.com'
+            - 'resources.ninjarmm.com'
+            - 'ninjaone.com'
+            - 'ninjarmm.net'
+            - '*.ninjarmm.net'
+            - 'rmmservice.eu'
+            - '*.rmmservice.eu'
+            - 'rmmservice.eu'
+            - '*.rmmservice.eu'
+            - 'rmmservice.com.au'
+            - '*.rmmservice.com.au'
+            - 'rmmservice.ca'
+            - '*.rmmservice.ca'
+            - 'ninja-backup.com'
+            - '*.ninja-backup.com'
     condition: selection
 falsepositives:
     - Legitimate use of NinjaRMM

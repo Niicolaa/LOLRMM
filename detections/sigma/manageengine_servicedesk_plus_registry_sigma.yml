@@ -1,5 +1,5 @@
 title: Potential ManageEngine ServiceDesk Plus RMM Tool Registry Activity
-id: 0a750ef8-625d-4c09-a8ef-87a873925549
+id: bf3087c5-e5b8-550b-8820-d09b743cd72b
 status: experimental
 description: |
     Detects potential registry activity of ManageEngine ServiceDesk Plus RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: registry_event
 detection:
     selection:
-        TargetObject|contains: "HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{*}"
+        TargetObject|contains: 'HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{*}'
     condition: selection
 falsepositives:
     - Legitimate use of ManageEngine ServiceDesk Plus

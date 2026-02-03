@@ -1,5 +1,5 @@
 title: Potential Level RMM Tool File Activity
-id: 6fe77bb5-cd1a-4f1b-898b-2c309502d42d
+id: 67f248b0-f625-5ec9-98de-5c18f29e50e2
 status: experimental
 description: |
     Detects potential files activity of Level RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\Program Files\Level\level.exe"
-            - "C:\Program Files\Level\osqueryi.exe"
-            - "C:\Program Files\Level\level.log"
+            - 'C:\Program Files\Level\level.exe'
+            - 'C:\Program Files\Level\osqueryi.exe'
+            - 'C:\Program Files\Level\level.log'
     condition: selection
 falsepositives:
     - Legitimate use of Level

@@ -1,5 +1,5 @@
 title: Potential Supremo RMM Tool Process Activity
-id: 73c65c9e-fd10-4125-a6bf-33e0d89b0cf4
+id: b415e3f0-1e76-55ff-a876-e3e344f36a3e
 status: experimental
 description: |
     Detects potential processes activity of Supremo RMM tool
@@ -16,18 +16,18 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "*\\supremoremotedesktop\\supremosystem.exe"
-            - "supremo.exe"
-            - "supremohelper.exe"
-            - "supremoservice.exe"
-            - "SupremoSystem.exe"
+            - '*\\supremoremotedesktop\\supremosystem.exe'
+            - 'supremo.exe'
+            - 'supremohelper.exe'
+            - 'supremoservice.exe'
+            - 'SupremoSystem.exe'
     selection_image:
         Image|endswith:
-            - "*\\supremoremotedesktop\\supremosystem.exe"
-            - "supremo.exe"
-            - "supremohelper.exe"
-            - "supremoservice.exe"
-            - "SupremoSystem.exe"
+            - '*\\supremoremotedesktop\\supremosystem.exe'
+            - 'supremo.exe'
+            - 'supremohelper.exe'
+            - 'supremoservice.exe'
+            - 'SupremoSystem.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Supremo

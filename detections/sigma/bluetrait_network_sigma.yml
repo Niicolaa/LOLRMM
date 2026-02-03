@@ -1,5 +1,5 @@
 title: Potential Bluetrait RMM Tool Network Activity
-id: d8d88fca-92ae-4c1a-9aa9-4f5334104f6f
+id: 7b82b4eb-1d6e-5858-8a4e-138a57840c66
 status: experimental
 description: |
     Detects potential network activity of Bluetrait RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "bluetrait.io"
-            - "*.bluetrait.io"
+            - 'bluetrait.io'
+            - '*.bluetrait.io'
     condition: selection
 falsepositives:
     - Legitimate use of Bluetrait

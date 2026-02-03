@@ -1,5 +1,5 @@
 title: Potential Auvik RMM Tool Network Activity
-id: 88f84adf-8f80-488d-99e5-b9dd4e31e62d
+id: 5ebf1127-b3c1-53e9-9760-e542a5e326d9
 status: experimental
 description: |
     Detects potential network activity of Auvik RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.my.auvik.com"
-            - "*.auvik.com"
-            - "auvik.com"
+            - '*.my.auvik.com'
+            - '*.auvik.com'
+            - 'auvik.com'
     condition: selection
 falsepositives:
     - Legitimate use of Auvik

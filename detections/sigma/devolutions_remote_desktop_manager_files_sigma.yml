@@ -1,5 +1,5 @@
 title: Potential Devolutions Remote Desktop Manager RMM Tool File Activity
-id: 58767cd5-8d7e-40e0-b90f-6452522faa1e
+id: 21280f5a-30e9-5f10-9312-d6492722012d
 status: experimental
 description: |
     Detects potential files activity of Devolutions Remote Desktop Manager RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "%localappdata%\Devolutions\RemoteDesktopManager\Connections.log"
-            - "%localappdata%\Devolutions\RemoteDesktopManager[GUID]\Mru.xml"
-            - "%localappdata%\Devolutions\RemoteDesktopManager\Connections.db"
+            - '%localappdata%\Devolutions\RemoteDesktopManager\Connections.log'
+            - '%localappdata%\Devolutions\RemoteDesktopManager[GUID]\Mru.xml'
+            - '%localappdata%\Devolutions\RemoteDesktopManager\Connections.db'
     condition: selection
 falsepositives:
     - Legitimate use of Devolutions Remote Desktop Manager

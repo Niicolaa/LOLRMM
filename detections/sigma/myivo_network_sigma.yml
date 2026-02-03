@@ -1,5 +1,5 @@
 title: Potential MyIVO RMM Tool Network Activity
-id: 6c2b47d3-6fec-4500-82aa-72885497be62
+id: d66ae447-2499-5096-9072-1bcf707db32b
 status: experimental
 description: |
     Detects potential network activity of MyIVO RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "myivo-server.software.informer.com"
+        DestinationHostname|endswith: 'myivo-server.software.informer.com'
     condition: selection
 falsepositives:
     - Legitimate use of MyIVO

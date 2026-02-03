@@ -1,5 +1,5 @@
 title: Potential Chrome Remote Desktop RMM Tool Network Activity
-id: e0c8d758-cb19-4828-b6a9-bf750c68ea9c
+id: 72dccdee-9224-5b8c-b6f3-139c5f6ad971
 status: experimental
 description: |
     Detects potential network activity of Chrome Remote Desktop RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*remotedesktop.google.com"
-            - "*remotedesktop-pa.googleapis.com"
-            - "remotedesktop.google.com"
-            - "chromoting-client.talkgadget.google.com"
-            - "chromoting-host.talkgadget.google.com"
-            - "chromoting-oauth.talkgadget.google.com"
+            - '*remotedesktop.google.com'
+            - '*remotedesktop-pa.googleapis.com'
+            - 'remotedesktop.google.com'
+            - 'chromoting-client.talkgadget.google.com'
+            - 'chromoting-host.talkgadget.google.com'
+            - 'chromoting-oauth.talkgadget.google.com'
     condition: selection
 falsepositives:
     - Legitimate use of Chrome Remote Desktop

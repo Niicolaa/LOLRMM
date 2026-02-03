@@ -1,5 +1,5 @@
 title: Potential NinjaRMM RMM Tool Process Activity
-id: d6ce779b-d49e-4c5e-bf98-550319bcef6f
+id: e86bed40-ecf9-5a3b-a07e-9b9084710100
 status: experimental
 description: |
     Detects potential processes activity of NinjaRMM RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "NinjaRMMAgent.exe"
-            - "NinjaRMMAgentPatcher.exe"
-            - "ninjarmm-cli.exe"
+            - 'NinjaRMMAgent.exe'
+            - 'NinjaRMMAgentPatcher.exe'
+            - 'ninjarmm-cli.exe'
     selection_image:
         Image|endswith:
-            - "NinjaRMMAgent.exe"
-            - "NinjaRMMAgentPatcher.exe"
-            - "ninjarmm-cli.exe"
+            - 'NinjaRMMAgent.exe'
+            - 'NinjaRMMAgentPatcher.exe'
+            - 'ninjarmm-cli.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of NinjaRMM

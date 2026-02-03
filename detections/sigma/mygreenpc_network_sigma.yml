@@ -1,5 +1,5 @@
 title: Potential MyGreenPC RMM Tool Network Activity
-id: aff38be0-8a1c-4446-b5ab-6f388d9af8f8
+id: 60aa9b0a-534d-57d9-b96f-efe2cc22811c
 status: experimental
 description: |
     Detects potential network activity of MyGreenPC RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "*mygreenpc.com"
+        DestinationHostname|endswith: '*mygreenpc.com'
     condition: selection
 falsepositives:
     - Legitimate use of MyGreenPC

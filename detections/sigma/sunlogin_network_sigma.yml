@@ -1,5 +1,5 @@
 title: Potential SunLogin RMM Tool Network Activity
-id: 10f09074-cedf-4392-ba62-688a0eaa02cf
+id: ae9c3430-7e86-57bc-833e-0c2a33b8a544
 status: experimental
 description: |
     Detects potential network activity of SunLogin RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "sunlogin.oray.com"
-            - "client.oray.net"
+            - 'sunlogin.oray.com'
+            - 'client.oray.net'
     condition: selection
 falsepositives:
     - Legitimate use of SunLogin

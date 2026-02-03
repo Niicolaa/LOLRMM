@@ -1,5 +1,5 @@
 title: Potential GoToAssist RMM Tool Network Activity
-id: afb82e71-9355-48a1-bcae-d24b91fc1ca8
+id: cf90a14a-22da-5f1a-8249-c57fb435c831
 status: experimental
 description: |
     Detects potential network activity of GoToAssist RMM tool
@@ -16,15 +16,15 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "goto.com"
-            - "*.getgo.com"
-            - "*.fastsupport.com"
-            - "*.gotoassist.com"
-            - "helpme.net"
-            - "*.gotoassist.me"
-            - "*.gotoassist.at"
-            - "*.desktopstreaming.com"
-            - "*.cdn.getgo.com"
+            - 'goto.com'
+            - '*.getgo.com'
+            - '*.fastsupport.com'
+            - '*.gotoassist.com'
+            - 'helpme.net'
+            - '*.gotoassist.me'
+            - '*.gotoassist.at'
+            - '*.desktopstreaming.com'
+            - '*.cdn.getgo.com'
     condition: selection
 falsepositives:
     - Legitimate use of GoToAssist

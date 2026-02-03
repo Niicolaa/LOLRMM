@@ -1,5 +1,5 @@
 title: Potential CrossTec Remote Control RMM Tool Network Activity
-id: a2eec75b-cad7-4885-887a-db08621edd8b
+id: 6c3d64ea-c89c-53ed-90b9-fe1b45f201d0
 status: experimental
 description: |
     Detects potential network activity of CrossTec Remote Control RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "crosstecsoftware.com/remotecontrol"
+            - 'user_managed'
+            - 'crosstecsoftware.com/remotecontrol'
     condition: selection
 falsepositives:
     - Legitimate use of CrossTec Remote Control

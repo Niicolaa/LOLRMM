@@ -1,5 +1,5 @@
 title: Potential PDQ Connect RMM Tool File Activity
-id: 823c8633-0c13-4c45-becd-6fda56076a3e
+id: 93194b67-a5d4-5cb4-8dca-c89d5c4c8623
 status: experimental
 description: |
     Detects potential files activity of PDQ Connect RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: file_event
 detection:
     selection:
-        TargetFilename|endswith: "C:\ProgramData\PDQ\PDQConnectAgent\PDQConnectAgent.db-journal"
+        TargetFilename|endswith: 'C:\ProgramData\PDQ\PDQConnectAgent\PDQConnectAgent.db-journal'
     condition: selection
 falsepositives:
     - Legitimate use of PDQ Connect

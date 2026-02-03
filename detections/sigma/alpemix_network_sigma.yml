@@ -1,5 +1,5 @@
 title: Potential Alpemix RMM Tool Network Activity
-id: 42d4b579-297e-4403-9dd1-2ffaaaae08ae
+id: b8658364-6780-5a56-bfc3-521fb3b85d89
 status: experimental
 description: |
     Detects potential network activity of Alpemix RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.alpemix.com"
-            - "*.teknopars.com"
+            - '*.alpemix.com'
+            - '*.teknopars.com'
     condition: selection
 falsepositives:
     - Legitimate use of Alpemix

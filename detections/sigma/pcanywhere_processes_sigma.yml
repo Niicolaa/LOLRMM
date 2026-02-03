@@ -1,5 +1,5 @@
 title: Potential pcAnywhere RMM Tool Process Activity
-id: d5ef835d-46cf-41d8-87e6-4f34a110c430
+id: cfac669a-b3d8-51a1-badd-760708ed50d1
 status: experimental
 description: |
     Detects potential processes activity of pcAnywhere RMM tool
@@ -16,16 +16,16 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "awhost32.exe"
-            - "awrem32.exe"
-            - "pcaquickconnect.exe"
-            - "winaw32.exe"
+            - 'awhost32.exe'
+            - 'awrem32.exe'
+            - 'pcaquickconnect.exe'
+            - 'winaw32.exe'
     selection_image:
         Image|endswith:
-            - "awhost32.exe"
-            - "awrem32.exe"
-            - "pcaquickconnect.exe"
-            - "winaw32.exe"
+            - 'awhost32.exe'
+            - 'awrem32.exe'
+            - 'pcaquickconnect.exe'
+            - 'winaw32.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of pcAnywhere

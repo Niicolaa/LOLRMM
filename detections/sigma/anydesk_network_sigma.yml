@@ -1,5 +1,5 @@
 title: Potential AnyDesk RMM Tool Network Activity
-id: 67cb5bfe-e30d-4cc2-8109-651e6413e9e2
+id: 404b77e6-19cc-599d-b1a5-a99812279600
 status: experimental
 description: |
     Detects potential network activity of AnyDesk RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "boot.net.anydesk.com"
-            - "relay-[a-f0-9]{8}.net.anydesk.com:443"
-            - "*.anydesk.com"
+            - 'boot.net.anydesk.com'
+            - 'relay-[a-f0-9]{8}.net.anydesk.com:443'
+            - '*.anydesk.com'
     condition: selection
 falsepositives:
     - Legitimate use of AnyDesk

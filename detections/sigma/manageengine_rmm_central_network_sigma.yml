@@ -1,5 +1,5 @@
 title: Potential ManageEngine RMM Central RMM Tool Network Activity
-id: 5c79a2d4-031d-4c2c-85ac-573f9e1feb1b
+id: d2da55d9-f98a-5e9b-879c-bef426f1bdda
 status: experimental
 description: |
     Detects potential network activity of ManageEngine RMM Central RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "manageengine.com/remote-monitoring-management/"
+        DestinationHostname|endswith: 'manageengine.com/remote-monitoring-management/'
     condition: selection
 falsepositives:
     - Legitimate use of ManageEngine RMM Central

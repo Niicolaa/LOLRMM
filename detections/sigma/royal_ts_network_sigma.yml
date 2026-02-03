@@ -1,5 +1,5 @@
 title: Potential Royal TS RMM Tool Network Activity
-id: 7f302a09-5d4b-4b25-b617-c560dbb0006a
+id: 70e858bf-d80d-5989-9d80-8688001be27d
 status: experimental
 description: |
     Detects potential network activity of Royal TS RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "royalapps.com"
+        DestinationHostname|endswith: 'royalapps.com'
     condition: selection
 falsepositives:
     - Legitimate use of Royal TS

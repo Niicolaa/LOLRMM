@@ -1,5 +1,5 @@
 title: Potential Netreo RMM Tool Network Activity
-id: 38f61ed3-5d9c-4925-82ac-7823bb443d05
+id: 3f94e0d3-a8aa-5f6f-b9a4-0f5edd9589b0
 status: experimental
 description: |
     Detects potential network activity of Netreo RMM tool
@@ -16,10 +16,10 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "charon.netreo.net"
-            - "activation.netreo.net"
-            - "*.api.netreo.com"
-            - "netreo.com"
+            - 'charon.netreo.net'
+            - 'activation.netreo.net'
+            - '*.api.netreo.com'
+            - 'netreo.com'
     condition: selection
 falsepositives:
     - Legitimate use of Netreo

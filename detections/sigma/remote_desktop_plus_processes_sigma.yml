@@ -1,5 +1,5 @@
 title: Potential Remote Desktop Plus RMM Tool Process Activity
-id: e4f164b1-738b-47e4-848d-c428aef87aa3
+id: 5ab4a9cf-4d9f-53d2-baf0-190f10651132
 status: experimental
 description: |
     Detects potential processes activity of Remote Desktop Plus RMM tool
@@ -15,9 +15,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: "rdp.exe"
+        ParentImage|endswith: 'rdp.exe'
     selection_image:
-        Image|endswith: "rdp.exe"
+        Image|endswith: 'rdp.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Remote Desktop Plus

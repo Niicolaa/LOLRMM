@@ -1,5 +1,5 @@
 title: Potential Veyon RMM Tool Registry Activity
-id: b7a72ac1-c517-434a-8f62-6d304614684c
+id: 98ca1fe3-5e9c-573e-a2d7-f3551edc1291
 status: experimental
 description: |
     Detects potential registry activity of Veyon RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         TargetObject|contains:
-            - "HKLM\SOFTWARE\Veyon Solutions"
-            - "HKLM\SYSTEM\CurrentControlSet\Services\VeyonService"
+            - 'HKLM\SOFTWARE\Veyon Solutions'
+            - 'HKLM\SYSTEM\CurrentControlSet\Services\VeyonService'
     condition: selection
 falsepositives:
     - Legitimate use of Veyon

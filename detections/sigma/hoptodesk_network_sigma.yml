@@ -1,5 +1,5 @@
 title: Potential HopToDesk RMM Tool Network Activity
-id: d3143867-0e13-4918-b9a6-a4409f33d7de
+id: 2c282894-f61a-5f05-ac32-2dc6b1f20859
 status: experimental
 description: |
     Detects potential network activity of HopToDesk RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "hoptodesk.com"
-            - "api.hoptodesk.com"
-            - "signal.hoptodesk.com"
-            - "turn.hoptodesk.com"
-            - "download.hoptodesk.com"
-            - "www.hoptodesk.com"
+            - 'hoptodesk.com'
+            - 'api.hoptodesk.com'
+            - 'signal.hoptodesk.com'
+            - 'turn.hoptodesk.com'
+            - 'download.hoptodesk.com'
+            - 'www.hoptodesk.com'
     condition: selection
 falsepositives:
     - Legitimate use of HopToDesk

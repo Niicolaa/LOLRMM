@@ -1,5 +1,5 @@
 title: Potential baramundi Management Suite RMM Tool Network Activity
-id: 0aba1150-5e6c-44de-b81e-29e6f6662b8d
+id: 6a3f6976-7dc0-5aaa-a981-b4f18b374b6d
 status: experimental
 description: |
     Detects potential network activity of baramundi Management Suite RMM tool
@@ -16,11 +16,11 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.baramundi.com"
-            - "www.baramundi.com"
-            - "docs.baramundi.com"
-            - "isodownload.baramundi.com"
-            - "*.baramundi.com"
+            - '*.baramundi.com'
+            - 'www.baramundi.com'
+            - 'docs.baramundi.com'
+            - 'isodownload.baramundi.com'
+            - '*.baramundi.com'
     condition: selection
 falsepositives:
     - Legitimate use of baramundi Management Suite

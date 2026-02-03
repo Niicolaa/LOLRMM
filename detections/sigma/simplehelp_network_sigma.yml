@@ -1,5 +1,5 @@
 title: Potential SimpleHelp RMM Tool Network Activity
-id: 3bae1203-2927-4d7c-bc14-4e2dc9cf74cc
+id: 876dfc34-8e93-570e-b3a9-84bd2f9355ff
 status: experimental
 description: |
     Detects potential network activity of SimpleHelp RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "simple-help.com"
+            - 'user_managed'
+            - 'simple-help.com'
     condition: selection
 falsepositives:
     - Legitimate use of SimpleHelp

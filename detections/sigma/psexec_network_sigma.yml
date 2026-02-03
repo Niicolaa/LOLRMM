@@ -1,5 +1,5 @@
 title: Potential PSEXEC RMM Tool Network Activity
-id: f2136ef0-15a5-4cdc-9c73-bffa0f8ec054
+id: 95851002-efc9-56f6-a7da-7019ae73f00d
 status: experimental
 description: |
     Detects potential network activity of PSEXEC RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "user_managed"
+        DestinationHostname|endswith: 'user_managed'
     condition: selection
 falsepositives:
     - Legitimate use of PSEXEC

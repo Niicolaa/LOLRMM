@@ -1,5 +1,5 @@
 title: Potential N-ABLE Remote Access Software RMM Tool Network Activity
-id: ff652efc-ea7c-456f-823a-3d3760483f85
+id: 59b992b5-26ec-5c13-8d1e-38cddb73111b
 status: experimental
 description: |
     Detects potential network activity of N-ABLE Remote Access Software RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "n-able.com"
+        DestinationHostname|endswith: 'n-able.com'
     condition: selection
 falsepositives:
     - Legitimate use of N-ABLE Remote Access Software

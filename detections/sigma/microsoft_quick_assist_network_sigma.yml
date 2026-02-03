@@ -1,5 +1,5 @@
 title: Potential Microsoft Quick Assist RMM Tool Network Activity
-id: 6644e5dc-993b-42a4-9bc8-f501d85c1ff1
+id: 72658ef6-e3a6-502d-9af6-de433767aacc
 status: experimental
 description: |
     Detects potential network activity of Microsoft Quick Assist RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "*.support.services.microsoft.com"
+            - 'user_managed'
+            - '*.support.services.microsoft.com'
     condition: selection
 falsepositives:
     - Legitimate use of Microsoft Quick Assist

@@ -1,5 +1,5 @@
 title: Potential Itarian RMM Tool Network Activity
-id: 816bd626-42f5-474c-9bd9-3da6c1c2eac2
+id: e483963d-3f2c-52fb-9d17-789db8e9c4dc
 status: experimental
 description: |
     Detects potential network activity of Itarian RMM tool
@@ -16,11 +16,11 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "mdmsupport.comodo.com"
-            - "*.itsm-us1.comodo.com"
-            - "*.cmdm.comodo.com"
-            - "remoteaccess.itarian.com"
-            - "servicedesk.itarian.com"
+            - 'mdmsupport.comodo.com'
+            - '*.itsm-us1.comodo.com'
+            - '*.cmdm.comodo.com'
+            - 'remoteaccess.itarian.com'
+            - 'servicedesk.itarian.com'
     condition: selection
 falsepositives:
     - Legitimate use of Itarian

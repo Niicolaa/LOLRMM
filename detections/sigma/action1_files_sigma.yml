@@ -1,5 +1,5 @@
 title: Potential Action1 RMM Tool File Activity
-id: 31837e4c-8573-4185-8438-2a8c31d93ad9
+id: ecb5ed8f-5729-51f5-9a54-3a6557cd7d9e
 status: experimental
 description: |
     Detects potential files activity of Action1 RMM tool
@@ -16,11 +16,11 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\Windows\Action1\action1_agent.exe"
-            - "C:\Windows\Action1\*"
-            - "C:\Windows\Action1\scripts\*"
-            - "C:\Windows\Action1\rule_data\*"
-            - "C:\Windows\Action1\action1_log_*.log"
+            - 'C:\Windows\Action1\action1_agent.exe'
+            - 'C:\Windows\Action1\*'
+            - 'C:\Windows\Action1\scripts\*'
+            - 'C:\Windows\Action1\rule_data\*'
+            - 'C:\Windows\Action1\action1_log_*.log'
     condition: selection
 falsepositives:
     - Legitimate use of Action1

@@ -1,5 +1,5 @@
 title: Potential Sorillus RMM Tool Network Activity
-id: edc90a07-f805-40ff-95cb-f501959457f3
+id: a45ed3ee-1dae-56ba-8b67-cc34308dc924
 status: experimental
 description: |
     Detects potential network activity of Sorillus RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.sorillus.com"
-            - "sorillus.com"
+            - '*.sorillus.com'
+            - 'sorillus.com'
     condition: selection
 falsepositives:
     - Legitimate use of Sorillus

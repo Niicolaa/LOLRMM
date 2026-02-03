@@ -1,5 +1,5 @@
 title: Potential IntelliAdmin Remote Control RMM Tool Network Activity
-id: 51038960-99b4-4695-a60e-20000a35ae17
+id: eca70842-1e98-5233-83d3-3e272938d7e4
 status: experimental
 description: |
     Detects potential network activity of IntelliAdmin Remote Control RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "*.intelliadmin.com"
-            - "intelliadmin.com/remote-control"
+            - 'user_managed'
+            - '*.intelliadmin.com'
+            - 'intelliadmin.com/remote-control'
     condition: selection
 falsepositives:
     - Legitimate use of IntelliAdmin Remote Control

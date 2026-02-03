@@ -1,5 +1,5 @@
 title: Potential HopToDesk RMM Tool Registry Activity
-id: 6ef0b3df-0c9a-4352-9085-d0741f6b3ea0
+id: 4c0dbbe6-33c5-5268-aed0-aaf0c3344071
 status: experimental
 description: |
     Detects potential registry activity of HopToDesk RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         TargetObject|contains:
-            - "HKEY_CURRENT_USER\Software\Classes\HopToDesk\shell\open\command"
-            - "HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\HopToDesk"
+            - 'HKEY_CURRENT_USER\Software\Classes\HopToDesk\shell\open\command'
+            - 'HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\HopToDesk'
     condition: selection
 falsepositives:
     - Legitimate use of HopToDesk

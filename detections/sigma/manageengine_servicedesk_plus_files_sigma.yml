@@ -1,5 +1,5 @@
 title: Potential ManageEngine ServiceDesk Plus RMM Tool File Activity
-id: 1f5d99aa-3ef7-477f-9a88-ecb5133f3586
+id: 658deba9-eee6-57df-a85a-e1df304055e9
 status: experimental
 description: |
     Detects potential files activity of ManageEngine ServiceDesk Plus RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\Program Files\ManageEngine\ServiceDesk\*"
-            - "C:\Users\*\AppData\Local\Temp\{*}\ManageEngine_ServiceDesk_Plus.exe"
-            - "C:\Users\*\AppData\Local\Temp\{*}\ISBEW64.exe"
+            - 'C:\Program Files\ManageEngine\ServiceDesk\*'
+            - 'C:\Users\*\AppData\Local\Temp\{*}\ManageEngine_ServiceDesk_Plus.exe'
+            - 'C:\Users\*\AppData\Local\Temp\{*}\ISBEW64.exe'
     condition: selection
 falsepositives:
     - Legitimate use of ManageEngine ServiceDesk Plus

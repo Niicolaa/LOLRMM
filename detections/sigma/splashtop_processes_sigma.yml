@@ -1,5 +1,5 @@
 title: Potential Splashtop RMM Tool Process Activity
-id: 5d40aa1d-cb1e-4253-a19c-aced8619bac6
+id: 6b196f14-02ea-526c-99fd-0e4f1c7beab4
 status: experimental
 description: |
     Detects potential processes activity of Splashtop RMM tool
@@ -15,9 +15,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: "strwinclt.exe"
+        ParentImage|endswith: 'strwinclt.exe'
     selection_image:
-        Image|endswith: "strwinclt.exe"
+        Image|endswith: 'strwinclt.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Splashtop

@@ -1,5 +1,5 @@
 title: Potential Splashtop (Beta) RMM Tool Network Activity
-id: 509613e1-a396-4ceb-9d06-c68d12a49f39
+id: d24f3c61-2827-5c5a-8692-830731d4ab72
 status: experimental
 description: |
     Detects potential network activity of Splashtop (Beta) RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "splashtop.com"
+        DestinationHostname|endswith: 'splashtop.com'
     condition: selection
 falsepositives:
     - Legitimate use of Splashtop (Beta)

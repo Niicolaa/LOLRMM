@@ -1,5 +1,5 @@
 title: Potential Syncthing RMM Tool Process Activity
-id: f5c45165-3845-4fb2-a227-9795e181b7f8
+id: 9dbaff25-1bcd-5ecb-ab11-13f1bfcf223e
 status: experimental
 description: |
     Detects potential processes activity of Syncthing RMM tool
@@ -15,9 +15,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: "*\Syncthing.exe"
+        ParentImage|endswith: '*\Syncthing.exe'
     selection_image:
-        Image|endswith: "*\Syncthing.exe"
+        Image|endswith: '*\Syncthing.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Syncthing

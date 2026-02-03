@@ -1,5 +1,5 @@
 title: Potential Acronis Cyber Protect (Remotix) RMM Tool Process Activity
-id: 96fff71a-0a83-490b-a1ef-510510d4a850
+id: 567d575d-1c03-5ce9-8dc8-dad4b7c5372d
 status: experimental
 description: |
     Detects potential processes activity of Acronis Cyber Protect (Remotix) RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "AcronisCyberProtectConnectQuickAssist*.exe"
-            - "AcronisCyberProtectConnectAgent.exe"
+            - 'AcronisCyberProtectConnectQuickAssist*.exe'
+            - 'AcronisCyberProtectConnectAgent.exe'
     selection_image:
         Image|endswith:
-            - "AcronisCyberProtectConnectQuickAssist*.exe"
-            - "AcronisCyberProtectConnectAgent.exe"
+            - 'AcronisCyberProtectConnectQuickAssist*.exe'
+            - 'AcronisCyberProtectConnectAgent.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Acronis Cyber Protect (Remotix)

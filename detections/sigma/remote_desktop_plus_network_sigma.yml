@@ -1,5 +1,5 @@
 title: Potential Remote Desktop Plus RMM Tool Network Activity
-id: 83e6f317-97a9-4652-9162-23e1d668f697
+id: fcc9a415-0d84-53e1-9dd3-0db18f281ea5
 status: experimental
 description: |
     Detects potential network activity of Remote Desktop Plus RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "donkz.nl"
+        DestinationHostname|endswith: 'donkz.nl'
     condition: selection
 falsepositives:
     - Legitimate use of Remote Desktop Plus

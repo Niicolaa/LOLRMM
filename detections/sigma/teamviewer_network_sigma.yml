@@ -1,5 +1,5 @@
 title: Potential TeamViewer RMM Tool Network Activity
-id: fea6e4ec-e8a8-4b32-aaa4-d85060ba689b
+id: a184776b-5fcc-5637-bf07-45a2d30db029
 status: experimental
 description: |
     Detects potential network activity of TeamViewer RMM tool
@@ -16,10 +16,10 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.teamviewer.com"
-            - "router15.teamviewer.com"
-            - "client.teamviewer.com"
-            - "taf.teamviewer.com"
+            - '*.teamviewer.com'
+            - 'router15.teamviewer.com'
+            - 'client.teamviewer.com'
+            - 'taf.teamviewer.com'
     condition: selection
 falsepositives:
     - Legitimate use of TeamViewer

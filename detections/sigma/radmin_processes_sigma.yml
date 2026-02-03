@@ -1,5 +1,5 @@
 title: Potential RAdmin RMM Tool Process Activity
-id: 5162a90f-e322-44ba-a3b3-f91b2e68f2c1
+id: 6148f84e-eced-5f70-b0bd-fd11e9b54127
 status: experimental
 description: |
     Detects potential processes activity of RAdmin RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "C:\Program Files (x86)\Radmin Viewer 3\Radmin.exe"
-            - "C:\Windows\SysWOW64\rserver30\rserver3.exe"
+            - 'C:\Program Files (x86)\Radmin Viewer 3\Radmin.exe'
+            - 'C:\Windows\SysWOW64\rserver30\rserver3.exe'
     selection_image:
         Image|endswith:
-            - "C:\Program Files (x86)\Radmin Viewer 3\Radmin.exe"
-            - "C:\Windows\SysWOW64\rserver30\rserver3.exe"
+            - 'C:\Program Files (x86)\Radmin Viewer 3\Radmin.exe'
+            - 'C:\Windows\SysWOW64\rserver30\rserver3.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of RAdmin

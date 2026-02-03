@@ -1,5 +1,5 @@
 title: Potential eHorus RMM Tool Network Activity
-id: e4bd8e69-4515-4f84-b8ff-010b703ddcd7
+id: a2bd3fa6-dd53-57eb-890d-8f260cc431c1
 status: experimental
 description: |
     Detects potential network activity of eHorus RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "ehorus.com"
+        DestinationHostname|endswith: 'ehorus.com'
     condition: selection
 falsepositives:
     - Legitimate use of eHorus

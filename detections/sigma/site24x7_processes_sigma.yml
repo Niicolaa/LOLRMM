@@ -1,5 +1,5 @@
 title: Potential Site24x7 RMM Tool Process Activity
-id: 117fdaf8-578c-4a4a-8ed9-ca48e643b818
+id: 1d84c0b1-2770-5362-9fe8-98ca095d312a
 status: experimental
 description: |
     Detects potential processes activity of Site24x7 RMM tool
@@ -16,16 +16,16 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "MEAgentHelper.exe"
-            - "MonitoringAgent.exe"
-            - "Site24x7WindowsAgentTrayIcon.exe"
-            - "Site24x7PluginAgent.exe"
+            - 'MEAgentHelper.exe'
+            - 'MonitoringAgent.exe'
+            - 'Site24x7WindowsAgentTrayIcon.exe'
+            - 'Site24x7PluginAgent.exe'
     selection_image:
         Image|endswith:
-            - "MEAgentHelper.exe"
-            - "MonitoringAgent.exe"
-            - "Site24x7WindowsAgentTrayIcon.exe"
-            - "Site24x7PluginAgent.exe"
+            - 'MEAgentHelper.exe'
+            - 'MonitoringAgent.exe'
+            - 'Site24x7WindowsAgentTrayIcon.exe'
+            - 'Site24x7PluginAgent.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Site24x7

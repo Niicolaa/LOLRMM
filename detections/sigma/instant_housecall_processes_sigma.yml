@@ -1,5 +1,5 @@
 title: Potential Instant Housecall RMM Tool Process Activity
-id: 1bc0b883-4d0f-414b-a5d7-22d05044009d
+id: 858675f2-f128-59b5-806a-dad5ea80166e
 status: experimental
 description: |
     Detects potential processes activity of Instant Housecall RMM tool
@@ -16,16 +16,16 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "hsloader.exe"
-            - "InstantHousecall.exe"
-            - "ihcserver.exe"
-            - "instanthousecall.exe"
+            - 'hsloader.exe'
+            - 'InstantHousecall.exe'
+            - 'ihcserver.exe'
+            - 'instanthousecall.exe'
     selection_image:
         Image|endswith:
-            - "hsloader.exe"
-            - "InstantHousecall.exe"
-            - "ihcserver.exe"
-            - "instanthousecall.exe"
+            - 'hsloader.exe'
+            - 'InstantHousecall.exe'
+            - 'ihcserver.exe'
+            - 'instanthousecall.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Instant Housecall

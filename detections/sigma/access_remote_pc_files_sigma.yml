@@ -1,5 +1,5 @@
 title: Potential Access Remote PC RMM Tool File Activity
-id: 22def60f-6814-4b8e-a2e9-a7df7a763171
+id: 6ede7801-b64d-5315-8168-da1264d8bd71
 status: experimental
 description: |
     Detects potential files activity of Access Remote PC RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\Program Files (x86)\RemotePC\RemotePCUIU.exe"
-            - "C:\Program Files (x86)\RemotePC\*"
+            - 'C:\Program Files (x86)\RemotePC\RemotePCUIU.exe'
+            - 'C:\Program Files (x86)\RemotePC\*'
     condition: selection
 falsepositives:
     - Legitimate use of Access Remote PC

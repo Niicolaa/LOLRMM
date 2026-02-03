@@ -1,5 +1,5 @@
 title: Potential Ammyy Admin RMM Tool Network Activity
-id: a2892767-85b6-43f6-9fb3-21facb05b2ea
+id: b039d751-e0ca-5a6d-a45d-6d832f7d4cc4
 status: experimental
 description: |
     Detects potential network activity of Ammyy Admin RMM tool
@@ -16,11 +16,11 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "ammyy.com"
-            - "*ammyy.com"
-            - "136.243.104.235"
-            - "136.243.104.242"
-            - "136.243.18.122"
+            - 'ammyy.com'
+            - '*ammyy.com'
+            - '136.243.104.235'
+            - '136.243.104.242'
+            - '136.243.18.122'
     condition: selection
 falsepositives:
     - Legitimate use of Ammyy Admin

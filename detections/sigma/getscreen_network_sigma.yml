@@ -1,5 +1,5 @@
 title: Potential GetScreen RMM Tool Network Activity
-id: c0417b29-972e-4488-8fdc-c00033f9e402
+id: edcf66bd-9925-5361-a76d-9942e093e228
 status: experimental
 description: |
     Detects potential network activity of GetScreen RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "getscreen.me"
-            - "GetScreen.me"
-            - "*.getscreen.me"
+            - 'getscreen.me'
+            - 'GetScreen.me'
+            - '*.getscreen.me'
     condition: selection
 falsepositives:
     - Legitimate use of GetScreen

@@ -1,5 +1,5 @@
 title: Potential SuperOps RMM Tool Process Activity
-id: 7ad01066-0768-4abb-8773-12bc360cbd87
+id: a5b88b5e-4ee5-59fe-be77-a9dff94a4401
 status: experimental
 description: |
     Detects potential processes activity of SuperOps RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "superopsticket.exe"
-            - "superops.exe"
+            - 'superopsticket.exe'
+            - 'superops.exe'
     selection_image:
         Image|endswith:
-            - "superopsticket.exe"
-            - "superops.exe"
+            - 'superopsticket.exe'
+            - 'superops.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of SuperOps

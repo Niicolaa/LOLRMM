@@ -1,5 +1,5 @@
 title: Potential Pandora RC (eHorus) RMM Tool Network Activity
-id: b2f4928d-a380-453d-9698-7e9c2514496b
+id: 359ba59f-ef84-5395-9d5a-9f4e34890ea0
 status: experimental
 description: |
     Detects potential network activity of Pandora RC (eHorus) RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "portal.ehorus.com"
+        DestinationHostname|endswith: 'portal.ehorus.com'
     condition: selection
 falsepositives:
     - Legitimate use of Pandora RC (eHorus)

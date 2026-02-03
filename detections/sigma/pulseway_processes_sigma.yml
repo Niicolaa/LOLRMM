@@ -1,5 +1,5 @@
 title: Potential Pulseway RMM Tool Process Activity
-id: 1235be91-fd09-46b0-bbc8-41a580ba5a86
+id: 05ce6735-42bd-591e-aceb-666947d99b7e
 status: experimental
 description: |
     Detects potential processes activity of Pulseway RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "PCMonitorManager.exe"
-            - "pcmonitorsrv.exe"
+            - 'PCMonitorManager.exe'
+            - 'pcmonitorsrv.exe'
     selection_image:
         Image|endswith:
-            - "PCMonitorManager.exe"
-            - "pcmonitorsrv.exe"
+            - 'PCMonitorManager.exe'
+            - 'pcmonitorsrv.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Pulseway

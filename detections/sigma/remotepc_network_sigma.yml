@@ -1,5 +1,5 @@
 title: Potential RemotePC RMM Tool Network Activity
-id: f53fcc9b-6346-4ddf-9450-c0d5015d7cef
+id: d04fb49c-3d9c-5d74-bfd0-5bee8d60adc3
 status: experimental
 description: |
     Detects potential network activity of RemotePC RMM tool
@@ -16,10 +16,10 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.remotedesktop.com"
-            - "*.remotepc.com"
-            - "www.remotepc.com"
-            - "remotepc.com"
+            - '*.remotedesktop.com'
+            - '*.remotepc.com'
+            - 'www.remotepc.com'
+            - 'remotepc.com'
     condition: selection
 falsepositives:
     - Legitimate use of RemotePC

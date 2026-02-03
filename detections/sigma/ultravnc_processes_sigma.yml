@@ -1,5 +1,5 @@
 title: Potential UltraVNC RMM Tool Process Activity
-id: a0d23b87-c277-4bc6-aa0d-13e48e4fb4c8
+id: 771adda6-1d4b-5b1a-8db1-2c6cf26c168c
 status: experimental
 description: |
     Detects potential processes activity of UltraVNC RMM tool
@@ -15,9 +15,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: "UltraVNC*.exe"
+        ParentImage|endswith: 'UltraVNC*.exe'
     selection_image:
-        Image|endswith: "UltraVNC*.exe"
+        Image|endswith: 'UltraVNC*.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of UltraVNC

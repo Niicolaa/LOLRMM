@@ -1,5 +1,5 @@
 title: Potential Zabbix Agent RMM Tool Network Activity
-id: f0b6951b-aaad-4b5d-9955-77184c64c8d0
+id: 7b136dc7-374f-58a6-9bc5-3b6d3aa08064
 status: experimental
 description: |
     Detects potential network activity of Zabbix Agent RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "zabbix.com"
+            - 'user_managed'
+            - 'zabbix.com'
     condition: selection
 falsepositives:
     - Legitimate use of Zabbix Agent

@@ -1,5 +1,5 @@
 title: Potential UltraViewer RMM Tool Network Activity
-id: 9640ccb3-4340-4bbd-b1c0-21137e152cb0
+id: 08fa8896-b18d-5512-a3ef-82a71d5594ed
 status: experimental
 description: |
     Detects potential network activity of UltraViewer RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.ultraviewer.net"
-            - "ultraviewer.net"
+            - '*.ultraviewer.net'
+            - 'ultraviewer.net'
     condition: selection
 falsepositives:
     - Legitimate use of UltraViewer

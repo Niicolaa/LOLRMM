@@ -1,5 +1,5 @@
 title: Potential Supremo RMM Tool Network Activity
-id: 2917e732-a7c0-4d86-8638-f9f0522060eb
+id: 8d3aa038-ebac-5535-97f5-fb2216b9c9d6
 status: experimental
 description: |
     Detects potential network activity of Supremo RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "*.supremocontrol.com"
+        DestinationHostname|endswith: '*.supremocontrol.com'
     condition: selection
 falsepositives:
     - Legitimate use of Supremo

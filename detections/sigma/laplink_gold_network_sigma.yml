@@ -1,5 +1,5 @@
 title: Potential Laplink Gold RMM Tool Network Activity
-id: cc88dc1b-f1b3-44a4-9c8c-87533fab4163
+id: 1eed379e-bdd8-5808-a400-4fcc82192b34
 status: experimental
 description: |
     Detects potential network activity of Laplink Gold RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "wen.laplink.com/product/laplink-gold"
+            - 'user_managed'
+            - 'wen.laplink.com/product/laplink-gold'
     condition: selection
 falsepositives:
     - Legitimate use of Laplink Gold

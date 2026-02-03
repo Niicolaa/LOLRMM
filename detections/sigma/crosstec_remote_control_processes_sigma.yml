@@ -1,5 +1,5 @@
 title: Potential CrossTec Remote Control RMM Tool Process Activity
-id: 2216d5f9-b23b-4b21-b864-3c920553a1f8
+id: 3658e4fb-2277-5c96-af7d-66c4519250b7
 status: experimental
 description: |
     Detects potential processes activity of CrossTec Remote Control RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "PCIVIDEO.EXE"
-            - "supporttool.exe"
+            - 'PCIVIDEO.EXE'
+            - 'supporttool.exe'
     selection_image:
         Image|endswith:
-            - "PCIVIDEO.EXE"
-            - "supporttool.exe"
+            - 'PCIVIDEO.EXE'
+            - 'supporttool.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of CrossTec Remote Control

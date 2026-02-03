@@ -1,5 +1,5 @@
 title: Potential Naverisk RMM Tool Network Activity
-id: a401b1c9-7b37-4501-9bc5-e66ea8e2d1f3
+id: 16288440-a197-5f45-a5d9-ea7ac8b99b7b
 status: experimental
 description: |
     Detects potential network activity of Naverisk RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "naverisk.com"
+            - 'user_managed'
+            - 'naverisk.com'
     condition: selection
 falsepositives:
     - Legitimate use of Naverisk

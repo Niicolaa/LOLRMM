@@ -1,5 +1,5 @@
 title: Potential RAdmin RMM Tool File Activity
-id: 207e209a-4807-4339-aaa1-43f41e83f305
+id: ff40caa8-c3b3-59ae-9853-502ebc39e7a8
 status: experimental
 description: |
     Detects potential files activity of RAdmin RMM tool
@@ -16,10 +16,10 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\Windows\SysWOW64\rserver30\Radm_log.htm"
-            - "C:\Windows\System32\rserver30\Radm_log.htm"
-            - "C:\Windows\System32\rserver30\CHATLOGS\*\*.htm"
-            - "C:\Users\*\Documents\ChatLogs\*\*.htm"
+            - 'C:\Windows\SysWOW64\rserver30\Radm_log.htm'
+            - 'C:\Windows\System32\rserver30\Radm_log.htm'
+            - 'C:\Windows\System32\rserver30\CHATLOGS\*\*.htm'
+            - 'C:\Users\*\Documents\ChatLogs\*\*.htm'
     condition: selection
 falsepositives:
     - Legitimate use of RAdmin

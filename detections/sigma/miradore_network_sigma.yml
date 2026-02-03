@@ -1,5 +1,5 @@
 title: Potential Miradore RMM Tool Network Activity
-id: ce4c495c-1e26-4db7-8df9-d21317ead8d5
+id: 15edd57b-00a7-53f9-8d3c-0b8679e0360d
 status: experimental
 description: |
     Detects potential network activity of Miradore RMM tool
@@ -16,10 +16,10 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "gateway.miradore.com"
-            - "*.miradore.com"
-            - "miradore.com"
-            - "gerwconline.blob.core.windows.net"
+            - 'gateway.miradore.com'
+            - '*.miradore.com'
+            - 'miradore.com'
+            - 'gerwconline.blob.core.windows.net'
     condition: selection
 falsepositives:
     - Legitimate use of Miradore

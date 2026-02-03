@@ -1,5 +1,5 @@
 title: Potential I'm InTouch RMM Tool Process Activity
-id: ebc78bee-6143-4d65-aa69-a596f07315d2
+id: d9ffc6cc-1bfd-578f-828a-31aeb6fe4fdb
 status: experimental
 description: |
     Detects potential processes activity of I'm InTouch RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "iit.exe"
-            - "intouch.exe"
-            - "I'm InTouch Go Installer.exe"
+            - 'iit.exe'
+            - 'intouch.exe'
+            - 'I'm InTouch Go Installer.exe'
     selection_image:
         Image|endswith:
-            - "iit.exe"
-            - "intouch.exe"
-            - "I'm InTouch Go Installer.exe"
+            - 'iit.exe'
+            - 'intouch.exe'
+            - 'I'm InTouch Go Installer.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of I'm InTouch

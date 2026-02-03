@@ -1,5 +1,5 @@
 title: Potential Mouse Without Borders RMM Tool File Activity
-id: e6fcc1cd-eaa3-4d10-9ee6-8c42a3b1b847
+id: 2d2731fb-27e6-52f4-ba4a-31e68ec6eba2
 status: experimental
 description: |
     Detects potential files activity of Mouse Without Borders RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\Program Files (x86)\Microsoft Garage\Mouse without Borders\MouseWithoutBorders.exe"
-            - "C:\Program Files (x86)\Microsoft Garage\Mouse without Borders\MouseWithoutBordersSvc.exe"
-            - "C:\Program Files (x86)\Microsoft Garage\Mouse without Borders\MouseWithoutBordersHelper.exe"
+            - 'C:\Program Files (x86)\Microsoft Garage\Mouse without Borders\MouseWithoutBorders.exe'
+            - 'C:\Program Files (x86)\Microsoft Garage\Mouse without Borders\MouseWithoutBordersSvc.exe'
+            - 'C:\Program Files (x86)\Microsoft Garage\Mouse without Borders\MouseWithoutBordersHelper.exe'
     condition: selection
 falsepositives:
     - Legitimate use of Mouse Without Borders

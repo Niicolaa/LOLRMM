@@ -1,5 +1,5 @@
 title: Potential HopToDesk RMM Tool Process Activity
-id: 8869b5aa-1a9e-4098-a0b4-01a3e9d3ade7
+id: 04a1bb01-5718-589a-ae21-08409f606b79
 status: experimental
 description: |
     Detects potential processes activity of HopToDesk RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "C:\Program Files (x86)\HopToDesk\HopToDesk.exe"
-            - "HopToDesk.exe"
-            - "HopToDesk-Standalone.exe"
+            - 'C:\Program Files (x86)\HopToDesk\HopToDesk.exe'
+            - 'HopToDesk.exe'
+            - 'HopToDesk-Standalone.exe'
     selection_image:
         Image|endswith:
-            - "C:\Program Files (x86)\HopToDesk\HopToDesk.exe"
-            - "HopToDesk.exe"
-            - "HopToDesk-Standalone.exe"
+            - 'C:\Program Files (x86)\HopToDesk\HopToDesk.exe'
+            - 'HopToDesk.exe'
+            - 'HopToDesk-Standalone.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of HopToDesk

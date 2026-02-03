@@ -1,5 +1,5 @@
 title: Potential RemotePC RMM Tool Process Activity
-id: 022e9f76-44a2-49ad-9d34-c42ed98f024b
+id: ba0e8fd7-94fb-54b4-abc9-29a370a98fe6
 status: experimental
 description: |
     Detects potential processes activity of RemotePC RMM tool
@@ -16,20 +16,20 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "remotepcservice.exe"
-            - "RemotePC.exe"
-            - "remotepchost.exe"
-            - "rpcsuite.exe"
-            - "*\RemotePCService.exe"
-            - "RemotePCService.exe"
+            - 'remotepcservice.exe'
+            - 'RemotePC.exe'
+            - 'remotepchost.exe'
+            - 'rpcsuite.exe'
+            - '*\RemotePCService.exe'
+            - 'RemotePCService.exe'
     selection_image:
         Image|endswith:
-            - "remotepcservice.exe"
-            - "RemotePC.exe"
-            - "remotepchost.exe"
-            - "rpcsuite.exe"
-            - "*\RemotePCService.exe"
-            - "RemotePCService.exe"
+            - 'remotepcservice.exe'
+            - 'RemotePC.exe'
+            - 'remotepchost.exe'
+            - 'rpcsuite.exe'
+            - '*\RemotePCService.exe'
+            - 'RemotePCService.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of RemotePC

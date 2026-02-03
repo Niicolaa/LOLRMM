@@ -1,5 +1,5 @@
 title: Potential DW Service RMM Tool Process Activity
-id: 39ffeca5-355b-4095-a601-e72756ecd38d
+id: e7d85314-f06d-55d5-95d2-4f26c0e5c6df
 status: experimental
 description: |
     Detects potential processes activity of DW Service RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "dwagsvc.exe"
-            - "dwagent.exe"
-            - "dwagsvc.exe"
+            - 'dwagsvc.exe'
+            - 'dwagent.exe'
+            - 'dwagsvc.exe'
     selection_image:
         Image|endswith:
-            - "dwagsvc.exe"
-            - "dwagent.exe"
-            - "dwagsvc.exe"
+            - 'dwagsvc.exe'
+            - 'dwagent.exe'
+            - 'dwagsvc.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of DW Service

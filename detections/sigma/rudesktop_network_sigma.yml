@@ -1,5 +1,5 @@
 title: Potential RuDesktop RMM Tool Network Activity
-id: 947d6bcd-5586-433e-a1d9-df68170f990a
+id: ac669409-36a8-5336-858a-c30f1b64e335
 status: experimental
 description: |
     Detects potential network activity of RuDesktop RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.rudesktop.ru"
-            - "rudesktop.ru"
+            - '*.rudesktop.ru'
+            - 'rudesktop.ru'
     condition: selection
 falsepositives:
     - Legitimate use of RuDesktop

@@ -1,5 +1,5 @@
 title: Potential I'm InTouch RMM Tool Network Activity
-id: 6961a242-89d6-4bbc-93c1-877eb266850e
+id: e8cfa90a-be6a-5f6e-a719-38d7ff697f36
 status: experimental
 description: |
     Detects potential network activity of I'm InTouch RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.01com.com"
-            - "01com.com/imintouch-remote-pc-desktop"
+            - '*.01com.com'
+            - '01com.com/imintouch-remote-pc-desktop'
     condition: selection
 falsepositives:
     - Legitimate use of I'm InTouch

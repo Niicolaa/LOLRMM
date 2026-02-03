@@ -1,5 +1,5 @@
 title: Potential Addigy RMM Tool Network Activity
-id: a934933c-45a4-4cc0-8c66-7bf0cf183506
+id: 19353241-8add-5556-8a66-870cdecfa84d
 status: experimental
 description: |
     Detects potential network activity of Addigy RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "prod.addigy.com"
-            - "grtmprod.addigy.com"
-            - "agents.addigy.com"
+            - 'prod.addigy.com'
+            - 'grtmprod.addigy.com'
+            - 'agents.addigy.com'
     condition: selection
 falsepositives:
     - Legitimate use of Addigy

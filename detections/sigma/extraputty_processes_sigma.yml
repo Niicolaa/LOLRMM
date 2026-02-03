@@ -1,5 +1,5 @@
 title: Potential ExtraPuTTY RMM Tool Process Activity
-id: 0eba988c-5794-440c-9c14-c7354fd0d648
+id: c192fe2b-80af-529f-8073-59107307b310
 status: experimental
 description: |
     Detects potential processes activity of ExtraPuTTY RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "C:\Users\*\ExtraPuTTY-0.30-2016-01-28-installer.exe"
-            - "*Users\*\ExtraPuTTY-0.30-2016-01-28-installer.exe"
-            - "*\ExtraPuTTY-0.30-2016-01-28-installer.exe"
+            - 'C:\Users\*\ExtraPuTTY-0.30-2016-01-28-installer.exe'
+            - '*Users\*\ExtraPuTTY-0.30-2016-01-28-installer.exe'
+            - '*\ExtraPuTTY-0.30-2016-01-28-installer.exe'
     selection_image:
         Image|endswith:
-            - "C:\Users\*\ExtraPuTTY-0.30-2016-01-28-installer.exe"
-            - "*Users\*\ExtraPuTTY-0.30-2016-01-28-installer.exe"
-            - "*\ExtraPuTTY-0.30-2016-01-28-installer.exe"
+            - 'C:\Users\*\ExtraPuTTY-0.30-2016-01-28-installer.exe'
+            - '*Users\*\ExtraPuTTY-0.30-2016-01-28-installer.exe'
+            - '*\ExtraPuTTY-0.30-2016-01-28-installer.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ExtraPuTTY

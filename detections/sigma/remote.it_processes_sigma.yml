@@ -1,5 +1,5 @@
 title: Potential Remote.it RMM Tool Process Activity
-id: a8651ad4-8c82-4660-ba48-61a417914219
+id: 755b5af9-6732-5f4b-97ab-065f4a078a71
 status: experimental
 description: |
     Detects potential processes activity of Remote.it RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "remote-it-installer.exe"
-            - "remote.it.exe"
-            - "remoteit.exe"
+            - 'remote-it-installer.exe'
+            - 'remote.it.exe'
+            - 'remoteit.exe'
     selection_image:
         Image|endswith:
-            - "remote-it-installer.exe"
-            - "remote.it.exe"
-            - "remoteit.exe"
+            - 'remote-it-installer.exe'
+            - 'remote.it.exe'
+            - 'remoteit.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Remote.it

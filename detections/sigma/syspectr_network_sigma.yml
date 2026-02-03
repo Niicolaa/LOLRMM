@@ -1,5 +1,5 @@
 title: Potential Syspectr RMM Tool Network Activity
-id: b637ba48-c57d-4c34-86d7-0a6e4fc0bb03
+id: 4518883d-c2f5-54db-89b5-f0c8fecee3a9
 status: experimental
 description: |
     Detects potential network activity of Syspectr RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "atled.syspectr.com"
-            - "app.syspectr.com"
+            - 'atled.syspectr.com'
+            - 'app.syspectr.com'
     condition: selection
 falsepositives:
     - Legitimate use of Syspectr

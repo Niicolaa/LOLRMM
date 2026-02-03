@@ -1,5 +1,5 @@
 title: Potential RES Automation Manager RMM Tool Process Activity
-id: bd2167d9-e2f5-4950-b215-43918b0e735e
+id: cd893476-80dc-554b-878b-7523ffa3e0c9
 status: experimental
 description: |
     Detects potential processes activity of RES Automation Manager RMM tool
@@ -16,16 +16,16 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "wisshell*.exe"
-            - "wmc.exe"
-            - "wmc_deployer.exe"
-            - "wmcsvc.exe"
+            - 'wisshell*.exe'
+            - 'wmc.exe'
+            - 'wmc_deployer.exe'
+            - 'wmcsvc.exe'
     selection_image:
         Image|endswith:
-            - "wisshell*.exe"
-            - "wmc.exe"
-            - "wmc_deployer.exe"
-            - "wmcsvc.exe"
+            - 'wisshell*.exe'
+            - 'wmc.exe'
+            - 'wmc_deployer.exe'
+            - 'wmcsvc.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of RES Automation Manager

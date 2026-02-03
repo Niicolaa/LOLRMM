@@ -1,5 +1,5 @@
 title: Potential Pocket Controller RMM Tool Process Activity
-id: 383db885-7de8-46ab-8f0f-f8a70b63f818
+id: 9d7eb737-44fe-5c4d-ae0e-d04ae3c9c26b
 status: experimental
 description: |
     Detects potential processes activity of Pocket Controller RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "pocketcontroller.exe"
-            - "pocketcloudservice.exe"
-            - "wysebrowser.exe"
+            - 'pocketcontroller.exe'
+            - 'pocketcloudservice.exe'
+            - 'wysebrowser.exe'
     selection_image:
         Image|endswith:
-            - "pocketcontroller.exe"
-            - "pocketcloudservice.exe"
-            - "wysebrowser.exe"
+            - 'pocketcontroller.exe'
+            - 'pocketcloudservice.exe'
+            - 'wysebrowser.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Pocket Controller

@@ -1,5 +1,5 @@
 title: Potential Acronis Cyber Protect (Remotix) RMM Tool Network Activity
-id: 92841cd8-bcd1-433f-b831-0d0d811a5029
+id: 09b5684f-5571-5607-9051-07f2b11e4fbe
 status: experimental
 description: |
     Detects potential network activity of Acronis Cyber Protect (Remotix) RMM tool
@@ -16,10 +16,10 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "cloud.acronis.com"
-            - "agents*-cloud.acronis.com"
-            - "gw.remotix.com"
-            - "connect.acronis.com"
+            - 'cloud.acronis.com'
+            - 'agents*-cloud.acronis.com'
+            - 'gw.remotix.com'
+            - 'connect.acronis.com'
     condition: selection
 falsepositives:
     - Legitimate use of Acronis Cyber Protect (Remotix)

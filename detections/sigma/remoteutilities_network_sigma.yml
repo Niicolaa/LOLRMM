@@ -1,5 +1,5 @@
 title: Potential RemoteUtilities RMM Tool Network Activity
-id: bd05104e-9672-4ff3-8ecf-df657389b8d3
+id: f8b97599-a738-5a59-9596-ae7339a1d686
 status: experimental
 description: |
     Detects potential network activity of RemoteUtilities RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "remoteutilities.com"
+        DestinationHostname|endswith: 'remoteutilities.com'
     condition: selection
 falsepositives:
     - Legitimate use of RemoteUtilities

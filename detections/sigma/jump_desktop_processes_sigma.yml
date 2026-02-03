@@ -1,5 +1,5 @@
 title: Potential Jump Desktop RMM Tool Process Activity
-id: 40c71b5e-5fe4-4088-9e63-1ef1e06feb70
+id: 652866d5-c987-5cc8-ac5a-2084a89665c7
 status: experimental
 description: |
     Detects potential processes activity of Jump Desktop RMM tool
@@ -16,18 +16,18 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "jumpclient.exe"
-            - "jumpdesktop.exe"
-            - "jumpservice.exe"
-            - "jumpconnect.exe"
-            - "jumpupdater.exe"
+            - 'jumpclient.exe'
+            - 'jumpdesktop.exe'
+            - 'jumpservice.exe'
+            - 'jumpconnect.exe'
+            - 'jumpupdater.exe'
     selection_image:
         Image|endswith:
-            - "jumpclient.exe"
-            - "jumpdesktop.exe"
-            - "jumpservice.exe"
-            - "jumpconnect.exe"
-            - "jumpupdater.exe"
+            - 'jumpclient.exe'
+            - 'jumpdesktop.exe'
+            - 'jumpservice.exe'
+            - 'jumpconnect.exe'
+            - 'jumpupdater.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Jump Desktop

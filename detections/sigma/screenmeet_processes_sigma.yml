@@ -1,5 +1,5 @@
 title: Potential ScreenMeet RMM Tool Process Activity
-id: a612d662-4b59-45ca-9323-18b9f7a000cb
+id: bca8c37a-9a08-575c-b23c-419384cacc82
 status: experimental
 description: |
     Detects potential processes activity of ScreenMeet RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "ScreenMeetSupport.exe"
-            - "ScreenMeet.Support.exe"
+            - 'ScreenMeetSupport.exe'
+            - 'ScreenMeet.Support.exe'
     selection_image:
         Image|endswith:
-            - "ScreenMeetSupport.exe"
-            - "ScreenMeet.Support.exe"
+            - 'ScreenMeetSupport.exe'
+            - 'ScreenMeet.Support.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ScreenMeet

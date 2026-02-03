@@ -1,5 +1,5 @@
 title: Potential Tactical RMM RMM Tool Process Activity
-id: 75405771-e5e6-423a-adb8-17f8c859ed69
+id: ff8e0328-c188-532e-bb12-0847ba9f15e3
 status: experimental
 description: |
     Detects potential processes activity of Tactical RMM RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "tacticalrmm.exe"
-            - "tacticalrmm.exe"
+            - 'tacticalrmm.exe'
+            - 'tacticalrmm.exe'
     selection_image:
         Image|endswith:
-            - "tacticalrmm.exe"
-            - "tacticalrmm.exe"
+            - 'tacticalrmm.exe'
+            - 'tacticalrmm.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Tactical RMM

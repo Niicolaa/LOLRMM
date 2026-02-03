@@ -1,5 +1,5 @@
 title: Potential Encapto RMM Tool Network Activity
-id: 3e692d86-73e3-4f04-b623-7f1d47d19a57
+id: cd3a032c-19f6-5ccd-bb5b-a250d977c0ff
 status: experimental
 description: |
     Detects potential network activity of Encapto RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "encapto.com"
+        DestinationHostname|endswith: 'encapto.com'
     condition: selection
 falsepositives:
     - Legitimate use of Encapto

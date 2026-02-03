@@ -1,5 +1,5 @@
 title: Potential RemotePass RMM Tool Network Activity
-id: 11987e39-2c2a-4ab1-9a26-1748fe769117
+id: 52e9a124-141f-5be7-851f-f3f0f7d877f8
 status: experimental
 description: |
     Detects potential network activity of RemotePass RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "remotepass.com"
+        DestinationHostname|endswith: 'remotepass.com'
     condition: selection
 falsepositives:
     - Legitimate use of RemotePass

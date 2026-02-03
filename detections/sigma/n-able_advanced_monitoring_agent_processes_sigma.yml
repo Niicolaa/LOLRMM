@@ -1,5 +1,5 @@
 title: Potential N-Able Advanced Monitoring Agent RMM Tool Process Activity
-id: 2f1a0586-3187-44b6-97db-7881faf9c09e
+id: d408a343-0206-5b2f-9896-de129c4f38d3
 status: experimental
 description: |
     Detects potential processes activity of N-Able Advanced Monitoring Agent RMM tool
@@ -16,22 +16,22 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "BASupSrvc.exe"
-            - "winagent.exe"
-            - "BASupApp.exe"
-            - "BASupTSHelper.exe"
-            - "Agent_*_RW.exe"
-            - "BASEClient.exe"
-            - "BASupSrvcCnfg.exe"
+            - 'BASupSrvc.exe'
+            - 'winagent.exe'
+            - 'BASupApp.exe'
+            - 'BASupTSHelper.exe'
+            - 'Agent_*_RW.exe'
+            - 'BASEClient.exe'
+            - 'BASupSrvcCnfg.exe'
     selection_image:
         Image|endswith:
-            - "BASupSrvc.exe"
-            - "winagent.exe"
-            - "BASupApp.exe"
-            - "BASupTSHelper.exe"
-            - "Agent_*_RW.exe"
-            - "BASEClient.exe"
-            - "BASupSrvcCnfg.exe"
+            - 'BASupSrvc.exe'
+            - 'winagent.exe'
+            - 'BASupApp.exe'
+            - 'BASupTSHelper.exe'
+            - 'Agent_*_RW.exe'
+            - 'BASEClient.exe'
+            - 'BASupSrvcCnfg.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of N-Able Advanced Monitoring Agent

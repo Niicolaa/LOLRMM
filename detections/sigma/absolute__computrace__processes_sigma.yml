@@ -1,5 +1,5 @@
 title: Potential Absolute (Computrace) RMM Tool Process Activity
-id: e417f466-55f0-47df-9c5b-aeed2a74c1de
+id: 4dc903cb-205b-516a-88cb-e4dc5181561f
 status: experimental
 description: |
     Detects potential processes activity of Absolute (Computrace) RMM tool
@@ -16,18 +16,18 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "rpcnet.exe"
-            - "ctes.exe"
-            - "ctespersitence.exe"
-            - "cteshostsvc.exe"
-            - "rpcld.exe"
+            - 'rpcnet.exe'
+            - 'ctes.exe'
+            - 'ctespersitence.exe'
+            - 'cteshostsvc.exe'
+            - 'rpcld.exe'
     selection_image:
         Image|endswith:
-            - "rpcnet.exe"
-            - "ctes.exe"
-            - "ctespersitence.exe"
-            - "cteshostsvc.exe"
-            - "rpcld.exe"
+            - 'rpcnet.exe'
+            - 'ctes.exe'
+            - 'ctespersitence.exe'
+            - 'cteshostsvc.exe'
+            - 'rpcld.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Absolute (Computrace)

@@ -1,5 +1,5 @@
 title: Potential TightVNC RMM Tool Network Activity
-id: f6e7833e-3c5b-4dff-ad55-5e97ff8c3025
+id: 47075227-f343-5bc0-a6f3-e2861796fdb5
 status: experimental
 description: |
     Detects potential network activity of TightVNC RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "tightvnc.com"
+            - 'user_managed'
+            - 'tightvnc.com'
     condition: selection
 falsepositives:
     - Legitimate use of TightVNC

@@ -1,5 +1,5 @@
 title: Potential WebRDP RMM Tool Network Activity
-id: daf53b7d-a916-43db-aa39-1beecd2c6d0e
+id: 7f1a2a6d-dd4f-5271-ba85-ee66faae9a5b
 status: experimental
 description: |
     Detects potential network activity of WebRDP RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "github.com/Mikej81/WebRDP"
+            - 'user_managed'
+            - 'github.com/Mikej81/WebRDP'
     condition: selection
 falsepositives:
     - Legitimate use of WebRDP

@@ -1,5 +1,5 @@
 title: Potential mRemoteNG RMM Tool Network Activity
-id: 48c004e3-6b96-45fe-ac3c-8eecfd437f67
+id: 67bf7932-14c6-5b7d-bad2-e37d66dd94d4
 status: experimental
 description: |
     Detects potential network activity of mRemoteNG RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "mremoteng.org"
+            - 'user_managed'
+            - 'mremoteng.org'
     condition: selection
 falsepositives:
     - Legitimate use of mRemoteNG

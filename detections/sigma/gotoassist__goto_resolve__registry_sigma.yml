@@ -1,5 +1,5 @@
 title: Potential GoToAssist (GoTo Resolve) RMM Tool Registry Activity
-id: f58f2157-d0b3-4341-8a46-b57f53fb84dc
+id: 10da59f2-c2e7-5d83-9a0e-82fbe57008b3
 status: experimental
 description: |
     Detects potential registry activity of GoToAssist (GoTo Resolve) RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: registry_event
 detection:
     selection:
-        TargetObject|contains: "HKLM\SOFTWARE\GoTo Resolve Unattended\"
+        TargetObject|contains: 'HKLM\SOFTWARE\GoTo Resolve Unattended\'
     condition: selection
 falsepositives:
     - Legitimate use of GoToAssist (GoTo Resolve)

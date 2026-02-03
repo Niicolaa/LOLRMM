@@ -1,5 +1,5 @@
 title: Potential NetBird RMM Tool File Activity
-id: e5c0e88e-bad0-4a20-9fae-5c852008e39c
+id: d7450e11-72aa-57b4-b835-9afeaa6eb423
 status: experimental
 description: |
     Detects potential files activity of NetBird RMM tool
@@ -16,10 +16,10 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\Program Files\Netbird\netbird.exe"
-            - "C:\ProgramData\Netbird\config.json"
-            - "/etc/netbird/config.json"
-            - "/var/log/netbird/*"
+            - 'C:\Program Files\Netbird\netbird.exe'
+            - 'C:\ProgramData\Netbird\config.json'
+            - '/etc/netbird/config.json'
+            - '/var/log/netbird/*'
     condition: selection
 falsepositives:
     - Legitimate use of NetBird

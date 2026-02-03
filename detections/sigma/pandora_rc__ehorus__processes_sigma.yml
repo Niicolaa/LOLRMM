@@ -1,5 +1,5 @@
 title: Potential Pandora RC (eHorus) RMM Tool Process Activity
-id: ece40898-e964-4e61-9231-c4cb601a0c18
+id: 1e7062ba-117d-515c-9500-8a5e430b7cf3
 status: experimental
 description: |
     Detects potential processes activity of Pandora RC (eHorus) RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "ehorus standalone.exe"
-            - "ehorus_agent.exe"
+            - 'ehorus standalone.exe'
+            - 'ehorus_agent.exe'
     selection_image:
         Image|endswith:
-            - "ehorus standalone.exe"
-            - "ehorus_agent.exe"
+            - 'ehorus standalone.exe'
+            - 'ehorus_agent.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Pandora RC (eHorus)

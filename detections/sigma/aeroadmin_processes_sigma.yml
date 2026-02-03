@@ -1,5 +1,5 @@
 title: Potential AeroAdmin RMM Tool Process Activity
-id: e4907740-8a66-4fd9-bced-21317282dbca
+id: 95672471-6203-5935-814e-ea51994e5212
 status: experimental
 description: |
     Detects potential processes activity of AeroAdmin RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "aeroadmin.exe"
-            - "AeroAdmin.exe"
+            - 'aeroadmin.exe'
+            - 'AeroAdmin.exe'
     selection_image:
         Image|endswith:
-            - "aeroadmin.exe"
-            - "AeroAdmin.exe"
+            - 'aeroadmin.exe'
+            - 'AeroAdmin.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of AeroAdmin

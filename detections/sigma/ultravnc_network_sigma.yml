@@ -1,5 +1,5 @@
 title: Potential UltraVNC RMM Tool Network Activity
-id: d7faebfa-0b7e-40ae-8bf1-fa1a62203c0d
+id: 28a15bcc-889d-5471-8d62-bd8db1b07e65
 status: experimental
 description: |
     Detects potential network activity of UltraVNC RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "ultravnc.com"
-            - "user_managed"
+            - 'ultravnc.com'
+            - 'user_managed'
     condition: selection
 falsepositives:
     - Legitimate use of UltraVNC

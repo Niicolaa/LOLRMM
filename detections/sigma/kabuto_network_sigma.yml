@@ -1,5 +1,5 @@
 title: Potential Kabuto RMM Tool Network Activity
-id: a99ce8e3-8c8b-4ad7-8ebd-34250dcd885d
+id: b6a4a650-8624-59f2-9dae-8885418002ca
 status: experimental
 description: |
     Detects potential network activity of Kabuto RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.kabuto.io"
-            - "repairtechsolutions.com/kabuto/"
+            - '*.kabuto.io'
+            - 'repairtechsolutions.com/kabuto/'
     condition: selection
 falsepositives:
     - Legitimate use of Kabuto

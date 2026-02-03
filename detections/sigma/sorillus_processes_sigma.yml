@@ -1,5 +1,5 @@
 title: Potential Sorillus RMM Tool Process Activity
-id: aaf025d4-207a-4639-bc0c-bf032cca1c38
+id: a7651dd4-cca9-568d-8dc2-b1ad0f501cc6
 status: experimental
 description: |
     Detects potential processes activity of Sorillus RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "Sorillus-Launcher*.exe"
-            - "Sorillus Launcher.exe"
+            - 'Sorillus-Launcher*.exe'
+            - 'Sorillus Launcher.exe'
     selection_image:
         Image|endswith:
-            - "Sorillus-Launcher*.exe"
-            - "Sorillus Launcher.exe"
+            - 'Sorillus-Launcher*.exe'
+            - 'Sorillus Launcher.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Sorillus

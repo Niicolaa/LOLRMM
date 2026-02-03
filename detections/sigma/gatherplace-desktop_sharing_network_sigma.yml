@@ -1,5 +1,5 @@
 title: Potential GatherPlace-desktop sharing RMM Tool Network Activity
-id: ed613fa9-7a12-41d5-93a5-1937366b941b
+id: 2fc85694-447d-5dc8-b46e-162600f0e83a
 status: experimental
 description: |
     Detects potential network activity of GatherPlace-desktop sharing RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.gatherplace.com"
-            - "*.gatherplace.net"
-            - "gatherplace.com"
+            - '*.gatherplace.com'
+            - '*.gatherplace.net'
+            - 'gatherplace.com'
     condition: selection
 falsepositives:
     - Legitimate use of GatherPlace-desktop sharing

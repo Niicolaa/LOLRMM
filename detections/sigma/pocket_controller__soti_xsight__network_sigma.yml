@@ -1,5 +1,5 @@
 title: Potential Pocket Controller (Soti Xsight) RMM Tool Network Activity
-id: 9c0b316b-7dd4-4952-94f2-92c3bded480a
+id: 38ff5e6c-6202-592c-a05f-cb532f28734d
 status: experimental
 description: |
     Detects potential network activity of Pocket Controller (Soti Xsight) RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "*soti.net"
+        DestinationHostname|endswith: '*soti.net'
     condition: selection
 falsepositives:
     - Legitimate use of Pocket Controller (Soti Xsight)

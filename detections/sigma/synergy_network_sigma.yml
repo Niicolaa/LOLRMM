@@ -1,5 +1,5 @@
 title: Potential Synergy RMM Tool Network Activity
-id: 709547d0-fef2-4ecb-ba9e-868f414211cc
+id: 019bec4c-7356-533b-ae47-096857196607
 status: experimental
 description: |
     Detects potential network activity of Synergy RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "user_managed"
+        DestinationHostname|endswith: 'user_managed'
     condition: selection
 falsepositives:
     - Legitimate use of Synergy

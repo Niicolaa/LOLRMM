@@ -1,5 +1,5 @@
 title: Potential Basecamp RMM Tool Network Activity
-id: 4aede84a-946a-4085-861f-15bb7147790f
+id: 7b84e0c7-ca69-51df-ab26-b1a83afae31c
 status: experimental
 description: |
     Detects potential network activity of Basecamp RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "basecamp.com"
+        DestinationHostname|endswith: 'basecamp.com'
     condition: selection
 falsepositives:
     - Legitimate use of Basecamp

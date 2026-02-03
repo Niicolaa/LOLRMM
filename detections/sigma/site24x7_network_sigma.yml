@@ -1,5 +1,5 @@
 title: Potential Site24x7 RMM Tool Network Activity
-id: 3169ba0e-168d-48c5-b479-d2e853a02d7b
+id: 28aa1aa8-bdd0-54ac-8651-925c4b54a0f1
 status: experimental
 description: |
     Detects potential network activity of Site24x7 RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "plus*.site24x7.com"
-            - "plus*.site24x7.eu"
-            - "plus*.site24x7.in"
-            - "plus*.site24x7.cn"
-            - "plus*.site24x7.net.au"
-            - "site24x7.com/msp"
+            - 'plus*.site24x7.com'
+            - 'plus*.site24x7.eu'
+            - 'plus*.site24x7.in'
+            - 'plus*.site24x7.cn'
+            - 'plus*.site24x7.net.au'
+            - 'site24x7.com/msp'
     condition: selection
 falsepositives:
     - Legitimate use of Site24x7

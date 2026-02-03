@@ -1,5 +1,5 @@
 title: Potential MioNet (Also known as WD Anywhere Access) RMM Tool Process Activity
-id: e18c885c-eb2d-4bc8-94f5-98c8f77ea817
+id: 90de4c83-d340-5fca-83cf-6d90d934f940
 status: experimental
 description: |
     Detects potential processes activity of MioNet (Also known as WD Anywhere Access) RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "mionet.exe"
-            - "mionetmanager.exe"
+            - 'mionet.exe'
+            - 'mionetmanager.exe'
     selection_image:
         Image|endswith:
-            - "mionet.exe"
-            - "mionetmanager.exe"
+            - 'mionet.exe'
+            - 'mionetmanager.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of MioNet (Also known as WD Anywhere Access)

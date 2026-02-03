@@ -1,5 +1,5 @@
 title: Potential Action1 RMM Tool Network Activity
-id: 14ab8a0a-65be-44fb-9c00-98090029ae95
+id: 4f70ef33-917d-5993-bd3c-e8511ac16c9d
 status: experimental
 description: |
     Detects potential network activity of Action1 RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.action1.com"
-            - "a1-backend-packages.s3.amazonaws.com"
+            - '*.action1.com'
+            - 'a1-backend-packages.s3.amazonaws.com'
     condition: selection
 falsepositives:
     - Legitimate use of Action1

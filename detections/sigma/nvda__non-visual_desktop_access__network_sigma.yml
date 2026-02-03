@@ -1,5 +1,5 @@
 title: Potential NVDA (Non-Visual Desktop Access) RMM Tool Network Activity
-id: 8ad92eff-97ab-4b5f-95bf-8900fac4fabe
+id: 814532f6-267d-5e39-b304-2ea58274997d
 status: experimental
 description: |
     Detects potential network activity of NVDA (Non-Visual Desktop Access) RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "nvaccess.org"
-            - "*.nvaccess.org"
+            - 'nvaccess.org'
+            - '*.nvaccess.org'
     condition: selection
 falsepositives:
     - Legitimate use of NVDA (Non-Visual Desktop Access)

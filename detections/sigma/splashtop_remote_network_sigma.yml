@@ -1,5 +1,5 @@
 title: Potential Splashtop Remote RMM Tool Network Activity
-id: e3d270e5-b156-45c6-8d0e-8aad3ed64370
+id: 4c8438ac-87b3-51d9-9a2b-a46adb5dedff
 status: experimental
 description: |
     Detects potential network activity of Splashtop Remote RMM tool
@@ -16,10 +16,10 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "splashtop.com"
-            - "*.api.splashtop.com"
-            - "*.relay.splashtop.com"
-            - "*.api.splashtop.eu"
+            - 'splashtop.com'
+            - '*.api.splashtop.com'
+            - '*.relay.splashtop.com'
+            - '*.api.splashtop.eu'
     condition: selection
 falsepositives:
     - Legitimate use of Splashtop Remote

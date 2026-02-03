@@ -1,5 +1,5 @@
 title: Potential BeInSync RMM Tool Process Activity
-id: 924a72a6-80fc-46f6-8903-2ab3ce6aac8a
+id: 52b76eb2-977f-5b1c-9414-0bde6a679e4e
 status: experimental
 description: |
     Detects potential processes activity of BeInSync RMM tool
@@ -15,9 +15,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: "Beinsync*.exe"
+        ParentImage|endswith: 'Beinsync*.exe'
     selection_image:
-        Image|endswith: "Beinsync*.exe"
+        Image|endswith: 'Beinsync*.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of BeInSync

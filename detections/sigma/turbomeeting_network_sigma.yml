@@ -1,5 +1,5 @@
 title: Potential TurboMeeting RMM Tool Network Activity
-id: 2beb6439-bfbf-4bb5-867b-eb5b5bff6e84
+id: 2393007a-aee4-5dc1-9d8f-c9a7efff594e
 status: experimental
 description: |
     Detects potential network activity of TurboMeeting RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "acceo.com/turbomeeting/"
+            - 'user_managed'
+            - 'acceo.com/turbomeeting/'
     condition: selection
 falsepositives:
     - Legitimate use of TurboMeeting

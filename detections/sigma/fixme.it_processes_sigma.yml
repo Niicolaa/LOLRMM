@@ -1,5 +1,5 @@
 title: Potential FixMe.it RMM Tool Process Activity
-id: b3fc70b6-f90f-4def-b2dc-e3bfd96ed711
+id: 8828950b-0e73-5dbd-867b-cd50fd421e36
 status: experimental
 description: |
     Detects potential processes activity of FixMe.it RMM tool
@@ -16,28 +16,28 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "FixMeit Client.exe"
-            - "TiExpertStandalone.exe"
-            - "FixMeitClient*.exe"
-            - "TiExpertCore.exe"
-            - "FixMeit Unattended Access Setup.exe"
-            - "FixMeit Expert Setup.exe"
-            - "TiExpertCore.exe"
-            - "fixmeitclient.exe"
-            - "TiClientCore.exe"
-            - "TiClientHelper*.exe"
+            - 'FixMeit Client.exe'
+            - 'TiExpertStandalone.exe'
+            - 'FixMeitClient*.exe'
+            - 'TiExpertCore.exe'
+            - 'FixMeit Unattended Access Setup.exe'
+            - 'FixMeit Expert Setup.exe'
+            - 'TiExpertCore.exe'
+            - 'fixmeitclient.exe'
+            - 'TiClientCore.exe'
+            - 'TiClientHelper*.exe'
     selection_image:
         Image|endswith:
-            - "FixMeit Client.exe"
-            - "TiExpertStandalone.exe"
-            - "FixMeitClient*.exe"
-            - "TiExpertCore.exe"
-            - "FixMeit Unattended Access Setup.exe"
-            - "FixMeit Expert Setup.exe"
-            - "TiExpertCore.exe"
-            - "fixmeitclient.exe"
-            - "TiClientCore.exe"
-            - "TiClientHelper*.exe"
+            - 'FixMeit Client.exe'
+            - 'TiExpertStandalone.exe'
+            - 'FixMeitClient*.exe'
+            - 'TiExpertCore.exe'
+            - 'FixMeit Unattended Access Setup.exe'
+            - 'FixMeit Expert Setup.exe'
+            - 'TiExpertCore.exe'
+            - 'fixmeitclient.exe'
+            - 'TiClientCore.exe'
+            - 'TiClientHelper*.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of FixMe.it

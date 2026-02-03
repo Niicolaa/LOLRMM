@@ -1,5 +1,5 @@
 title: Potential Royal Server RMM Tool Network Activity
-id: 4b1d5d87-538d-4867-913d-a49afb19789a
+id: 00b0e261-540e-5a67-bda5-36bca12ff5d7
 status: experimental
 description: |
     Detects potential network activity of Royal Server RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "royalapps.com"
+        DestinationHostname|endswith: 'royalapps.com'
     condition: selection
 falsepositives:
     - Legitimate use of Royal Server

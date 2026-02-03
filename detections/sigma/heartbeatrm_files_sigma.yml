@@ -1,5 +1,5 @@
 title: Potential HeartbeatRM RMM Tool File Activity
-id: 7720ab99-e18a-40a1-b177-9f68791e9ffa
+id: 6068f888-107c-5be5-a931-c7fef5f8f22b
 status: experimental
 description: |
     Detects potential files activity of HeartbeatRM RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\Program Files (x86)\HeartbeatRM\*"
-            - "C:\Program Files\HeartbeatRM\*"
-            - "*\agent-installer-any.exe"
+            - 'C:\Program Files (x86)\HeartbeatRM\*'
+            - 'C:\Program Files\HeartbeatRM\*'
+            - '*\agent-installer-any.exe'
     condition: selection
 falsepositives:
     - Legitimate use of HeartbeatRM

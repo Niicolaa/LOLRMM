@@ -1,5 +1,5 @@
 title: Potential QQ IM-remote assistance RMM Tool Network Activity
-id: f74193e8-47f7-430e-a417-7359b20060da
+id: d27339cf-da2b-525d-b396-226c7f0c5b92
 status: experimental
 description: |
     Detects potential network activity of QQ IM-remote assistance RMM tool
@@ -16,10 +16,10 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.mdt.qq.com"
-            - "*.desktop.qq.com"
-            - "upload_data.qq.com"
-            - "qq-messenger.en.softonic.com"
+            - '*.mdt.qq.com'
+            - '*.desktop.qq.com'
+            - 'upload_data.qq.com'
+            - 'qq-messenger.en.softonic.com'
     condition: selection
 falsepositives:
     - Legitimate use of QQ IM-remote assistance

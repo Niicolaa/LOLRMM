@@ -1,5 +1,5 @@
 title: Potential ScreenMeet RMM Tool Network Activity
-id: 9d0014d9-9e4b-4b4e-ae42-570ff906407c
+id: eb5441dd-9519-5e03-bd14-210c712aa4d1
 status: experimental
 description: |
     Detects potential network activity of ScreenMeet RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.screenmeet.com"
-            - "*.scrn.mt"
+            - '*.screenmeet.com'
+            - '*.scrn.mt'
     condition: selection
 falsepositives:
     - Legitimate use of ScreenMeet

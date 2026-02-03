@@ -1,5 +1,5 @@
 title: Potential DW Service RMM Tool Network Activity
-id: 9d44067e-d1ee-40ca-96d7-0ab54f5100ef
+id: fa86ead5-e0f6-5dfa-8889-c598457cd8fd
 status: experimental
 description: |
     Detects potential network activity of DW Service RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "*.dwservice.net"
+        DestinationHostname|endswith: '*.dwservice.net'
     condition: selection
 falsepositives:
     - Legitimate use of DW Service

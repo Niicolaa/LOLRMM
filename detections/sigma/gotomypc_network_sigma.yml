@@ -1,5 +1,5 @@
 title: Potential GoToMyPC RMM Tool Network Activity
-id: 8309af21-dbee-4775-981e-c657597e7538
+id: 54d94d2d-ad88-5120-820f-5bf0f9c32a4f
 status: experimental
 description: |
     Detects potential network activity of GoToMyPC RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "*.GoToMyPC.com"
+        DestinationHostname|endswith: '*.GoToMyPC.com'
     condition: selection
 falsepositives:
     - Legitimate use of GoToMyPC

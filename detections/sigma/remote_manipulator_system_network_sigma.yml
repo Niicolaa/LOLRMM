@@ -1,5 +1,5 @@
 title: Potential Remote Manipulator System RMM Tool Network Activity
-id: 89d0c2bb-296c-42b2-bf44-829035ab7c5f
+id: 7f6770a9-c881-59d7-82cc-91aa187c4dea
 status: experimental
 description: |
     Detects potential network activity of Remote Manipulator System RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.internetid.ru"
-            - "rmansys.ru"
+            - '*.internetid.ru'
+            - 'rmansys.ru'
     condition: selection
 falsepositives:
     - Legitimate use of Remote Manipulator System

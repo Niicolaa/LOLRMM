@@ -1,5 +1,5 @@
 title: Potential Remobo RMM Tool Network Activity
-id: 16dbb15b-c804-4fbe-9884-33d24197550b
+id: 0ea3cb85-3ba6-52d7-bcde-aeaf59720860
 status: experimental
 description: |
     Detects potential network activity of Remobo RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "remobo.en.softonic.com"
+            - 'user_managed'
+            - 'remobo.en.softonic.com'
     condition: selection
 falsepositives:
     - Legitimate use of Remobo

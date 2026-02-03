@@ -1,5 +1,5 @@
 title: Potential NoMachine RMM Tool Network Activity
-id: 418b89dd-b2eb-4d33-b175-a8afaed487d8
+id: 3a1f2607-e9bd-5087-beda-0d5adcbfa0fa
 status: experimental
 description: |
     Detects potential network activity of NoMachine RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "nomachine.com"
+            - 'user_managed'
+            - 'nomachine.com'
     condition: selection
 falsepositives:
     - Legitimate use of NoMachine

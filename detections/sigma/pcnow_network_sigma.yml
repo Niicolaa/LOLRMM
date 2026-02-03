@@ -1,5 +1,5 @@
 title: Potential Pcnow RMM Tool Network Activity
-id: 510acfa4-ccac-42a8-8acf-dc0e374e0cae
+id: 678c2c96-cbe5-556b-96ab-4d8539e1dde6
 status: experimental
 description: |
     Detects potential network activity of Pcnow RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "au.pcmag.com/utilities/21470/webex-pcnow"
+        DestinationHostname|endswith: 'au.pcmag.com/utilities/21470/webex-pcnow'
     condition: selection
 falsepositives:
     - Legitimate use of Pcnow

@@ -1,5 +1,5 @@
 title: Potential 247ithelp.com (ConnectWise) RMM Tool Network Activity
-id: 78208d47-0a50-44d2-80cc-42d5167cd759
+id: 46a93cbf-d8b6-5ad5-ac4d-cbddd7fc5733
 status: experimental
 description: |
     Detects potential network activity of 247ithelp.com (ConnectWise) RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "*.247ithelp.com"
+        DestinationHostname|endswith: '*.247ithelp.com'
     condition: selection
 falsepositives:
     - Legitimate use of 247ithelp.com (ConnectWise)

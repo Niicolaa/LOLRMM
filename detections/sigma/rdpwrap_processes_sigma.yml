@@ -1,5 +1,5 @@
 title: Potential rdpwrap RMM Tool Process Activity
-id: 9b9a6deb-b9d4-4f6d-a046-5bf1c9a00471
+id: 7616e922-5463-5fa3-bbec-8e9a589e2d4c
 status: experimental
 description: |
     Detects potential processes activity of rdpwrap RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "RDPWInst.exe"
-            - "RDPCheck.exe"
-            - "RDPConf.exe"
+            - 'RDPWInst.exe'
+            - 'RDPCheck.exe'
+            - 'RDPConf.exe'
     selection_image:
         Image|endswith:
-            - "RDPWInst.exe"
-            - "RDPCheck.exe"
-            - "RDPConf.exe"
+            - 'RDPWInst.exe'
+            - 'RDPCheck.exe'
+            - 'RDPConf.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of rdpwrap

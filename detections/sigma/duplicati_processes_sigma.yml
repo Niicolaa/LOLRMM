@@ -1,5 +1,5 @@
 title: Potential Duplicati RMM Tool Process Activity
-id: 70f3fc1b-6f4e-4003-bae2-7a257b3b2db1
+id: 8cc7086b-ff45-5b34-978c-32a7b65e5da3
 status: experimental
 description: |
     Detects potential processes activity of Duplicati RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "c:\Program Files\*\Duplicati.Server.exe"
-            - "*\*\Duplicati.Server.exe"
+            - 'c:\Program Files\*\Duplicati.Server.exe'
+            - '*\*\Duplicati.Server.exe'
     selection_image:
         Image|endswith:
-            - "c:\Program Files\*\Duplicati.Server.exe"
-            - "*\*\Duplicati.Server.exe"
+            - 'c:\Program Files\*\Duplicati.Server.exe'
+            - '*\*\Duplicati.Server.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Duplicati

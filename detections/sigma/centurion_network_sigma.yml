@@ -1,5 +1,5 @@
 title: Potential Centurion RMM Tool Network Activity
-id: 7f38ae12-d218-4a78-8f88-704cadd0e9f2
+id: 0ad4624d-7f8c-57e3-9983-5c8afd6300ed
 status: experimental
 description: |
     Detects potential network activity of Centurion RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "centuriontech.com"
+        DestinationHostname|endswith: 'centuriontech.com'
     condition: selection
 falsepositives:
     - Legitimate use of Centurion

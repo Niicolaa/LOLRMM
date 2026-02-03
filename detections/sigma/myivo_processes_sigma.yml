@@ -1,5 +1,5 @@
 title: Potential MyIVO RMM Tool Process Activity
-id: d2926a5f-876a-4388-8453-b79cc7eaacf2
+id: 5d37d5ca-1700-5f8c-a3d1-ee03d893919d
 status: experimental
 description: |
     Detects potential processes activity of MyIVO RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "myivomgr.exe"
-            - "myivomanager.exe"
+            - 'myivomgr.exe'
+            - 'myivomanager.exe'
     selection_image:
         Image|endswith:
-            - "myivomgr.exe"
-            - "myivomanager.exe"
+            - 'myivomgr.exe'
+            - 'myivomanager.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of MyIVO

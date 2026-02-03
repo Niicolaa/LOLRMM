@@ -1,5 +1,5 @@
 title: Potential Miradore RMM Tool File Activity
-id: 967c3a35-a732-4315-be5d-7e4e8e01469c
+id: 0c9a40bc-ba73-56f9-bca4-12d7c4511675
 status: experimental
 description: |
     Detects potential files activity of Miradore RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\Program Files\Miradore\OnlineClient\bin\*"
-            - "C:\Program Files\Miradore\OnlineClient\bin\7z.dll"
+            - 'C:\Program Files\Miradore\OnlineClient\bin\*'
+            - 'C:\Program Files\Miradore\OnlineClient\bin\7z.dll'
     condition: selection
 falsepositives:
     - Legitimate use of Miradore

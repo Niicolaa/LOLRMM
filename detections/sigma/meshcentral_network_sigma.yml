@@ -1,5 +1,5 @@
 title: Potential MeshCentral RMM Tool Network Activity
-id: 81020056-64c0-495b-bb22-96e00a400fe6
+id: 2989a1a0-ade8-5594-8ec5-50b685b21b3c
 status: experimental
 description: |
     Detects potential network activity of MeshCentral RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "meshcentral.com"
+            - 'user_managed'
+            - 'meshcentral.com'
     condition: selection
 falsepositives:
     - Legitimate use of MeshCentral

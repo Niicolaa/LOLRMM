@@ -1,5 +1,5 @@
 title: Potential Duet Display RMM Tool Network Activity
-id: 890d0676-c4bc-4925-a24e-d69a90a32dec
+id: f35b39c2-45b7-5beb-87f4-9586f5ec4374
 status: experimental
 description: |
     Detects potential network activity of Duet Display RMM tool
@@ -16,11 +16,11 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.duetdisplay.com"
-            - "rdp.duetdisplay.com"
-            - "duetdisplay.com"
-            - "*.itagent.com"
-            - "itagent.com"
+            - '*.duetdisplay.com'
+            - 'rdp.duetdisplay.com'
+            - 'duetdisplay.com'
+            - '*.itagent.com'
+            - 'itagent.com'
     condition: selection
 falsepositives:
     - Legitimate use of Duet Display

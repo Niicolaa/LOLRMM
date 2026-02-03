@@ -1,5 +1,5 @@
 title: Potential RPort RMM Tool Process Activity
-id: e6d6b133-a582-430c-9824-764d825b1554
+id: e0006f9a-f282-5220-90aa-06cb810791f7
 status: experimental
 description: |
     Detects potential processes activity of RPort RMM tool
@@ -15,9 +15,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: "rport.exe"
+        ParentImage|endswith: 'rport.exe'
     selection_image:
-        Image|endswith: "rport.exe"
+        Image|endswith: 'rport.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of RPort

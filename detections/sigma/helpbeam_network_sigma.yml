@@ -1,5 +1,5 @@
 title: Potential HelpBeam RMM Tool Network Activity
-id: 295371ec-afc6-4c6e-ad4c-a01700328698
+id: 25b396bb-34a6-543b-809c-b6693514a244
 status: experimental
 description: |
     Detects potential network activity of HelpBeam RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "helpbeam.software.informer.com"
+        DestinationHostname|endswith: 'helpbeam.software.informer.com'
     condition: selection
 falsepositives:
     - Legitimate use of HelpBeam

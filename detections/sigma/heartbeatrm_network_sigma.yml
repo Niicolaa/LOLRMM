@@ -1,5 +1,5 @@
 title: Potential HeartbeatRM RMM Tool Network Activity
-id: 35ddce36-0d6f-4e07-b2de-78bd92e4e48c
+id: 6bf78314-f722-50d4-9a80-b0537b72dd9d
 status: experimental
 description: |
     Detects potential network activity of HeartbeatRM RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.heartbeatrm.com"
-            - "heartbeatrm.com"
+            - '*.heartbeatrm.com'
+            - 'heartbeatrm.com'
     condition: selection
 falsepositives:
     - Legitimate use of HeartbeatRM

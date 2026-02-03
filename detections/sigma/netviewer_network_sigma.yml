@@ -1,5 +1,5 @@
 title: Potential Netviewer RMM Tool Network Activity
-id: 707f6671-bf8b-4aab-8a74-9036bc28fbfd
+id: 931fd1e9-6e0b-560d-994e-bb9476787a6c
 status: experimental
 description: |
     Detects potential network activity of Netviewer RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "download.cnet.com/Net-Viewer/3000-2370_4-10034828.html"
+        DestinationHostname|endswith: 'download.cnet.com/Net-Viewer/3000-2370_4-10034828.html'
     condition: selection
 falsepositives:
     - Legitimate use of Netviewer

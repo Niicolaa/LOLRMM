@@ -1,5 +1,5 @@
 title: Potential Comodo RMM RMM Tool Network Activity
-id: 33036a9a-d0e6-4519-8c2d-153718d464fd
+id: d083615c-4f20-53a6-b19f-342e62825f96
 status: experimental
 description: |
     Detects potential network activity of Comodo RMM RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.itsm-us1.comodo.com"
-            - "*mdmsupport.comodo.com"
-            - "one.comodo.com"
+            - '*.itsm-us1.comodo.com'
+            - '*mdmsupport.comodo.com'
+            - 'one.comodo.com'
     condition: selection
 falsepositives:
     - Legitimate use of Comodo RMM

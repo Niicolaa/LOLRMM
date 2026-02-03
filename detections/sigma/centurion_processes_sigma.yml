@@ -1,5 +1,5 @@
 title: Potential Centurion RMM Tool Process Activity
-id: f2bb50fc-eb59-4978-98f9-cbc6e9edc809
+id: 6505221f-cf22-520c-8c3b-3be78b43b05c
 status: experimental
 description: |
     Detects potential processes activity of Centurion RMM tool
@@ -15,9 +15,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: "ctiserv.exe"
+        ParentImage|endswith: 'ctiserv.exe'
     selection_image:
-        Image|endswith: "ctiserv.exe"
+        Image|endswith: 'ctiserv.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Centurion

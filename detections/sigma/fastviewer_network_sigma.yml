@@ -1,5 +1,5 @@
 title: Potential FastViewer RMM Tool Network Activity
-id: 3da0a96f-b2f2-43f5-bd1a-1a20a4b97709
+id: b5fc2355-8eed-5627-9e29-50c8fa8b670f
 status: experimental
 description: |
     Detects potential network activity of FastViewer RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.fastviewer.com"
-            - "fastviewer.com"
+            - '*.fastviewer.com'
+            - 'fastviewer.com'
     condition: selection
 falsepositives:
     - Legitimate use of FastViewer

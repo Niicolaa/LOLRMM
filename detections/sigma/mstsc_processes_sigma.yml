@@ -1,5 +1,5 @@
 title: Potential mstsc RMM Tool Process Activity
-id: a246b30b-2ed0-4301-a709-c76e48145137
+id: f42a99f1-6dcf-5f12-9a07-4e740ed9e79f
 status: experimental
 description: |
     Detects potential processes activity of mstsc RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "C:\Windows\System32\mstsc.exe"
-            - "*Windows\System32\mstsc.exe"
+            - 'C:\Windows\System32\mstsc.exe'
+            - '*Windows\System32\mstsc.exe'
     selection_image:
         Image|endswith:
-            - "C:\Windows\System32\mstsc.exe"
-            - "*Windows\System32\mstsc.exe"
+            - 'C:\Windows\System32\mstsc.exe'
+            - '*Windows\System32\mstsc.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of mstsc

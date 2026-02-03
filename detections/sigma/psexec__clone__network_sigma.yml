@@ -1,5 +1,5 @@
 title: Potential PSEXEC (Clone) RMM Tool Network Activity
-id: aaebd81f-b3f1-4bd9-ad7e-d01c8debc259
+id: ab770140-fbfc-509f-bb86-aea49ae83435
 status: experimental
 description: |
     Detects potential network activity of PSEXEC (Clone) RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "user_managed"
+        DestinationHostname|endswith: 'user_managed'
     condition: selection
 falsepositives:
     - Legitimate use of PSEXEC (Clone)

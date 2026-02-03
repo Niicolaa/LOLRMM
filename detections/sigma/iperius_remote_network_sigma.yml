@@ -1,5 +1,5 @@
 title: Potential Iperius Remote RMM Tool Network Activity
-id: 82eb06ea-010a-407e-a32b-368fecb545e9
+id: 32437e12-e41b-5dfb-8774-fd9e6d32ef19
 status: experimental
 description: |
     Detects potential network activity of Iperius Remote RMM tool
@@ -16,10 +16,10 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.iperiusremote.com"
-            - "*.iperius.com"
-            - "*.iperius-rs.com"
-            - "iperiusremote.com"
+            - '*.iperiusremote.com'
+            - '*.iperius.com'
+            - '*.iperius-rs.com'
+            - 'iperiusremote.com'
     condition: selection
 falsepositives:
     - Legitimate use of Iperius Remote

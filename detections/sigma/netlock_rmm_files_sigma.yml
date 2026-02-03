@@ -1,5 +1,5 @@
 title: Potential NetLock RMM RMM Tool File Activity
-id: 4eb2c5ae-a6d0-4dcf-9351-b06a715dc9fa
+id: 82c10301-9a7b-5116-9066-5e36877f8a7f
 status: experimental
 description: |
     Detects potential files activity of NetLock RMM RMM tool
@@ -16,11 +16,11 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\temp\netlock rmm\installer\logs\*"
-            - "C:\ProgramData\0x101 Cyber Security\NetLock RMM\Comm Agent\server_config.json"
-            - "/etc/systemd/system/netlock-rmm-agent-comm.service"
-            - "/Library/LaunchDaemons/com.netlock.rmm.agentcomm.plist"
-            - "/var/log/netlock-rmm-agent-comm.log"
+            - 'C:\temp\netlock rmm\installer\logs\*'
+            - 'C:\ProgramData\0x101 Cyber Security\NetLock RMM\Comm Agent\server_config.json'
+            - '/etc/systemd/system/netlock-rmm-agent-comm.service'
+            - '/Library/LaunchDaemons/com.netlock.rmm.agentcomm.plist'
+            - '/var/log/netlock-rmm-agent-comm.log'
     condition: selection
 falsepositives:
     - Legitimate use of NetLock RMM

@@ -1,5 +1,5 @@
 title: Potential ngrok RMM Tool Network Activity
-id: 83319359-ccbe-4171-9e9c-542664561e80
+id: cfdb0abb-2923-5206-b15f-51ddcae9991d
 status: experimental
 description: |
     Detects potential network activity of ngrok RMM tool
@@ -16,15 +16,15 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "connect.ngrok-agent.com"
-            - "connect.us.ngrok-agent.com"
-            - "connect.eu.ngrok-agent.com"
-            - "connect.ap.ngrok-agent.com"
-            - "connect.au.ngrok-agent.com"
-            - "connect.sa.ngrok-agent.com"
-            - "connect.jp.ngrok-agent.com"
-            - "connect.in.ngrok-agent.com"
-            - "ngrok.com"
+            - 'connect.ngrok-agent.com'
+            - 'connect.us.ngrok-agent.com'
+            - 'connect.eu.ngrok-agent.com'
+            - 'connect.ap.ngrok-agent.com'
+            - 'connect.au.ngrok-agent.com'
+            - 'connect.sa.ngrok-agent.com'
+            - 'connect.jp.ngrok-agent.com'
+            - 'connect.in.ngrok-agent.com'
+            - 'ngrok.com'
     condition: selection
 falsepositives:
     - Legitimate use of ngrok

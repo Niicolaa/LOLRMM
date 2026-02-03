@@ -1,5 +1,5 @@
 title: Potential Pocket Controller RMM Tool Network Activity
-id: 84f32863-f9fc-41bb-8764-201d41334e4d
+id: b2fb8a2b-38ea-57ea-acb8-df14b19abd12
 status: experimental
 description: |
     Detects potential network activity of Pocket Controller RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "soti.net/products/soti-pocket-controller"
+        DestinationHostname|endswith: 'soti.net/products/soti-pocket-controller'
     condition: selection
 falsepositives:
     - Legitimate use of Pocket Controller

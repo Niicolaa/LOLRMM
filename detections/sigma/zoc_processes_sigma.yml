@@ -1,5 +1,5 @@
 title: Potential ZOC RMM Tool Process Activity
-id: 35b9662e-5e3f-4240-aeb2-307844a2c2b1
+id: 29a8c43e-86f1-5a56-bc98-b0535f3f4481
 status: experimental
 description: |
     Detects potential processes activity of ZOC RMM tool
@@ -15,9 +15,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: "*\zoc.exe"
+        ParentImage|endswith: '*\zoc.exe'
     selection_image:
-        Image|endswith: "*\zoc.exe"
+        Image|endswith: '*\zoc.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ZOC

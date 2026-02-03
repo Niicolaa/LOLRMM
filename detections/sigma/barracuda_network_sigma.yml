@@ -1,5 +1,5 @@
 title: Potential Barracuda RMM Tool Network Activity
-id: c1609f09-8510-40f2-bced-1810ad326a51
+id: 3d84d486-cefd-5a6a-89e3-cbf41838f8e2
 status: experimental
 description: |
     Detects potential network activity of Barracuda RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.islonline.net"
-            - "rmm.barracudamsp.com"
-            - "barracudamsp.com"
+            - '*.islonline.net'
+            - 'rmm.barracudamsp.com'
+            - 'barracudamsp.com'
     condition: selection
 falsepositives:
     - Legitimate use of Barracuda

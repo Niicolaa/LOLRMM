@@ -1,5 +1,5 @@
 title: Potential Insync RMM Tool Process Activity
-id: f6e51f88-6f6b-472d-a6a1-7500bf913c14
+id: cbcf273c-7cf3-5374-bd3b-92f6970c1c81
 status: experimental
 description: |
     Detects potential processes activity of Insync RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "C:\Users\USERNAME\AppData\Roaming\Insync\App\Insync.exe"
-            - "*Users\*\AppData\Roaming\Insync\App\Insync.exe"
-            - "*\Insync.exe"
+            - 'C:\Users\USERNAME\AppData\Roaming\Insync\App\Insync.exe'
+            - '*Users\*\AppData\Roaming\Insync\App\Insync.exe'
+            - '*\Insync.exe'
     selection_image:
         Image|endswith:
-            - "C:\Users\USERNAME\AppData\Roaming\Insync\App\Insync.exe"
-            - "*Users\*\AppData\Roaming\Insync\App\Insync.exe"
-            - "*\Insync.exe"
+            - 'C:\Users\USERNAME\AppData\Roaming\Insync\App\Insync.exe'
+            - '*Users\*\AppData\Roaming\Insync\App\Insync.exe'
+            - '*\Insync.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Insync

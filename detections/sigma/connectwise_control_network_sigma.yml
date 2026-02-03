@@ -1,5 +1,5 @@
 title: Potential ConnectWise Control RMM Tool Network Activity
-id: 05963b2b-9b92-496d-bf8b-2e996a43a5e0
+id: 0bd0958e-24ab-564e-956f-7468cf3d3356
 status: experimental
 description: |
     Detects potential network activity of ConnectWise Control RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "live.screenconnect.com"
-            - "control.connectwise.com"
+            - 'live.screenconnect.com'
+            - 'control.connectwise.com'
     condition: selection
 falsepositives:
     - Legitimate use of ConnectWise Control

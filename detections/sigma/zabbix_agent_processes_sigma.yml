@@ -1,5 +1,5 @@
 title: Potential Zabbix Agent RMM Tool Process Activity
-id: e93c3fcf-f780-4660-b357-8a7e07fd936d
+id: ae15ddd2-9daa-5b4b-b007-ee3fd36e2aaf
 status: experimental
 description: |
     Detects potential processes activity of Zabbix Agent RMM tool
@@ -15,9 +15,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: "zabbix_agent*.exe"
+        ParentImage|endswith: 'zabbix_agent*.exe'
     selection_image:
-        Image|endswith: "zabbix_agent*.exe"
+        Image|endswith: 'zabbix_agent*.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Zabbix Agent

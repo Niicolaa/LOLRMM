@@ -1,5 +1,5 @@
 title: Potential Netop Remote Control (Impero Connect) RMM Tool Process Activity
-id: 0451a6e7-3846-42ee-9912-3f3c17084acf
+id: 1b3e5bc8-ee76-55c8-a9e3-651fefbffb1d
 status: experimental
 description: |
     Detects potential processes activity of Netop Remote Control (Impero Connect) RMM tool
@@ -16,26 +16,26 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "nhostsvc.exe"
-            - "nhstw32.exe"
-            - "ngstw32.exe"
-            - "Netop Ondemand.exe"
-            - "nldrw32.exe"
-            - "rmserverconsolemediator.exe"
-            - "ImperoInit.exe"
-            - "Connect.Backdrop.cloud*.exe"
-            - "ImperoClientSVC.exe"
+            - 'nhostsvc.exe'
+            - 'nhstw32.exe'
+            - 'ngstw32.exe'
+            - 'Netop Ondemand.exe'
+            - 'nldrw32.exe'
+            - 'rmserverconsolemediator.exe'
+            - 'ImperoInit.exe'
+            - 'Connect.Backdrop.cloud*.exe'
+            - 'ImperoClientSVC.exe'
     selection_image:
         Image|endswith:
-            - "nhostsvc.exe"
-            - "nhstw32.exe"
-            - "ngstw32.exe"
-            - "Netop Ondemand.exe"
-            - "nldrw32.exe"
-            - "rmserverconsolemediator.exe"
-            - "ImperoInit.exe"
-            - "Connect.Backdrop.cloud*.exe"
-            - "ImperoClientSVC.exe"
+            - 'nhostsvc.exe'
+            - 'nhstw32.exe'
+            - 'ngstw32.exe'
+            - 'Netop Ondemand.exe'
+            - 'nldrw32.exe'
+            - 'rmserverconsolemediator.exe'
+            - 'ImperoInit.exe'
+            - 'Connect.Backdrop.cloud*.exe'
+            - 'ImperoClientSVC.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Netop Remote Control (Impero Connect)

@@ -1,5 +1,5 @@
 title: Potential NVDA (Non-Visual Desktop Access) RMM Tool File Activity
-id: 4aaf76e7-2a2e-406a-8ff0-178c7fe59d86
+id: 26110593-ccfd-510a-9d00-a877daa2ee99
 status: experimental
 description: |
     Detects potential files activity of NVDA (Non-Visual Desktop Access) RMM tool
@@ -16,10 +16,10 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\Program Files (x86)\NVDA\nvda.exe"
-            - "C:\Program Files\NVDA\nvda.exe"
-            - "C:\Users\*\AppData\Roaming\nvda\nvda.log"
-            - "C:\Users\*\AppData\Roaming\nvda\nvda.ini"
+            - 'C:\Program Files (x86)\NVDA\nvda.exe'
+            - 'C:\Program Files\NVDA\nvda.exe'
+            - 'C:\Users\*\AppData\Roaming\nvda\nvda.log'
+            - 'C:\Users\*\AppData\Roaming\nvda\nvda.ini'
     condition: selection
 falsepositives:
     - Legitimate use of NVDA (Non-Visual Desktop Access)

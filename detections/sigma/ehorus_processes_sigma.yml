@@ -1,5 +1,5 @@
 title: Potential eHorus RMM Tool Process Activity
-id: fa559b76-3f7c-4a35-89b7-501aa34fa4e6
+id: 8a763258-c629-561e-89ff-7459ec0349c7
 status: experimental
 description: |
     Detects potential processes activity of eHorus RMM tool
@@ -16,18 +16,18 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "ehorus standalone.exe"
-            - "ehorus_agent.exe"
-            - "ehorus_cmd.exe"
-            - "ehorus_launcher.exe"
-            - "ehorus_uit.exe"
+            - 'ehorus standalone.exe'
+            - 'ehorus_agent.exe'
+            - 'ehorus_cmd.exe'
+            - 'ehorus_launcher.exe'
+            - 'ehorus_uit.exe'
     selection_image:
         Image|endswith:
-            - "ehorus standalone.exe"
-            - "ehorus_agent.exe"
-            - "ehorus_cmd.exe"
-            - "ehorus_launcher.exe"
-            - "ehorus_uit.exe"
+            - 'ehorus standalone.exe'
+            - 'ehorus_agent.exe'
+            - 'ehorus_cmd.exe'
+            - 'ehorus_launcher.exe'
+            - 'ehorus_uit.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of eHorus

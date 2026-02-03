@@ -1,5 +1,5 @@
 title: Potential BeAnyWhere RMM Tool Process Activity
-id: 5c28131a-c50a-4d18-948a-50a6a4be8703
+id: 0ca8ec9d-d4e6-56fe-afa4-9ec032c65a97
 status: experimental
 description: |
     Detects potential processes activity of BeAnyWhere RMM tool
@@ -16,24 +16,24 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "basuptshelper.exe"
-            - "basupsrvcupdate.exe"
-            - "BASupApp.exe"
-            - "BASupSysInf.exe"
-            - "BASupAppSrvc.exe"
-            - "TakeControl.exe"
-            - "BASupAppElev.exe"
-            - "basupsrvc.exe"
+            - 'basuptshelper.exe'
+            - 'basupsrvcupdate.exe'
+            - 'BASupApp.exe'
+            - 'BASupSysInf.exe'
+            - 'BASupAppSrvc.exe'
+            - 'TakeControl.exe'
+            - 'BASupAppElev.exe'
+            - 'basupsrvc.exe'
     selection_image:
         Image|endswith:
-            - "basuptshelper.exe"
-            - "basupsrvcupdate.exe"
-            - "BASupApp.exe"
-            - "BASupSysInf.exe"
-            - "BASupAppSrvc.exe"
-            - "TakeControl.exe"
-            - "BASupAppElev.exe"
-            - "basupsrvc.exe"
+            - 'basuptshelper.exe'
+            - 'basupsrvcupdate.exe'
+            - 'BASupApp.exe'
+            - 'BASupSysInf.exe'
+            - 'BASupAppSrvc.exe'
+            - 'TakeControl.exe'
+            - 'BASupAppElev.exe'
+            - 'basupsrvc.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of BeAnyWhere

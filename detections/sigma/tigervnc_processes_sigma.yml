@@ -1,5 +1,5 @@
 title: Potential TigerVNC RMM Tool Process Activity
-id: 0578b1a1-7899-45d1-9d8c-656b7b14319f
+id: 5157bfb1-f83b-5542-89a3-248bc11d602f
 status: experimental
 description: |
     Detects potential processes activity of TigerVNC RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "tigervnc*.exe"
-            - "winvnc4.exe"
-            - "*\tvnserver.exe"
+            - 'tigervnc*.exe'
+            - 'winvnc4.exe'
+            - '*\tvnserver.exe'
     selection_image:
         Image|endswith:
-            - "tigervnc*.exe"
-            - "winvnc4.exe"
-            - "*\tvnserver.exe"
+            - 'tigervnc*.exe'
+            - 'winvnc4.exe'
+            - '*\tvnserver.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of TigerVNC

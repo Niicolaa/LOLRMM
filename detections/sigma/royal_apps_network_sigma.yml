@@ -1,5 +1,5 @@
 title: Potential Royal Apps RMM Tool Network Activity
-id: cd629058-9659-4702-b7d7-ad8621a805d2
+id: ad600cb3-bfe7-51a3-87cd-d95f5f131b65
 status: experimental
 description: |
     Detects potential network activity of Royal Apps RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "user_managed"
+        DestinationHostname|endswith: 'user_managed'
     condition: selection
 falsepositives:
     - Legitimate use of Royal Apps

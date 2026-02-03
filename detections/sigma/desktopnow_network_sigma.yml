@@ -1,5 +1,5 @@
 title: Potential DesktopNow RMM Tool Network Activity
-id: f84132b6-77ad-42a7-bcf3-ec2ab6afab89
+id: 23562e9b-0deb-5d34-a12f-9ffebfcc110e
 status: experimental
 description: |
     Detects potential network activity of DesktopNow RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "*.nchuser.com"
+        DestinationHostname|endswith: '*.nchuser.com'
     condition: selection
 falsepositives:
     - Legitimate use of DesktopNow

@@ -1,5 +1,5 @@
 title: Potential Pilixo RMM Tool Network Activity
-id: e8fdeacc-d914-4135-a796-7715c477f9a5
+id: e16838f9-d906-5bc8-a747-77b624715806
 status: experimental
 description: |
     Detects potential network activity of Pilixo RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "pilixo.com"
-            - "download.pilixo.com"
-            - "*.pilixo.com"
+            - 'pilixo.com'
+            - 'download.pilixo.com'
+            - '*.pilixo.com'
     condition: selection
 falsepositives:
     - Legitimate use of Pilixo

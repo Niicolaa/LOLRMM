@@ -1,5 +1,5 @@
 title: Potential RPort RMM Tool Network Activity
-id: 23558197-e7f1-444b-9b9e-3c7321c82ffc
+id: 4730b65b-1328-5c9e-a8f8-1868a100bb24
 status: experimental
 description: |
     Detects potential network activity of RPort RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "rport.io"
+            - 'user_managed'
+            - 'rport.io'
     condition: selection
 falsepositives:
     - Legitimate use of RPort

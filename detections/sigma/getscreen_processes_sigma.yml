@@ -1,5 +1,5 @@
 title: Potential GetScreen RMM Tool Process Activity
-id: 579711ec-df28-4f47-adac-3edc493530c0
+id: a62e3743-71ff-53be-a998-4d75a742a582
 status: experimental
 description: |
     Detects potential processes activity of GetScreen RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "GetScreen.exe"
-            - "getscreen.exe"
+            - 'GetScreen.exe'
+            - 'getscreen.exe'
     selection_image:
         Image|endswith:
-            - "GetScreen.exe"
-            - "getscreen.exe"
+            - 'GetScreen.exe'
+            - 'getscreen.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of GetScreen

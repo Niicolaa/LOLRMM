@@ -1,5 +1,5 @@
 title: Potential Sophos-Remote Management System RMM Tool Process Activity
-id: 235f30f3-9086-4404-b34e-b7dcde3d04df
+id: f311e841-cc26-5d4f-86ab-0704a9ad7acd
 status: experimental
 description: |
     Detects potential processes activity of Sophos-Remote Management System RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "clientmrinit.exe"
-            - "mgntsvc.exe"
-            - "routernt.exe"
+            - 'clientmrinit.exe'
+            - 'mgntsvc.exe'
+            - 'routernt.exe'
     selection_image:
         Image|endswith:
-            - "clientmrinit.exe"
-            - "mgntsvc.exe"
-            - "routernt.exe"
+            - 'clientmrinit.exe'
+            - 'mgntsvc.exe'
+            - 'routernt.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Sophos-Remote Management System

@@ -1,5 +1,5 @@
 title: Potential RdClient RMM Tool Registry Activity
-id: f9c34442-e2e9-4b21-978a-83544fd64814
+id: 1488606f-9adc-50d0-8b3d-c620b0a64ed9
 status: experimental
 description: |
     Detects potential registry activity of RdClient RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: registry_event
 detection:
     selection:
-        TargetObject|contains: "HKLM\SOFTWARE\RdClient"
+        TargetObject|contains: 'HKLM\SOFTWARE\RdClient'
     condition: selection
 falsepositives:
     - Legitimate use of RdClient

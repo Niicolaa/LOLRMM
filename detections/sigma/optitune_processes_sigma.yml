@@ -1,5 +1,5 @@
 title: Potential OptiTune RMM Tool Process Activity
-id: 78c84425-ff27-4277-86c2-34c0a568998a
+id: fd36d5bd-60ff-54e4-b0c1-fd0babcc4d2a
 status: experimental
 description: |
     Detects potential processes activity of OptiTune RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "OTService.exe"
-            - "OTPowerShell.exe"
+            - 'OTService.exe'
+            - 'OTPowerShell.exe'
     selection_image:
         Image|endswith:
-            - "OTService.exe"
-            - "OTPowerShell.exe"
+            - 'OTService.exe'
+            - 'OTPowerShell.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of OptiTune

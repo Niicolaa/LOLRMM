@@ -1,5 +1,5 @@
 title: Potential ezHelp RMM Tool Network Activity
-id: 7e713f4e-e1d3-40a3-9234-ead8cc06396b
+id: 1db1db8e-1c97-5ce9-9fcc-d7fdc6b7a9f6
 status: experimental
 description: |
     Detects potential network activity of ezHelp RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.ezhelp.co.kr"
-            - "ezhelp.co.kr"
+            - '*.ezhelp.co.kr'
+            - 'ezhelp.co.kr'
     condition: selection
 falsepositives:
     - Legitimate use of ezHelp

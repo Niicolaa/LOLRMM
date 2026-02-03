@@ -1,5 +1,5 @@
 title: Potential Apple Remote Desktop RMM Tool Network Activity
-id: fd59fe56-6050-4bba-8b6c-d90e495a6dcc
+id: 2a881cc7-b51f-59b9-be7a-dc197dece509
 status: experimental
 description: |
     Detects potential network activity of Apple Remote Desktop RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "user_managed"
+        DestinationHostname|endswith: 'user_managed'
     condition: selection
 falsepositives:
     - Legitimate use of Apple Remote Desktop

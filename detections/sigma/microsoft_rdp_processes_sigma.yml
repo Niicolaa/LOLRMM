@@ -1,5 +1,5 @@
 title: Potential Microsoft RDP RMM Tool Process Activity
-id: d349a8d1-9417-42ae-b934-f52fe3bf01c8
+id: fe4f29e4-6ede-5f3e-afb8-180ce93df2aa
 status: experimental
 description: |
     Detects potential processes activity of Microsoft RDP RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "termsrv.exe"
-            - "mstsc.exe"
+            - 'termsrv.exe'
+            - 'mstsc.exe'
     selection_image:
         Image|endswith:
-            - "termsrv.exe"
-            - "mstsc.exe"
+            - 'termsrv.exe'
+            - 'mstsc.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Microsoft RDP

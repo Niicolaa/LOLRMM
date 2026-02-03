@@ -1,5 +1,5 @@
 title: Potential ngrok RMM Tool Process Activity
-id: 689183d0-26c2-48c8-ab8b-0f4247fe486b
+id: 060f3d4d-64f8-579d-9344-4c7bea0f390d
 status: experimental
 description: |
     Detects potential processes activity of ngrok RMM tool
@@ -15,9 +15,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: "ngrok.exe"
+        ParentImage|endswith: 'ngrok.exe'
     selection_image:
-        Image|endswith: "ngrok.exe"
+        Image|endswith: 'ngrok.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ngrok

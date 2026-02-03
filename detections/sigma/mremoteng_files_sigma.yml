@@ -1,5 +1,5 @@
 title: Potential mRemoteNG RMM Tool File Activity
-id: 2ecf7c86-7255-4310-b48f-a95494d22ca0
+id: 7d5db791-0b23-555d-acfc-6e01cd81795f
 status: experimental
 description: |
     Detects potential files activity of mRemoteNG RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\Users\*\AppData\Roaming\mRemoteNG\mRemoteNG.log"
-            - "C:\Users\*\AppData\Roaming\mRemoteNG\confCons.xml"
-            - "C:\Users\*\AppData\*\mRemoteNG\**10\user.config"
+            - 'C:\Users\*\AppData\Roaming\mRemoteNG\mRemoteNG.log'
+            - 'C:\Users\*\AppData\Roaming\mRemoteNG\confCons.xml'
+            - 'C:\Users\*\AppData\*\mRemoteNG\**10\user.config'
     condition: selection
 falsepositives:
     - Legitimate use of mRemoteNG

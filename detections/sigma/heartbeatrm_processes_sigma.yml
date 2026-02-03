@@ -1,5 +1,5 @@
 title: Potential HeartbeatRM RMM Tool Process Activity
-id: 6fb73cf2-0c5c-4d89-bca1-c754cf26a1da
+id: ca4f3aa9-5178-578f-9c94-12231e521d9f
 status: experimental
 description: |
     Detects potential processes activity of HeartbeatRM RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "agent-installer-any.exe"
-            - "hbrm-x64.exe"
-            - "hbrm-updater-x64.exe"
+            - 'agent-installer-any.exe'
+            - 'hbrm-x64.exe'
+            - 'hbrm-updater-x64.exe'
     selection_image:
         Image|endswith:
-            - "agent-installer-any.exe"
-            - "hbrm-x64.exe"
-            - "hbrm-updater-x64.exe"
+            - 'agent-installer-any.exe'
+            - 'hbrm-x64.exe'
+            - 'hbrm-updater-x64.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of HeartbeatRM

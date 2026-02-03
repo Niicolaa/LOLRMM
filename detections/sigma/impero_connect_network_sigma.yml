@@ -1,5 +1,5 @@
 title: Potential Impero Connect RMM Tool Network Activity
-id: cd7d9c29-44f4-4c38-82c8-29c5b9f896bd
+id: 3477a96e-8bba-5e90-ad9a-0112aaeac735
 status: experimental
 description: |
     Detects potential network activity of Impero Connect RMM tool
@@ -15,7 +15,7 @@ logsource:
     category: network_connection
 detection:
     selection:
-        DestinationHostname|endswith: "imperosoftware.com"
+        DestinationHostname|endswith: 'imperosoftware.com'
     condition: selection
 falsepositives:
     - Legitimate use of Impero Connect

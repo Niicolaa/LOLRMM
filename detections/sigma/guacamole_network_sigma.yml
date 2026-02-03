@@ -1,5 +1,5 @@
 title: Potential Guacamole RMM Tool Network Activity
-id: f2f24b1d-3cfd-489a-aed7-b1b6134ff449
+id: a20f0ee0-7479-5306-9bf0-5974ac1c3b53
 status: experimental
 description: |
     Detects potential network activity of Guacamole RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "user_managed"
-            - "guacamole.apache.org"
+            - 'user_managed'
+            - 'guacamole.apache.org'
     condition: selection
 falsepositives:
     - Legitimate use of Guacamole

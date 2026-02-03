@@ -1,5 +1,5 @@
 title: Potential Tanium RMM Tool Network Activity
-id: 07584cd4-d3f6-499f-9397-dd4317795693
+id: 6d343c3e-f9b5-5158-86fa-001676e64397
 status: experimental
 description: |
     Detects potential network activity of Tanium RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "cloud.tanium.com"
-            - "*.cloud.tanium.com"
+            - 'cloud.tanium.com'
+            - '*.cloud.tanium.com'
     condition: selection
 falsepositives:
     - Legitimate use of Tanium

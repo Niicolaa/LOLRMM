@@ -1,5 +1,5 @@
 title: Potential CrossLoop RMM Tool Network Activity
-id: 5a22b093-824c-425e-b687-098ac9a166a1
+id: 99770785-9c41-5435-8839-372a9c8e2b07
 status: experimental
 description: |
     Detects potential network activity of CrossLoop RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.crossloop.com"
-            - "crossloop.en.softonic.com"
+            - '*.crossloop.com'
+            - 'crossloop.en.softonic.com'
     condition: selection
 falsepositives:
     - Legitimate use of CrossLoop

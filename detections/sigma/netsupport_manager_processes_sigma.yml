@@ -1,5 +1,5 @@
 title: Potential NetSupport Manager RMM Tool Process Activity
-id: df0fffa7-376a-47ac-96d8-6aa840c1bf56
+id: 55368c9b-40aa-5aaf-984b-98ae73c3b699
 status: experimental
 description: |
     Detects potential processes activity of NetSupport Manager RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "pcictlui.exe"
-            - "pcicfgui.exe"
-            - "client32.exe"
+            - 'pcictlui.exe'
+            - 'pcicfgui.exe'
+            - 'client32.exe'
     selection_image:
         Image|endswith:
-            - "pcictlui.exe"
-            - "pcicfgui.exe"
-            - "client32.exe"
+            - 'pcictlui.exe'
+            - 'pcicfgui.exe'
+            - 'client32.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of NetSupport Manager

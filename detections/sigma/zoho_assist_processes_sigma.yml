@@ -1,5 +1,5 @@
 title: Potential Zoho Assist RMM Tool Process Activity
-id: 916aeebd-3605-4f90-ad79-481a21c2cfbe
+id: a7812b35-9329-5fed-99a3-df00e14ba031
 status: experimental
 description: |
     Detects potential processes activity of Zoho Assist RMM tool
@@ -16,30 +16,30 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "zaservice.exe"
-            - "ZMAgent.exe"
-            - "C:\*\ZA_Access.exe"
-            - "ZohoMeeting.exe"
-            - "Zohours.exe"
-            - "zohotray.exe"
-            - "ZohoURSService.exe"
-            - "*\ZA_Access.exe"
-            - "Zaservice.exe"
-            - "za_connect.exe"
-            - "connect.exe"
+            - 'zaservice.exe'
+            - 'ZMAgent.exe'
+            - 'C:\*\ZA_Access.exe'
+            - 'ZohoMeeting.exe'
+            - 'Zohours.exe'
+            - 'zohotray.exe'
+            - 'ZohoURSService.exe'
+            - '*\ZA_Access.exe'
+            - 'Zaservice.exe'
+            - 'za_connect.exe'
+            - 'connect.exe'
     selection_image:
         Image|endswith:
-            - "zaservice.exe"
-            - "ZMAgent.exe"
-            - "C:\*\ZA_Access.exe"
-            - "ZohoMeeting.exe"
-            - "Zohours.exe"
-            - "zohotray.exe"
-            - "ZohoURSService.exe"
-            - "*\ZA_Access.exe"
-            - "Zaservice.exe"
-            - "za_connect.exe"
-            - "connect.exe"
+            - 'zaservice.exe'
+            - 'ZMAgent.exe'
+            - 'C:\*\ZA_Access.exe'
+            - 'ZohoMeeting.exe'
+            - 'Zohours.exe'
+            - 'zohotray.exe'
+            - 'ZohoURSService.exe'
+            - '*\ZA_Access.exe'
+            - 'Zaservice.exe'
+            - 'za_connect.exe'
+            - 'connect.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Zoho Assist

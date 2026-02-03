@@ -1,5 +1,5 @@
 title: Potential CentraStage (Now Datto) RMM Tool Process Activity
-id: e7e14f5d-d2dd-4821-aa49-471ca9a78fad
+id: 8986ff10-b5a7-5960-8e31-70841d340ae8
 status: experimental
 description: |
     Detects potential processes activity of CentraStage (Now Datto) RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "CagService.exe"
-            - "AEMAgent.exe"
+            - 'CagService.exe'
+            - 'AEMAgent.exe'
     selection_image:
         Image|endswith:
-            - "CagService.exe"
-            - "AEMAgent.exe"
+            - 'CagService.exe'
+            - 'AEMAgent.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of CentraStage (Now Datto)

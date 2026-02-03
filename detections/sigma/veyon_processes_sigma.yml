@@ -1,5 +1,5 @@
 title: Potential Veyon RMM Tool Process Activity
-id: 3fc14c4d-f564-4053-8f31-4008ff17d789
+id: 14567547-1ca1-5c54-b074-422ba9d11087
 status: experimental
 description: |
     Detects potential processes activity of Veyon RMM tool
@@ -16,18 +16,18 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "veyon-wcli.exe"
-            - "veyon-worker.exe"
-            - "veyon-server.exe"
-            - "veyon-service.exe"
-            - "veyon-master.exe"
+            - 'veyon-wcli.exe'
+            - 'veyon-worker.exe'
+            - 'veyon-server.exe'
+            - 'veyon-service.exe'
+            - 'veyon-master.exe'
     selection_image:
         Image|endswith:
-            - "veyon-wcli.exe"
-            - "veyon-worker.exe"
-            - "veyon-server.exe"
-            - "veyon-service.exe"
-            - "veyon-master.exe"
+            - 'veyon-wcli.exe'
+            - 'veyon-worker.exe'
+            - 'veyon-server.exe'
+            - 'veyon-service.exe'
+            - 'veyon-master.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Veyon

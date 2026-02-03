@@ -1,5 +1,5 @@
 title: Potential Parsec RMM Tool Network Activity
-id: 8a8767e9-bfd0-4089-94a3-11ac205ae099
+id: bfa97730-7290-5520-bb73-bb48c798e490
 status: experimental
 description: |
     Detects potential network activity of Parsec RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "parsec.app"
-            - "parsec.gg"
-            - "*.parsec.app"
+            - 'parsec.app'
+            - 'parsec.gg'
+            - '*.parsec.app'
     condition: selection
 falsepositives:
     - Legitimate use of Parsec

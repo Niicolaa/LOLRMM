@@ -1,5 +1,5 @@
 title: Potential ScreenConnect RMM Tool File Activity
-id: 65059f62-0123-4b3e-a8e3-88eb92c0791d
+id: 1461da7e-2712-5195-9d57-86c6ef02ff2e
 status: experimental
 description: |
     Detects potential files activity of ScreenConnect RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - "C:\Program Files*\ScreenConnect\App_Data\Session.db"
-            - "C:\Program Files*\ScreenConnect\App_Data\User.xml"
-            - "C:\ProgramData\ScreenConnect Client*\user.config"
+            - 'C:\Program Files*\ScreenConnect\App_Data\Session.db'
+            - 'C:\Program Files*\ScreenConnect\App_Data\User.xml'
+            - 'C:\ProgramData\ScreenConnect Client*\user.config'
     condition: selection
 falsepositives:
     - Legitimate use of ScreenConnect

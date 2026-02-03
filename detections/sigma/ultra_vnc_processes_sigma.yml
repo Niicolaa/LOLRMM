@@ -1,5 +1,5 @@
 title: Potential Ultra VNC RMM Tool Process Activity
-id: 9bc5a5b0-30b1-40e4-a902-27d825f5235d
+id: a3df8613-a454-5c8f-a564-a2d3c3e641a5
 status: experimental
 description: |
     Detects potential processes activity of Ultra VNC RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "*\UVNC_Launch.exe"
-            - "*\winvnc.exe"
-            - "*\vncviewer.exe"
+            - '*\UVNC_Launch.exe'
+            - '*\winvnc.exe'
+            - '*\vncviewer.exe'
     selection_image:
         Image|endswith:
-            - "*\UVNC_Launch.exe"
-            - "*\winvnc.exe"
-            - "*\vncviewer.exe"
+            - '*\UVNC_Launch.exe'
+            - '*\winvnc.exe'
+            - '*\vncviewer.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Ultra VNC

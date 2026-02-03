@@ -1,5 +1,5 @@
 title: Potential Microsoft TSC RMM Tool Process Activity
-id: f6989ad0-a1c4-45d4-8281-e3e946198f8a
+id: 6563a5e4-7b6e-5762-aff0-2dc4aa73db4f
 status: experimental
 description: |
     Detects potential processes activity of Microsoft TSC RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "termsrv.exe"
-            - "mstsc.exe"
+            - 'termsrv.exe'
+            - 'mstsc.exe'
     selection_image:
         Image|endswith:
-            - "termsrv.exe"
-            - "mstsc.exe"
+            - 'termsrv.exe'
+            - 'mstsc.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Microsoft TSC

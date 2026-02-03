@@ -1,5 +1,5 @@
 title: Potential CentraStage (Now Datto) RMM Tool Network Activity
-id: 515e1175-e6a9-4859-8271-e0bff2d712f3
+id: 2881c97b-4674-5ba0-809c-f4aeea00f981
 status: experimental
 description: |
     Detects potential network activity of CentraStage (Now Datto) RMM tool
@@ -16,9 +16,9 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.rmm.datto.com"
-            - "*cc.centrastage.net"
-            - "datto.com/au/products/rmm/"
+            - '*.rmm.datto.com'
+            - '*cc.centrastage.net'
+            - 'datto.com/au/products/rmm/'
     condition: selection
 falsepositives:
     - Legitimate use of CentraStage (Now Datto)

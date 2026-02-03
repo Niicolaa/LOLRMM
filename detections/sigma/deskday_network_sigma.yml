@@ -1,5 +1,5 @@
 title: Potential DeskDay RMM Tool Network Activity
-id: 05521b2f-0802-42a5-811c-d876669e7d31
+id: ec7f887d-a13e-5e5b-8491-ab6bed87a1e7
 status: experimental
 description: |
     Detects potential network activity of DeskDay RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "deskday.ai"
-            - "app.deskday.ai"
+            - 'deskday.ai'
+            - 'app.deskday.ai'
     condition: selection
 falsepositives:
     - Legitimate use of DeskDay

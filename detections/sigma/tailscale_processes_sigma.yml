@@ -1,5 +1,5 @@
 title: Potential Tailscale RMM Tool Process Activity
-id: 6f91a410-c950-4b78-bda0-38ec015d2820
+id: dab9913c-44e8-5ccd-8d37-11b9311059a4
 status: experimental
 description: |
     Detects potential processes activity of Tailscale RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "tailscale-*.exe"
-            - "tailscaled.exe"
-            - "tailscale-ipn.exe"
+            - 'tailscale-*.exe'
+            - 'tailscaled.exe'
+            - 'tailscale-ipn.exe'
     selection_image:
         Image|endswith:
-            - "tailscale-*.exe"
-            - "tailscaled.exe"
-            - "tailscale-ipn.exe"
+            - 'tailscale-*.exe'
+            - 'tailscaled.exe'
+            - 'tailscale-ipn.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Tailscale

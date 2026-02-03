@@ -1,5 +1,5 @@
 title: Potential Kabuto RMM Tool Process Activity
-id: ef240db1-6bd8-499e-b639-8bbd5268a9c9
+id: 62b8343d-71b4-570a-b2b4-f40f857392cf
 status: experimental
 description: |
     Detects potential processes activity of Kabuto RMM tool
@@ -15,9 +15,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: "Kabuto.App.Runner.exe"
+        ParentImage|endswith: 'Kabuto.App.Runner.exe'
     selection_image:
-        Image|endswith: "Kabuto.App.Runner.exe"
+        Image|endswith: 'Kabuto.App.Runner.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Kabuto

@@ -1,5 +1,5 @@
 title: Potential ZeroTier RMM Tool Network Activity
-id: d80a6043-b96f-4a14-9ba3-2b6268f6a651
+id: d9b12e95-f361-533b-8d97-38997338228e
 status: experimental
 description: |
     Detects potential network activity of ZeroTier RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "zerotier.com"
-            - "*.zerotier.com"
+            - 'zerotier.com'
+            - '*.zerotier.com'
     condition: selection
 falsepositives:
     - Legitimate use of ZeroTier

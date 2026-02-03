@@ -1,5 +1,5 @@
 title: Potential ManageEngine ServiceDesk Plus RMM Tool Process Activity
-id: 7647630b-98fb-4c3d-9e60-b7cc093d8a9d
+id: ae1e12fd-17ee-567b-909e-08b137050836
 status: experimental
 description: |
     Detects potential processes activity of ManageEngine ServiceDesk Plus RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "ManageEngine_ServiceDesk_Plus.exe"
-            - "ISBEW64.exe"
+            - 'ManageEngine_ServiceDesk_Plus.exe'
+            - 'ISBEW64.exe'
     selection_image:
         Image|endswith:
-            - "ManageEngine_ServiceDesk_Plus.exe"
-            - "ISBEW64.exe"
+            - 'ManageEngine_ServiceDesk_Plus.exe'
+            - 'ISBEW64.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of ManageEngine ServiceDesk Plus

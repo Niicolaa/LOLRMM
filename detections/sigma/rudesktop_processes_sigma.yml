@@ -1,5 +1,5 @@
 title: Potential RuDesktop RMM Tool Process Activity
-id: cbedbaa9-073e-400e-b6e9-bb796b3eea75
+id: 24333420-9bbd-57e3-bd17-d05332ea87ff
 status: experimental
 description: |
     Detects potential processes activity of RuDesktop RMM tool
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "rd.exe"
-            - "rudesktop*.exe"
+            - 'rd.exe'
+            - 'rudesktop*.exe'
     selection_image:
         Image|endswith:
-            - "rd.exe"
-            - "rudesktop*.exe"
+            - 'rd.exe'
+            - 'rudesktop*.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of RuDesktop

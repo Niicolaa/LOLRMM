@@ -1,5 +1,5 @@
 title: Potential N-Able Advanced Monitoring Agent RMM Tool Network Activity
-id: a37d5a64-7743-4b17-a549-abe845195933
+id: d0163483-f60a-55b7-9870-ede5e4ae5a9c
 status: experimental
 description: |
     Detects potential network activity of N-Able Advanced Monitoring Agent RMM tool
@@ -16,25 +16,25 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "*.beanywhere.com "
-            - "systemmonitor.co.uk"
-            - "*system-monitor.com"
-            - "cloudbackup.management"
-            - "*systemmonitor.co.uk"
-            - "n-able.com"
-            - "systemmonitor.us"
-            - "*systemmonitor.eu.com"
-            - "*.logicnow.com"
-            - "*.swi-tc.com"
-            - "*remote.management"
-            - "systemmonitor.us.cdn.cloudflare.net"
-            - "*cloudbackup.management"
-            - "remote.management"
-            - "logicnow.com"
-            - "system-monitor.com"
-            - "*systemmonitor.us"
-            - "systemmonitor.eu.com"
-            - "*.n-able.com"
+            - '*.beanywhere.com '
+            - 'systemmonitor.co.uk'
+            - '*system-monitor.com'
+            - 'cloudbackup.management'
+            - '*systemmonitor.co.uk'
+            - 'n-able.com'
+            - 'systemmonitor.us'
+            - '*systemmonitor.eu.com'
+            - '*.logicnow.com'
+            - '*.swi-tc.com'
+            - '*remote.management'
+            - 'systemmonitor.us.cdn.cloudflare.net'
+            - '*cloudbackup.management'
+            - 'remote.management'
+            - 'logicnow.com'
+            - 'system-monitor.com'
+            - '*systemmonitor.us'
+            - 'systemmonitor.eu.com'
+            - '*.n-able.com'
     condition: selection
 falsepositives:
     - Legitimate use of N-Able Advanced Monitoring Agent

@@ -1,5 +1,5 @@
 title: Potential RemotePass RMM Tool Process Activity
-id: a15620b2-aa22-4914-a1e9-d7ecac53dd23
+id: 8952b8a6-f260-505c-a2d4-a352a87d294e
 status: experimental
 description: |
     Detects potential processes activity of RemotePass RMM tool
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - "remotepass-access.exe"
-            - "rpaccess.exe"
-            - "rpwhostscr.exe"
+            - 'remotepass-access.exe'
+            - 'rpaccess.exe'
+            - 'rpwhostscr.exe'
     selection_image:
         Image|endswith:
-            - "remotepass-access.exe"
-            - "rpaccess.exe"
-            - "rpwhostscr.exe"
+            - 'remotepass-access.exe'
+            - 'rpaccess.exe'
+            - 'rpwhostscr.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of RemotePass

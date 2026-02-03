@@ -1,5 +1,5 @@
 title: Potential MyGreenPC RMM Tool Process Activity
-id: 6f47a3c6-bce9-4efa-a5df-70bf04242329
+id: 59f4d985-7b19-5f9d-a337-6119ee06df07
 status: experimental
 description: |
     Detects potential processes activity of MyGreenPC RMM tool
@@ -15,9 +15,9 @@ logsource:
     category: process_creation
 detection:
     selection_parent:
-        ParentImage|endswith: "mygreenpc.exe"
+        ParentImage|endswith: 'mygreenpc.exe'
     selection_image:
-        Image|endswith: "mygreenpc.exe"
+        Image|endswith: 'mygreenpc.exe'
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of MyGreenPC

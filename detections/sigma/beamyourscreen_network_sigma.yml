@@ -1,5 +1,5 @@
 title: Potential BeamYourScreen RMM Tool Network Activity
-id: bc17025e-2273-4ed4-bf5d-e9b1052d37e8
+id: 95c5c4fa-841d-5c6d-8c6d-41c8d3a36de1
 status: experimental
 description: |
     Detects potential network activity of BeamYourScreen RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "beamyourscreen.com"
-            - "*.beamyourscreen.com"
+            - 'beamyourscreen.com'
+            - '*.beamyourscreen.com'
     condition: selection
 falsepositives:
     - Legitimate use of BeamYourScreen

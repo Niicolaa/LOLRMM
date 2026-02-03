@@ -1,5 +1,5 @@
 title: Potential HelpU RMM Tool Network Activity
-id: e44ae45e-0228-4e42-b1f9-35d38937f3e8
+id: bc2449da-6eba-5500-8b78-6a4a57ccf6f1
 status: experimental
 description: |
     Detects potential network activity of HelpU RMM tool
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - "helpu.co.kr"
-            - "*.helpu.co.kr"
+            - 'helpu.co.kr'
+            - '*.helpu.co.kr'
     condition: selection
 falsepositives:
     - Legitimate use of HelpU
