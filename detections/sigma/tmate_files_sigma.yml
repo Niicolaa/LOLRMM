@@ -1,0 +1,27 @@
+title: Potential tmate RMM Tool File Activity
+id: d0e9b1c2-4329-4059-96ea-4e056170ca4e
+status: experimental
+description: |
+    Detects potential files activity of tmate RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-02-03
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - "/tmp/tmate*"
+            - "~/.tmate.conf"
+            - "tmate.sock"
+            - "tmate-ready"
+            - "tmate.bashrc"
+    condition: selection
+falsepositives:
+    - Legitimate use of tmate
+level: medium

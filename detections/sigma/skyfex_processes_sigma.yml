@@ -1,12 +1,12 @@
 title: Potential SkyFex RMM Tool Process Activity
-id: b4da400d-cfa2-48df-b0df-3af0bd829b2a
+id: 24b4eec9-a48a-4553-ba43-11563e571799
 status: experimental
 description: |
     Detects potential processes activity of SkyFex RMM tool
 references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2025-12-01
+date: 2026-02-03
 tags:
     - attack.execution
     - attack.t1219
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - Deskroll.exe
-            - DeskRollUA.exe
+            - "Deskroll.exe"
+            - "DeskRollUA.exe"
     selection_image:
         Image|endswith:
-            - Deskroll.exe
-            - DeskRollUA.exe
+            - "Deskroll.exe"
+            - "DeskRollUA.exe"
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of SkyFex

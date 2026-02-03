@@ -1,0 +1,24 @@
+title: Potential Remote Ripple RMM Tool File Activity
+id: b2533afb-ac59-4dea-9efd-68e94e7268ea
+status: experimental
+description: |
+    Detects potential files activity of Remote Ripple RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-02-03
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - "%APPDATA%\GlavSoft\RemoteRipple\*"
+            - "%TEMP%\Remote_Ripple_*"
+    condition: selection
+falsepositives:
+    - Legitimate use of Remote Ripple
+level: medium

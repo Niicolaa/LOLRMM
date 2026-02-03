@@ -1,12 +1,12 @@
 title: Potential Ammyy Admin RMM Tool File Activity
-id: f888a292-f924-4ec6-89f0-e1d645380537
+id: cce6aeea-db94-4984-93f0-e12bb6eb68c4
 status: experimental
 description: |
     Detects potential files activity of Ammyy Admin RMM tool
 references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2025-12-01
+date: 2026-02-03
 tags:
     - attack.execution
     - attack.t1219
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         TargetFilename|endswith:
-            - %programdata%\\AMMYY\\access.log
-            - %Binary_path%\\AA_v3.log
+            - "%programdata%\\AMMYY\\access.log"
+            - "%Binary_path%\\AA_v3.log"
     condition: selection
 falsepositives:
     - Legitimate use of Ammyy Admin

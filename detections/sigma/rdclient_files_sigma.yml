@@ -1,0 +1,22 @@
+title: Potential RdClient RMM Tool File Activity
+id: 01c5ead0-a0ab-4316-ba30-9d6afb8b563a
+status: experimental
+description: |
+    Detects potential files activity of RdClient RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-02-03
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith: "%APPDATA%\RdClient\*"
+    condition: selection
+falsepositives:
+    - Legitimate use of RdClient
+level: medium

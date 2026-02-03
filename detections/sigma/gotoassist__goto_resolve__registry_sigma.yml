@@ -1,0 +1,22 @@
+title: Potential GoToAssist (GoTo Resolve) RMM Tool Registry Activity
+id: f58f2157-d0b3-4341-8a46-b57f53fb84dc
+status: experimental
+description: |
+    Detects potential registry activity of GoToAssist (GoTo Resolve) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-02-03
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: registry_event
+detection:
+    selection:
+        TargetObject|contains: "HKLM\SOFTWARE\GoTo Resolve Unattended\"
+    condition: selection
+falsepositives:
+    - Legitimate use of GoToAssist (GoTo Resolve)
+level: medium

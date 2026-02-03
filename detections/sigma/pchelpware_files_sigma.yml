@@ -1,0 +1,22 @@
+title: Potential PChelpware RMM Tool File Activity
+id: 5bd5b215-163b-4b3c-a84b-245db6a3b264
+status: experimental
+description: |
+    Detects potential files activity of PChelpware RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-02-03
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith: "C:\temp_phw"
+    condition: selection
+falsepositives:
+    - Legitimate use of PChelpware
+level: medium

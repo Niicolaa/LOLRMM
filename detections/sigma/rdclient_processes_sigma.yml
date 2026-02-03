@@ -1,0 +1,30 @@
+title: Potential RdClient RMM Tool Process Activity
+id: 1d0ab234-148b-4a79-bf37-6793018e6298
+status: experimental
+description: |
+    Detects potential processes activity of RdClient RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-02-03
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - "rdclient.exe"
+            - "RdClientInstaller.exe"
+            - "SupportTool.exe"
+    selection_image:
+        Image|endswith:
+            - "rdclient.exe"
+            - "RdClientInstaller.exe"
+            - "SupportTool.exe"
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of RdClient
+level: medium

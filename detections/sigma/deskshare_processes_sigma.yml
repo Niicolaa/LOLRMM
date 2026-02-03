@@ -1,12 +1,12 @@
 title: Potential DeskShare RMM Tool Process Activity
-id: 3e853e40-0c3e-4e9e-94ed-5786aa7268ee
+id: 25d1fd39-ee4f-4d52-bcc4-cd417ead46f1
 status: experimental
 description: |
     Detects potential processes activity of DeskShare RMM tool
 references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2025-12-01
+date: 2026-02-03
 tags:
     - attack.execution
     - attack.t1219
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - TeamTaskManager.exe
-            - DSGuest.exe
+            - "TeamTaskManager.exe"
+            - "DSGuest.exe"
     selection_image:
         Image|endswith:
-            - TeamTaskManager.exe
-            - DSGuest.exe
+            - "TeamTaskManager.exe"
+            - "DSGuest.exe"
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of DeskShare

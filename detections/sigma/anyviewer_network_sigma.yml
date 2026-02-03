@@ -1,12 +1,12 @@
 title: Potential AnyViewer RMM Tool Network Activity
-id: f79262ed-7f6b-40f8-ac51-245aecab6b97
+id: 49d2a26c-7853-4ca9-ac1b-5fb17d864c1a
 status: experimental
 description: |
     Detects potential network activity of AnyViewer RMM tool
 references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2025-12-01
+date: 2026-02-03
 tags:
     - attack.execution
     - attack.t1219
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - *.anyviewer.com
-            - *.aomeisoftware.com
+            - "*.anyviewer.com"
+            - "*.aomeisoftware.com"
     condition: selection
 falsepositives:
     - Legitimate use of AnyViewer

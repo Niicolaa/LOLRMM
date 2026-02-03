@@ -1,12 +1,12 @@
 title: Potential Parallels Access RMM Tool Network Activity
-id: 30ddd92c-43ea-47bc-9580-a2a5e9184321
+id: ac86557a-c167-478e-956b-09302de2dc7f
 status: experimental
 description: |
     Detects potential network activity of Parallels Access RMM tool
 references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2025-12-01
+date: 2026-02-03
 tags:
     - attack.execution
     - attack.t1219
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - *.parallels.com
-            - parallels.com/products/ras/try
+            - "*.parallels.com"
+            - "parallels.com/products/ras/try"
     condition: selection
 falsepositives:
     - Legitimate use of Parallels Access

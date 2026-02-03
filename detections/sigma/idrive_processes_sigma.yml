@@ -1,0 +1,32 @@
+title: Potential iDrive RMM Tool Process Activity
+id: 9fa264a8-dfda-4f62-b9ab-80a1fa56d63c
+status: experimental
+description: |
+    Detects potential processes activity of iDrive RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-02-03
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - "C:\Users\*\Downloads\IDriveWinSetup.exe"
+            - "IDriveWinSetup.exe"
+            - "IDriveEClassic.exe"
+            - "id_tray.exe"
+    selection_image:
+        Image|endswith:
+            - "C:\Users\*\Downloads\IDriveWinSetup.exe"
+            - "IDriveWinSetup.exe"
+            - "IDriveEClassic.exe"
+            - "id_tray.exe"
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of iDrive
+level: medium

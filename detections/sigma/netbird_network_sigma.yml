@@ -1,0 +1,26 @@
+title: Potential NetBird RMM Tool Network Activity
+id: 80a7c9b8-0992-4edf-bcd1-0b47039210e6
+status: experimental
+description: |
+    Detects potential network activity of NetBird RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-02-03
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - "netbird.io"
+            - "*.netbird.io"
+            - "api.netbird.io"
+            - "signal.netbird.io"
+    condition: selection
+falsepositives:
+    - Legitimate use of NetBird
+level: medium
