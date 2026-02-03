@@ -88,13 +88,13 @@ def write_sigma_rule(rule: Dict[str, Any], filepath: str) -> None:
                     if isinstance(subvalue, list):
                         # Single element: write inline, multiple elements: write as list
                         if len(subvalue) == 1:
-                            f.write(f"        {subkey}: {subvalue[0]}\n")
+                            f.write(f'        {subkey}: "{subvalue[0]}"\n')
                         else:
                             f.write(f"        {subkey}:\n")
                             for item in subvalue:
-                                f.write(f"            - {item}\n")
+                                f.write(f'            - "{item}"\n')
                     else:
-                        f.write(f"        {subkey}: {subvalue}\n")
+                        f.write(f'        {subkey}: "{subvalue}"\n')
         f.write(f"    condition: {detection['condition']}\n")
 
         # Falsepositives
