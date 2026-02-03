@@ -1,12 +1,12 @@
 title: Potential OCS inventory RMM Tool Network Activity
-id: 6af3935a-ded4-413a-a175-7edea764de78
+id: 0c684da4-0f70-4d1f-ac9d-69081b1232aa
 status: experimental
 description: |
     Detects potential network activity of OCS inventory RMM tool
 references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2025-12-01
+date: 2026-02-03
 tags:
     - attack.execution
     - attack.t1219
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - user_managed
-            - ocsinventory-ng.org
+            - "user_managed"
+            - "ocsinventory-ng.org"
     condition: selection
 falsepositives:
     - Legitimate use of OCS inventory

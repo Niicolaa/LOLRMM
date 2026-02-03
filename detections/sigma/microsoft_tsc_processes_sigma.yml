@@ -1,12 +1,12 @@
 title: Potential Microsoft TSC RMM Tool Process Activity
-id: ea9f6f7d-1757-460a-906d-53d0ba6e422a
+id: f6989ad0-a1c4-45d4-8281-e3e946198f8a
 status: experimental
 description: |
     Detects potential processes activity of Microsoft TSC RMM tool
 references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2025-12-01
+date: 2026-02-03
 tags:
     - attack.execution
     - attack.t1219
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - termsrv.exe
-            - mstsc.exe
+            - "termsrv.exe"
+            - "mstsc.exe"
     selection_image:
         Image|endswith:
-            - termsrv.exe
-            - mstsc.exe
+            - "termsrv.exe"
+            - "mstsc.exe"
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Microsoft TSC

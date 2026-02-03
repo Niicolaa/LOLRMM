@@ -1,0 +1,24 @@
+title: Potential Miradore RMM Tool File Activity
+id: 967c3a35-a732-4315-be5d-7e4e8e01469c
+status: experimental
+description: |
+    Detects potential files activity of Miradore RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-02-03
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - "C:\Program Files\Miradore\OnlineClient\bin\*"
+            - "C:\Program Files\Miradore\OnlineClient\bin\7z.dll"
+    condition: selection
+falsepositives:
+    - Legitimate use of Miradore
+level: medium

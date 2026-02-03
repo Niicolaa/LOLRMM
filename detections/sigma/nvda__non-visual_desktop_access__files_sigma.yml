@@ -1,0 +1,26 @@
+title: Potential NVDA (Non-Visual Desktop Access) RMM Tool File Activity
+id: 4aaf76e7-2a2e-406a-8ff0-178c7fe59d86
+status: experimental
+description: |
+    Detects potential files activity of NVDA (Non-Visual Desktop Access) RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-02-03
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - "C:\Program Files (x86)\NVDA\nvda.exe"
+            - "C:\Program Files\NVDA\nvda.exe"
+            - "C:\Users\*\AppData\Roaming\nvda\nvda.log"
+            - "C:\Users\*\AppData\Roaming\nvda\nvda.ini"
+    condition: selection
+falsepositives:
+    - Legitimate use of NVDA (Non-Visual Desktop Access)
+level: medium

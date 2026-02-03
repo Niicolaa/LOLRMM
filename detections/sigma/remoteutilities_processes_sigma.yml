@@ -1,12 +1,12 @@
 title: Potential RemoteUtilities RMM Tool Process Activity
-id: e93cef04-7126-4b84-ba4c-d1c8344eeed4
+id: 9c0894a7-eaf9-4c86-b891-7a2da76145ef
 status: experimental
 description: |
     Detects potential processes activity of RemoteUtilities RMM tool
 references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2025-12-01
+date: 2026-02-03
 tags:
     - attack.execution
     - attack.t1219
@@ -16,14 +16,14 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - rutview.exe
-            - rutserv.exe
-            - rutserv.exe
+            - "rutview.exe"
+            - "rutserv.exe"
+            - "*\rutserv.exe"
     selection_image:
         Image|endswith:
-            - rutview.exe
-            - rutserv.exe
-            - rutserv.exe
+            - "rutview.exe"
+            - "rutserv.exe"
+            - "*\rutserv.exe"
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of RemoteUtilities

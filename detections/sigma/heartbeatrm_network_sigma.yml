@@ -1,0 +1,24 @@
+title: Potential HeartbeatRM RMM Tool Network Activity
+id: 35ddce36-0d6f-4e07-b2de-78bd92e4e48c
+status: experimental
+description: |
+    Detects potential network activity of HeartbeatRM RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-02-03
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - "*.heartbeatrm.com"
+            - "heartbeatrm.com"
+    condition: selection
+falsepositives:
+    - Legitimate use of HeartbeatRM
+level: medium

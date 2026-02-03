@@ -1,12 +1,12 @@
 title: Potential CrossLoop RMM Tool Network Activity
-id: 40f7000c-d0eb-45a0-9203-f6db301528de
+id: 5a22b093-824c-425e-b687-098ac9a166a1
 status: experimental
 description: |
     Detects potential network activity of CrossLoop RMM tool
 references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2025-12-01
+date: 2026-02-03
 tags:
     - attack.execution
     - attack.t1219
@@ -16,8 +16,8 @@ logsource:
 detection:
     selection:
         DestinationHostname|endswith:
-            - *.crossloop.com
-            - crossloop.en.softonic.com
+            - "*.crossloop.com"
+            - "crossloop.en.softonic.com"
     condition: selection
 falsepositives:
     - Legitimate use of CrossLoop

@@ -1,0 +1,26 @@
+title: Potential iDrive RMM Tool File Activity
+id: ec1e0d8b-70d4-4acc-b17a-5848b63e85b9
+status: experimental
+description: |
+    Detects potential files activity of iDrive RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-02-03
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection:
+        TargetFilename|endswith:
+            - "C:\ProgramData\IDrive\*"
+            - "C:\Program Files\IDrive\*"
+            - "C:\Program Files (x86)\IDrive\*"
+            - "C:\Users\*\AppData\Local\IDrive\*"
+    condition: selection
+falsepositives:
+    - Legitimate use of iDrive
+level: medium

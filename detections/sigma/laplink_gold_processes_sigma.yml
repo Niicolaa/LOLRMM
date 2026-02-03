@@ -1,12 +1,12 @@
 title: Potential Laplink Gold RMM Tool Process Activity
-id: af4b14bc-2afc-49ea-8767-0f0b75c0d2e9
+id: 5952d484-f700-4b2a-8c9f-013407a4e021
 status: experimental
 description: |
     Detects potential processes activity of Laplink Gold RMM tool
 references:
     - https://github.com/magicsword-io/LOLRMM
 author: LOLRMM Project
-date: 2025-12-01
+date: 2026-02-03
 tags:
     - attack.execution
     - attack.t1219
@@ -16,12 +16,12 @@ logsource:
 detection:
     selection_parent:
         ParentImage|endswith:
-            - tsircusr.exe
-            - laplink.exe
+            - "tsircusr.exe"
+            - "laplink.exe"
     selection_image:
         Image|endswith:
-            - tsircusr.exe
-            - laplink.exe
+            - "tsircusr.exe"
+            - "laplink.exe"
     condition: 1 of selection_*
 falsepositives:
     - Legitimate use of Laplink Gold

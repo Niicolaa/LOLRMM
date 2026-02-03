@@ -1,0 +1,30 @@
+title: Potential Duet Display RMM Tool Process Activity
+id: 06788d88-6c8f-4545-aba2-dd86a07c887a
+status: experimental
+description: |
+    Detects potential processes activity of Duet Display RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2026-02-03
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - "duet.exe"
+            - "DuetSetup.exe"
+            - "DuetDisp.exe"
+    selection_image:
+        Image|endswith:
+            - "duet.exe"
+            - "DuetSetup.exe"
+            - "DuetDisp.exe"
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of Duet Display
+level: medium
